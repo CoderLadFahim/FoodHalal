@@ -1,10 +1,18 @@
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
 import './App.scss';
 
 function App() {
+	let p = useRef(null);
+
+	useEffect(() => {
+		gsap.from(p, { scale: 0 });
+	}, []);
+
 	return (
 		<div className="App">
 			<header className="App-header">
-				<p>
+				<p ref={el => (p = el)}>
 					Edit <code>src/App.js</code> and save to reload.
 				</p>
 				<a
