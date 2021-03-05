@@ -11,7 +11,7 @@ function Opening() {
 		</span>
 	));
 
-	const disclaimerText = "We don't exist".split('').map((l, i) => (
+	const disclaimerText = 'Fictional Site'.split('').map((l, i) => (
 		<span key={i} className="la2">
 			{l}
 		</span>
@@ -30,21 +30,24 @@ function Opening() {
 				duration: 0.5,
 				fontSize: '0.1px',
 				stagger: 0.1,
-				// ease: 'bounce.out',
+				ease: 'bounce.out',
 			})
 			.from('.la2', {
 				duration: 0.5,
+				top: 200,
 				opacity: 0,
-				top: 50,
+				fontSize: '1rem',
 				ease: 'power3.out',
 				stagger: 0.02,
 			})
-			.to('.opening', {
-				delay: 0.5,
+			.to('.overlay', {
 				duration: 0.5,
-				yPercent: -100,
-				opacity: 0,
-				display: 'none',
+				xPercent: -100,
+				delay: 1,
+			})
+			.to('.opening', {
+				duration: 0.5,
+				xPercent: -100,
 				pointerEvents: 'none',
 			});
 	}, []);
@@ -53,6 +56,7 @@ function Opening() {
 		<section className="opening">
 			<h1 className="app-title logo-grad">{logoText}</h1>
 			<h2 className="disclaimer">{disclaimerText}</h2>
+			<div className="overlay"></div>
 		</section>
 	);
 }

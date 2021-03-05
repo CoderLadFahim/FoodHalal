@@ -2,11 +2,11 @@
 
 .opening {
 	background-color: #222;
-	position: absolute;
+	position: fixed;
 	top: 0;
-	right: 0;
-	bottom: 0;
 	left: 0;
+	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -15,18 +15,49 @@
 	.app-title {
 		font-family: $logo-font;
 		font-size: 4rem;
-		// .la {
-		// 	display: none;
-		// }
 	}
 
 	.disclaimer {
 		text-transform: uppercase;
 		font-size: 2rem;
 		color: $beige;
+	}
 
-		.la2 {
-			position: relative;
+	.la2 {
+		position: relative;
+	}
+
+	.overlay {
+		background: $pink;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transform: translateX(100%);
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.opening {
+		.app-title {
+			font-size: 6rem;
+		}
+
+		.disclaimer {
+			font-size: 3rem;
 		}
 	}
 }
+
+// @media only screen and (min-width: 1024px) {
+// 	.opening {
+// 		.app-title {
+// 			font-size: 8rem;
+// 		}
+
+// 		.disclaimer {
+// 			font-size: 4rem;
+// 		}
+// 	}
+// }
