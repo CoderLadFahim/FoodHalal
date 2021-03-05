@@ -1,5 +1,3 @@
-import gsap from 'gsap';
-import { useRef, useEffect } from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import './App.scss';
 
@@ -9,13 +7,12 @@ import About from './views/About';
 import Contact from './views/Contact';
 import TableBook from './views/TableBook';
 
+import Opening from './components/Opening';
+
 function App() {
-	let p = useRef(null);
-
-	useEffect(() => {}, []);
-
 	return (
 		<Router>
+			<Opening />
 			<section className="App">
 				<nav>
 					<ul>
