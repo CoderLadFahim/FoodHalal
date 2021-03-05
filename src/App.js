@@ -1,36 +1,64 @@
-import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
+import { useRef, useEffect } from 'react';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import './App.scss';
+
+import Home from './views/Home';
+import Menu from './views/Menu';
+import About from './views/About';
+import Contact from './views/Contact';
+import TableBook from './views/TableBook';
 
 function App() {
 	let p = useRef(null);
 
-	useEffect(() => {
-		gsap.from(p, {
-			duration: 1,
-			opacity: 0,
-			yPercent: -100,
-			ease: 'elastic.out',
-			stagger: 0.1,
-		});
-	}, []);
+	useEffect(() => {}, []);
 
 	return (
-		<div className="App">
-			<header className="App-header">
-				<p className="animate" ref={el => (p = el)}>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
-		</div>
+		<Router>
+			<section className="App">
+				<nav>
+					<ul>
+						<li>
+							<Link to="/">Home</Link>
+						</li>
+						<li>
+							<Link to="/menu">Menu</Link>
+						</li>
+						<li>
+							<Link to="/contact">Contact</Link>
+						</li>
+						<li>
+							<Link to="/about">About</Link>
+						</li>
+					</ul>
+				</nav>
+
+				<Link to="/book">
+					<button>Book a Table</button>
+				</Link>
+
+				{/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+				<Switch>
+					<Route exact path="/">
+						<Home />
+					</Route>
+					<Route path="/menu">
+						<Menu />
+					</Route>
+					<Route path="/about">
+						<About />
+					</Route>
+					<Route path="/contact">
+						<Contact />
+					</Route>
+					<Route path="/book">
+						<TableBook />
+					</Route>
+				</Switch>
+			</section>
+		</Router>
 	);
 }
 
