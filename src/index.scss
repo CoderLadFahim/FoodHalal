@@ -17,3 +17,12 @@ $orange: #ff6825;
 $beige: #f4e0b6;
 $lightpink: #ff7979;
 $lightorange: #ff834d;
+
+// class
+.logo-grad {
+	background: -webkit-linear-gradient(to right, $orange 0%, $pink 100%);
+	background: -moz-linear-gradient(to right, $orange 0%, $pink 100%);
+	background: linear-gradient(to right, $orange 0%, $pink 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
