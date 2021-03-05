@@ -1,7 +1,19 @@
 // fonts
-$font1: 'Poppins';
-$font2: 'PT Sans Caption';
-$font3: 'Nunito';
+$fallback-fonts: Arial, Helvetica, sans-serif;
+
+$logo-font: 'Atma', $fallback-fonts;
+
+$font1: 'Poppins', $fallback-fonts;
+$font2: 'PT Sans Caption', $fallback-fonts;
+$font3: 'Nunito', $fallback-fonts;
 
 // colors
-$body-col: #333;
+$gray1: #333;
+$gray2: #444444;
+$gray3: #555555;
+
+$pink: #ff5c5c;
+$orange: #ff6825;
+$beige: #f4e0b6;
+$lightpink: #ff7979;
+$lightorange: #ff834d;
