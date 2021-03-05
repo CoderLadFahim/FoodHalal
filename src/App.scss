@@ -1,0 +1,15 @@
+@import './index.scss';
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: $gray1;
+	font-family: $font1;
+	color: #eee;
+}
