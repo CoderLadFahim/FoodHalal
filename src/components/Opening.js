@@ -46,6 +46,7 @@ function Opening() {
 				delay: 1,
 			})
 			.to('.opening', {
+				delay: 0.3,
 				duration: 0.5,
 				xPercent: -100,
 				pointerEvents: 'none',
