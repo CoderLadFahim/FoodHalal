@@ -34,18 +34,21 @@ function Opening() {
 			})
 			.from('.la2', {
 				duration: 0.5,
-				top: 10,
+				top: 200,
 				opacity: 0,
 				fontSize: '1rem',
 				ease: 'power3.out',
 				stagger: 0.02,
 			})
+			.to('.overlay', {
+				duration: 0.5,
+				xPercent: -100,
+				delay: 1,
+			})
 			.to('.opening', {
 				delay: 0.3,
 				duration: 0.5,
-				yPercent: -100,
-				opacity: 0,
-				display: 'none',
+				xPercent: -100,
 				pointerEvents: 'none',
 			});
 	}, []);
@@ -54,6 +57,7 @@ function Opening() {
 		<section className="opening">
 			<h1 className="app-title logo-grad">{logoText}</h1>
 			<h2 className="disclaimer">{disclaimerText}</h2>
+			<div className="overlay"></div>
 		</section>
 	);
 }
