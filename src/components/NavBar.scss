@@ -1,0 +1,43 @@
+@import '../index.scss';
+
+nav {
+	background: $gray2;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	height: 8vh;
+	display: flex;
+	align-items: center;
+	font-family: $font2;
+
+	ul {
+		display: flex;
+		list-style: none;
+		justify-content: space-between;
+		align-items: center;
+		// border: 1px solid white;
+		font-weight: bold;
+	}
+
+	li a {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #fff;
+	}
+
+	li.home-link a {
+		font-family: $logo-font;
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	nav {
+		position: fixed;
+		top: 0;
+
+		li.home-link {
+			margin-right: 200px;
+		}
+	}
+}
