@@ -1,5 +1,5 @@
 // fonts
-$fallback-fonts: Arial, Helvetica, sans-serif;
+$fallback-fonts: 'Poppins', Arial, Helvetica, sans-serif;
 
 $logo-font: 'Atma', $fallback-fonts;
 
@@ -18,11 +18,16 @@ $beige: #f4e0b6;
 $lightpink: #ff7979;
 $lightorange: #ff834d;
 
-// class
+// classes
 .logo-grad {
 	background: -webkit-linear-gradient(to right, $orange 0%, $pink 100%);
 	background: -moz-linear-gradient(to right, $orange 0%, $pink 100%);
 	background: linear-gradient(to right, $orange 0%, $pink 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.wrapper {
+	width: 85%;
+	margin: 0 auto;
 }

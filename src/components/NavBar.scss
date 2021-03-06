@@ -1,0 +1,59 @@
+@import '../index.scss';
+
+nav {
+	background: $gray2;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	height: 8vh;
+	display: flex;
+	align-items: center;
+	font-family: $font2;
+
+	ul {
+		display: flex;
+		list-style: none;
+		justify-content: space-between;
+		align-items: center;
+		font-weight: bold;
+	}
+
+	li a {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #fff;
+	}
+
+	li.home-link a {
+		font-family: $logo-font;
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	nav {
+		position: fixed;
+		bottom: auto;
+		width: 5vw;
+		height: 100vh;
+		left: 0;
+		flex-direction: column;
+		justify-content: center;
+
+		ul {
+			// border: 1px solid white;
+			height: 95%;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+
+		li {
+			transform: rotate(-90deg);
+		}
+
+		li.home-link {
+			transform: rotate(0deg);
+			margin: 0;
+		}
+	}
+}

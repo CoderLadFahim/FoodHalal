@@ -8,28 +8,14 @@ import Contact from './views/Contact';
 import TableBook from './views/TableBook';
 
 import Opening from './components/Opening';
+import NavBar from './components/NavBar';
 
 function App() {
 	return (
 		<Router>
 			<Opening />
 			<section className="App">
-				<nav>
-					<ul>
-						<li>
-							<Link to="/">Home</Link>
-						</li>
-						<li>
-							<Link to="/menu">Menu</Link>
-						</li>
-						<li>
-							<Link to="/contact">Contact</Link>
-						</li>
-						<li>
-							<Link to="/about">About</Link>
-						</li>
-					</ul>
-				</nav>
+				<NavBar></NavBar>
 
 				<Link to="/book">
 					<button>Book a Table</button>
