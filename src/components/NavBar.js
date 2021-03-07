@@ -6,7 +6,9 @@ function NavBar() {
 		<nav>
 			<ul className="wrapper">
 				<li className="home-link logo-grad">
-					<Link to="/">FH</Link>
+					<Link to="/">
+						<h1>FH</h1>
+					</Link>
 				</li>
 				<li>
 					<Link to="/menu">Menu</Link>

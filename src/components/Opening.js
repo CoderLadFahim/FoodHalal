@@ -50,6 +50,9 @@ function Opening() {
 				duration: 0.5,
 				xPercent: -100,
 				pointerEvents: 'none',
+			})
+			.to('.opening', {
+				display: 'none',
 			});
 	}, []);
 
