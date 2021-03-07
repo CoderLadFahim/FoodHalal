@@ -1,4 +1,4 @@
-import gsap from 'gsap';
+import TweenLite from 'gsap';
 import { useEffect } from 'react';
 
 import './OpeningStyles.scss';
@@ -18,7 +18,7 @@ function Opening() {
 	));
 
 	useEffect(() => {
-		const openingTl = gsap.timeline();
+		const openingTl = TweenLite.timeline();
 
 		openingTl
 			.from('.app-title', {

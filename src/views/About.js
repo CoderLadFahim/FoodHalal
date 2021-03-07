@@ -1,9 +1,14 @@
+import { useEffect } from 'react';
+import TweenLite from 'gsap';
 import './AboutStyles.scss';
 
 function About(props) {
 	return (
 		<section className="about-page wrapper">
-			<h1 className="page-title">About Us</h1>
+			<h1 className="page-title">
+				About Us
+				<span></span>
+			</h1>
 			<div className="info-paragraphs">
 				<div className="info">
 					<h1 className="text-title">Lorem Ipsum</h1>
@@ -31,6 +36,7 @@ function About(props) {
 					</p>
 				</div>
 			</div>
+			<div className="circle watermark"></div>
 		</section>
 	);
 }
