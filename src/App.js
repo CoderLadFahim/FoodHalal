@@ -16,10 +16,10 @@ function App() {
 			<Opening />
 			<section className="App">
 				<NavBar></NavBar>
-
+				{/* 
 				<Link to="/book">
 					<button>Book a Table</button>
-				</Link>
+				</Link> */}
 
 				{/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
