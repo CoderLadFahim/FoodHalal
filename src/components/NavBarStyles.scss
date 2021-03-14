@@ -22,13 +22,13 @@ nav {
 
 	li a {
 		text-decoration: none;
-		// text-transform: uppercase;
+		text-transform: uppercase;
 		color: #fff;
 	}
 
 	li.home-link a {
 		font-family: $logo-font;
-		// font-size: 1.5rem;
+		font-size: 1.5rem;
 	}
 }
 
@@ -38,10 +38,6 @@ nav {
 		top: 0;
 		z-index: 1;
 		height: 10vh;
-
-		ul {
-			font-weight: normal;
-		}
 
 		li {
 			font-size: 1rem;

@@ -31,18 +31,16 @@ function About(props) {
 						<span className="pink"> repudiandae</span> quaerat quas culpa
 						expedita, ipsum sint architecto totam error at adipisci nostrum,{' '}
 						<br /> <br /> Amet qui consequuntur debitis, voluptates consectetur
-						eius, beatae natus assumenda <span className="beige">ipsam</span>{' '}
-						recusandae vero aut ab est accusantium molestiae minus! Odio,
-						molestiae?
+						eius, beatae natus assumenda recusandae vero aut ab est accusantium
+						molestiae minus! Odio, molestiae?
 					</p>
 				</div>
 				<div className="info">
 					<h1 className="text-title">Duis aute irure</h1>
 					<p className="text">
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-						Dignissimos necessitatibus <span className="beige">voluptatem</span>{' '}
-						unde ipsa eius nisi consequuntur delectus atque inventore <br />{' '}
-						<br /> ullam nemo, aliquid, ut expedita vitae{' '}
+						Dignissimos necessitatibus unde ipsa eius nisi consequuntur delectus
+						atque inventore <br /> <br /> ullam nemo, aliquid, ut expedita vitae{' '}
 						<span className="orange">asperiores</span>, incidunt nihil cum
 						nesciunt sunt. Nam perferendis dolorum repellat deserunt doloribus
 						iste fuga laborum.
@@ -58,18 +56,17 @@ function About(props) {
 						architecto <br /> <br /> impedit sit commodi, voluptates quisquam?
 						Minus tempore ullam exercitationem consequuntur id eveniet <br />{' '}
 						<br /> quae illo voluptatum sit ipsa iusto ex molestiae placeat
-						nulla officiis aliquid, quos cupiditate{' '}
-						<span className="orange">doloribus</span> quam itaque.
+						nulla officiis aliquid, quos cupiditate quam itaque.
 					</p>
 				</div>
 				<div className="info">
 					<h1 className="text-title">Lorem Ipsum</h1>
 					<p className="text">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-						officiis suscipit <span className="beige">dignissimos</span>{' '}
-						corporis voluptas neque, iusto repudiandae quaerat quas culpa
-						expedita, ipsum sint architecto totam error at adipisci nostrum,{' '}
-						<br /> <br /> amet qui? <span className="pink">Consequuntur</span>
+						officiis suscipit corporis voluptas neque, iusto repudiandae quaerat
+						quas culpa expedita, ipsum sint architecto totam error at adipisci
+						nostrum, <br /> <br /> amet qui?{' '}
+						<span className="pink">Consequuntur</span>
 						debitis, voluptates consectetur eius, beatae natus assumenda ipsam
 						recusandae vero aut ab est accusantium molestiae minus! Odio,
 						molestiae?
@@ -80,11 +77,10 @@ function About(props) {
 					<p className="text">
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 						Dignissimos necessitatibus voluptatem unde ipsa eius nisi
-						consequuntur <span className="orange">delectus</span> atque
-						inventore ullam nemo, aliquid, ut expedita vitae asperiores,
-						incidunt nihil <br /> <br /> cum nesciunt sunt. Nam perferendis
-						dolorum repellat deserunt <span className="pink">doloribus</span>{' '}
-						iste fuga laborum.
+						consequuntur atque inventore ullam nemo, aliquid, ut expedita vitae
+						asperiores, incidunt nihil <br /> <br /> cum nesciunt sunt. Nam
+						perferendis dolorum repellat deserunt{' '}
+						<span className="pink">doloribus</span> iste fuga laborum.
 					</p>
 				</div>
 				<div className="info">
@@ -95,11 +91,9 @@ function About(props) {
 						expedita provident <br /> <br /> sapiente nobis maxime voluptas
 						repudiandae quibusdam velit <span className="beige">laborum</span>{' '}
 						eius nemo architecto impedit sit commodi, voluptates quisquam? Minus
-						<br /> <br /> tempore ullam{' '}
-						<span className="orange">exercitationem</span> consequuntur id
-						eveniet quae illo voluptatum sit ipsa iusto ex <br /> <br />{' '}
-						molestiae placeat nulla officiis aliquid, quos cupiditate doloribus
-						quam itaque.
+						<br /> <br /> tempore ullam consequuntur id eveniet quae illo
+						voluptatum sit ipsa iusto ex <br /> <br /> molestiae placeat nulla
+						officiis aliquid, quos cupiditate doloribus quam itaque.
 					</p>
 				</div>
 			</div>
