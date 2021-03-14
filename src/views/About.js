@@ -20,7 +20,7 @@ function About(props) {
 
 	return (
 		<section className="about-page wrapper">
-			<PageTitle>{'About Us'}</PageTitle>
+			<PageTitle>{'ABOUT US'}</PageTitle>
 
 			<div className="info-paragraphs">
 				<div className="info">
@@ -105,7 +105,7 @@ function About(props) {
 			</div>
 			<div className="circle watermark"></div>
 			<div className="square watermark"></div>
-			<div className="cross watermark"></div>
+			<div className="logo watermark">FH</div>
 		</section>
 	);
 }

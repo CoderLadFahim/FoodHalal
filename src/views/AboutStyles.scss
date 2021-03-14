@@ -22,6 +22,10 @@
 		color: $orange;
 	}
 
+	.watermark {
+		display: none;
+	}
+
 	.info-paragraphs {
 		height: 80%;
 		// background: #393939;
@@ -82,9 +86,47 @@
 
 @media only screen and (min-width: 1280px) {
 	.about-page {
+		.watermark {
+			display: block;
+			$color: #fff;
+			position: fixed;
+			opacity: 0.05;
+			// pointer-events: none;
+
+			&.logo {
+				font-size: 20rem;
+				font-family: $logo-font;
+				font-weight: bold;
+				top: 0px;
+				right: 10px;
+				color: $color;
+			}
+
+			&.circle {
+				$circleDiam: 300px;
+				width: $circleDiam;
+				height: $circleDiam;
+				border-radius: 50%;
+				top: -40px;
+				left: -120px;
+				border: 60px solid;
+				color: $color;
+			}
+
+			&.square {
+				$squareDiam: 300px;
+				width: $squareDiam;
+				height: $squareDiam;
+				bottom: -130px;
+				left: -120px;
+				border: 60px solid;
+				color: $color;
+			}
+		}
+
 		.info-paragraphs {
-			width: 60%;
-			margin-left: 50px;
+			width: 75%;
+			margin-left: 30px;
 		}
 
 		.info {
