@@ -15,15 +15,15 @@ function PageTitle(props) {
 		const pageTitleTl = TweenLite.timeline();
 
 		pageTitleTl
-			.from('.bottom-border', {
-				duration: 0.5,
-				left: '-100%',
-			})
 			.from('.tTL', {
 				duration: 0.5,
 				fontSize: '0px',
-				opacity: 0,
+				// opacity: 0,
 				stagger: 0.05,
+			})
+			.from('.bottom-border', {
+				duration: 0.3,
+				left: '-100%',
 			});
 	}, []);
 
