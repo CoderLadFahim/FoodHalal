@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './NavBarStyles.scss';
 
 function NavBar() {
@@ -6,18 +6,24 @@ function NavBar() {
 		<nav>
 			<ul className="wrapper">
 				<li className="home-link logo-grad">
-					<Link to="/">
+					<NavLink activeClassName="active-link" to="/">
 						<h1>FH</h1>
-					</Link>
+					</NavLink>
 				</li>
 				<li className="route-link">
-					<Link to="/menu">Menu</Link>
+					<NavLink activeClassName="active-link" to="/menu">
+						Menu
+					</NavLink>
 				</li>
 				<li className="route-link">
-					<Link to="/contact">Contact</Link>
+					<NavLink activeClassName="active-link" to="/contact">
+						Contact
+					</NavLink>
 				</li>
 				<li className="route-link">
-					<Link to="/about">About</Link>
+					<NavLink activeClassName="active-link" to="/about">
+						About
+					</NavLink>
 				</li>
 			</ul>
 		</nav>

@@ -10,7 +10,7 @@ function About(props) {
 		const aboutPageTL = TweenLite.timeline({ delay: 0.5 });
 
 		aboutPageTL.from('.info', {
-			delay: 1,
+			delay: 0.5,
 			duration: 1,
 			opacity: 0,
 			y: 50,
