@@ -1,0 +1,182 @@
+@import '../index.scss';
+
+.app-input {
+	position: relative;
+	// background: #444;
+	width: 95%;
+	height: 8%;
+
+	$effect-col: $pink;
+	$input-col: $beige;
+	$border-width: 1px;
+
+	label,
+	label span,
+	label::before,
+	label::after {
+		transition: 350ms;
+	}
+
+	label {
+		z-index: 5;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-bottom: $border-width solid $gray3;
+		pointer-events: none;
+		overflow-x: hidden;
+
+		span {
+			font-size: 14px;
+			position: absolute;
+			bottom: 1px;
+			left: 5px;
+			color: $white;
+			font-family: $font1;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 50%;
+			height: 2px;
+			background-color: $effect-col;
+		}
+
+		&::before {
+			left: -100%;
+		}
+
+		&::after {
+			right: -100%;
+		}
+	}
+
+	input {
+		background: none;
+		border: none;
+		outline: none;
+		color: $input-col;
+		z-index: 4;
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		width: 100%;
+		font-size: 1rem;
+		padding-top: 15px;
+		font-family: $font3;
+		font-weight: bold;
+		letter-spacing: 0.5px;
+	}
+
+	input:focus + .input-label > .label-content,
+	input:valid + .input-label > .label-content {
+		font-size: 12px;
+		top: 0;
+		left: 0;
+		color: $effect-col;
+	}
+
+	input:focus + .input-label,
+	input:valid + .input-label {
+		&::before {
+			left: 0;
+		}
+		&::after {
+			right: 0;
+		}
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.app-input {
+		label span {
+			font-size: 1rem;
+		}
+
+		input {
+			padding-top: 30px;
+		}
+
+		input:focus + .input-label > .label-content,
+		input:valid + .input-label > .label-content {
+			top: 10px;
+			font-size: 14px;
+		}
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.app-input {
+		input {
+			padding-top: 55px;
+			// font-size: 1rem;
+		}
+
+		input:focus + .input-label > .label-content,
+		input:valid + .input-label > .label-content {
+			top: 30px;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.app-input {
+		label span {
+			font-size: 1.5rem;
+		}
+
+		input {
+			padding-top: 55px;
+			font-size: 1.3rem;
+		}
+
+		input:focus + .input-label > .label-content,
+		input:valid + .input-label > .label-content {
+			top: 25px;
+			font-size: 1rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.app-input {
+		height: 35%;
+		label span {
+			font-size: 1.2rem;
+		}
+
+		input {
+			padding-top: 30px;
+			font-size: 1.2rem;
+		}
+
+		input:focus + .input-label > .label-content,
+		input:valid + .input-label > .label-content {
+			top: 5px;
+			font-size: 1rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.app-input {
+		label span {
+			font-size: 1.5rem;
+		}
+
+		input {
+			padding-top: 40px;
+			font-size: 1.5rem;
+		}
+
+		input:focus + .input-label > .label-content,
+		input:valid + .input-label > .label-content {
+			font-size: 1.3rem;
+		}
+	}
+}

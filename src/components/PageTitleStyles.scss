@@ -6,6 +6,7 @@
 	margin: 20px 0;
 	text-transform: uppercase;
 	overflow: hidden;
+	color: $pink;
 
 	.title-text {
 		font-size: 2rem;
@@ -16,7 +17,7 @@
 		bottom: 0;
 		left: 0;
 		background: $beige;
-		width: 80%;
+		width: 60%;
 		height: 4px;
 	}
 }
@@ -52,7 +53,7 @@
 
 @media only screen and (min-width: 1280px) {
 	.page-title {
-		margin-top: 100px;
+		// margin-top: 100px;
 		margin-bottom: 50px;
 
 		.title-text {

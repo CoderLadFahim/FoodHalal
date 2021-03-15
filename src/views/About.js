@@ -7,10 +7,10 @@ import PageTitle from '../components/PageTitle';
 function About(props) {
 	useEffect(() => {
 		// about page timeline
-		const aboutPageTL = TweenLite.timeline({ delay: 0.5 });
+		const aboutPageTL = TweenLite.timeline();
 
 		aboutPageTL.from('.info', {
-			delay: 0.5,
+			delay: 1,
 			duration: 1,
 			opacity: 0,
 			y: 50,
