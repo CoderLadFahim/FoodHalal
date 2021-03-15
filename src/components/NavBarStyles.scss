@@ -11,18 +11,30 @@ nav {
 	font-family: $font1;
 	z-index: 98;
 
+	.active-link {
+		color: $beige;
+		border-bottom: 3px solid $orange;
+		font-weight: bold;
+
+		&::after {
+			display: none !important;
+		}
+	}
+
 	ul {
 		display: flex;
 		list-style: none;
 		justify-content: space-between;
 		align-items: center;
-		font-weight: bold;
+		font-weight: 600;
 	}
 
 	li a {
 		text-decoration: none;
 		text-transform: uppercase;
 		color: #fff;
+		padding: 0;
+		transition: 150ms;
 	}
 
 	li.route-link a {
@@ -36,7 +48,7 @@ nav {
 			left: 50%;
 			transform: translateX(-50%);
 			width: 0;
-			background: $beige;
+			background: $orange;
 			transition: 150ms;
 		}
 
