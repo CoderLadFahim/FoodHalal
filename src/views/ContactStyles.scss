@@ -45,6 +45,10 @@
 			cursor: pointer;
 		}
 
+		&:active {
+			margin-bottom: -5px;
+		}
+
 		&.disabled {
 			background-color: #999;
 			pointer-events: none;
@@ -82,7 +86,6 @@
 			grid-template-rows: repeat(3, 1fr);
 
 			.app-input {
-				// align-self: start;
 				width: 85%;
 			}
 		}
@@ -105,7 +108,7 @@
 			position: absolute;
 			left: 50%;
 			bottom: 5%;
-			transform: translateX(-50%);
+			transform: translateX(-50%) translateY(-50px);
 		}
 	}
 }
