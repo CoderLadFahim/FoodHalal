@@ -24,6 +24,11 @@
 			family: $font3;
 			size: 1rem;
 		}
+		transition: 200ms;
+
+		&:focus {
+			border: 2px solid $pink;
+		}
 	}
 
 	.submit-btn {
@@ -43,6 +48,10 @@
 		&:hover {
 			transform: scale(1.05);
 			cursor: pointer;
+		}
+
+		&:active {
+			margin-bottom: -5px;
 		}
 
 		&.disabled {
@@ -82,7 +91,6 @@
 			grid-template-rows: repeat(3, 1fr);
 
 			.app-input {
-				// align-self: start;
 				width: 85%;
 			}
 		}
@@ -105,7 +113,7 @@
 			position: absolute;
 			left: 50%;
 			bottom: 5%;
-			transform: translateX(-50%);
+			transform: translateX(-50%) translateY(-50px);
 		}
 	}
 }
