@@ -7,13 +7,13 @@ import About from './views/About';
 import Contact from './views/Contact';
 import TableBook from './views/TableBook';
 
-import Opening from './components/Opening';
+// import Opening from './components/Opening';
 import NavBar from './components/NavBar';
 
 function App() {
 	return (
 		<Router>
-			<Opening />
+			{/* <Opening /> */}
 			<section className="App">
 				<NavBar></NavBar>
 				{/* 

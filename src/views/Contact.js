@@ -44,8 +44,8 @@ function Contact(props) {
 				<AppInput> Full Name </AppInput>
 				<AppInput> Email / Phone </AppInput>
 				<AppInput> Subject </AppInput>
-				<textarea placeholder="Tell us your issue"></textarea>
-				<button className="submit-btn disabled">Submit</button>
+				<textarea required placeholder="Tell us your issue"></textarea>
+				<button className="submit-btn">Submit</button>
 			</form>
 		</section>
 	);
