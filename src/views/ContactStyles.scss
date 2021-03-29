@@ -24,6 +24,11 @@
 			family: $font3;
 			size: 1rem;
 		}
+		transition: 200ms;
+
+		&:focus {
+			border: 2px solid $pink;
+		}
 	}
 
 	.submit-btn {
