@@ -1,12 +1,31 @@
-import { NavLink } from 'react-router-dom';
-import './AppNav.scss';
+import TweenLite from 'gsap';
 
-function NavBar() {
+import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
+import './AppNavStyles.scss';
+
+function NavBar({ navToggleState }) {
+	useEffect(() => {
+		// animates only on mobile when the hamburger menu is clicked adding the 'mobile-show' class
+		const navTimeline = TweenLite.timeline();
+
+		navTimeline.from('.mobile-show .route-link', {
+			duration: 1,
+			yPercent: -100,
+			opacity: 0,
+			scale: 0,
+			stagger: 0.1,
+			ease: 'elastic.out',
+		});
+	}, [navToggleState]);
+
+	let navClass = navToggleState ? 'mobile-show' : 'mobile-hide';
+
 	return (
-		<nav>
-			<ul className="wrapper">
+		<nav className={navClass}>
+			<ul className="wrapper nav-links">
 				<li className="route-link">
-					<NavLink activeClassName="active-link" to="/">
+					<NavLink activeClassName="active-link" exact to="/">
 						Home
 					</NavLink>
 				</li>
@@ -15,6 +34,11 @@ function NavBar() {
 						Menu
 					</NavLink>
 				</li>
+				{/* <li className="route-link">
+					<NavLink activeClassName="active-link" to="/book">
+						Book a Table
+					</NavLink>
+				</li> */}
 				<li className="route-link">
 					<NavLink activeClassName="active-link" to="/contact">
 						Contact
@@ -26,12 +50,12 @@ function NavBar() {
 					</NavLink>
 				</li>
 			</ul>
-
+			{/* 
 			<ul className="hamburger">
 				<li className="line"></li>
 				<li className="line"></li>
 				<li className="line"></li>
-			</ul>
+			</ul> */}
 		</nav>
 	);
 }

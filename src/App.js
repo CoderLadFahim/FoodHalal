@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 
@@ -8,14 +10,22 @@ import Contact from './views/Contact';
 import TableBook from './views/TableBook';
 
 // import Opening from './components/Opening';
-import NavBar from './components/NavBar';
+// import NavBar from './components/NavBar';
+import AppNav from './components/AppNav';
+import HamburgerMenu from './components/HamburgerMenu';
 
 function App() {
+	const [navToggleState, setNavToggleState] = useState(false);
+
+	const toggleNav = toggleState => setNavToggleState(toggleState);
+
 	return (
 		<Router>
 			{/* <Opening /> */}
 			<section className="App">
-				<NavBar></NavBar>
+				{/* <NavBar></NavBar> */}
+				<HamburgerMenu navToggler={toggleNav} />
+				<AppNav navToggleState={navToggleState} />
 				{/* 
 				<Link to="/book">
 					<button>Book a Table</button>
