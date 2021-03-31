@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
 import './AppNavStyles.scss';
 
-function NavBar({ navToggleState }) {
+function NavBar({ navToggler, navToggleState }) {
 	useEffect(() => {
 		// animates only on mobile when the hamburger menu is clicked adding the 'mobile-show' class
 		const navTimeline = TweenLite.timeline();
@@ -21,8 +21,17 @@ function NavBar({ navToggleState }) {
 
 	let navClass = navToggleState ? 'mobile-show' : 'mobile-hide';
 
+	// this function is getting the NavLink className and toggling the AppNav
+	const handleLinkClick = ({
+		target: {
+			parentElement: { className },
+		},
+	}) => {
+		className === 'route-link' && navToggler();
+	};
+
 	return (
-		<nav className={navClass}>
+		<nav className={navClass} onClick={handleLinkClick}>
 			<ul className="wrapper nav-links">
 				<li className="route-link">
 					<NavLink activeClassName="active-link" exact to="/">

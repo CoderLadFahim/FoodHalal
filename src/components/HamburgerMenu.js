@@ -1,21 +1,10 @@
 import './HamburgerMenuStyles.scss';
 
-function Hamburger({ navToggler }) {
-	// this function toggles the '.hamburger-close' class
-	const toggleClass = ({ currentTarget }) => {
-		const navClasses = Array.from(currentTarget.classList);
-
-		if (!navClasses.includes('hamburger-close')) {
-			currentTarget.classList.add('hamburger-close');
-			navToggler(true);
-		} else {
-			currentTarget.classList.remove('hamburger-close');
-			navToggler(false);
-		}
-	};
+function Hamburger({ navToggler, navToggleState }) {
+	let hamburgerClass = `hamburger ${navToggleState ? 'hamburger-close' : ''}`;
 
 	return (
-		<ul onClick={toggleClass} className="hamburger">
+		<ul onClick={navToggler} className={hamburgerClass}>
 			<li className="line"></li>
 			<li className="line"></li>
 			<li className="line"></li>

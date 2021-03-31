@@ -17,18 +17,15 @@ import HamburgerMenu from './components/HamburgerMenu';
 function App() {
 	const [navToggleState, setNavToggleState] = useState(false);
 
-	const toggleNav = toggleState => {
-		setNavToggleState(toggleState);
-		console.log(navToggleState);
-	};
+	const toggleNav = () => setNavToggleState(prevState => !prevState);
 
 	return (
 		<Router>
 			{/* <Opening /> */}
 			<section className="App">
 				{/* <NavBar></NavBar> */}
-				<HamburgerMenu navToggler={toggleNav} />
-				<AppNav navToggleState={navToggleState} />
+				<HamburgerMenu navToggler={toggleNav} navToggleState={navToggleState} />
+				<AppNav navToggler={toggleNav} navToggleState={navToggleState} />
 				{/* 
 				<Link to="/book">
 					<button>Book a Table</button>
