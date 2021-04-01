@@ -10,7 +10,7 @@ function NavBar({ navToggler, navToggleState }) {
 		const navTimeline = TweenLite.timeline();
 
 		navTimeline.from('.mobile-show .route-link', {
-			duration: 1,
+			duration: 0.85,
 			yPercent: -100,
 			opacity: 0,
 			scale: 0,
@@ -27,7 +27,9 @@ function NavBar({ navToggler, navToggleState }) {
 			parentElement: { className },
 		},
 	}) => {
-		className === 'route-link' && navToggler();
+		if (window.innerWidth <= 500) {
+			className === 'route-link' && setTimeout(navToggler, 150);
+		}
 	};
 
 	return (
