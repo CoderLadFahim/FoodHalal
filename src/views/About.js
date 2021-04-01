@@ -8,98 +8,95 @@ function About(props) {
 	useEffect(() => {
 		// about page timeline
 		const aboutPageTL = TweenLite.timeline();
-
-		aboutPageTL.from('.info', {
-			delay: 1,
-			duration: 1,
-			opacity: 0,
-			y: 50,
-			stagger: 0.5,
-		});
 	}, []);
 
 	return (
-		<section className="about-page wrapper">
-			<PageTitle>{'ABOUT US'}</PageTitle>
+		<section className="about-page">
+			<div className="page-hero">
+				<PageTitle>{'ABOUT US'}</PageTitle>
+			</div>
 
-			<div className="info-paragraphs">
-				<div className="info">
-					<h1 className="text-title">Lorem Ipsum</h1>
-					<p className="text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-						officiis suscipit dignissimos corporis voluptas neque, iusto
-						<span className="pink"> repudiandae</span> quaerat quas culpa
-						expedita, ipsum sint architecto totam error at adipisci nostrum,{' '}
-						<br /> <br /> Amet qui consequuntur debitis, voluptates consectetur
-						eius, beatae natus assumenda recusandae vero aut ab est accusantium
-						molestiae minus! Odio, molestiae?
-					</p>
+			<div className="page-content wrapper">
+				<div className="info-cards">
+					<div className="info-card">
+						<h2>Lorem ipsum</h2>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+					</div>
+					<div className="info-card">
+						<h2>Dolor Sit</h2>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+					</div>
+					<div className="info-card">
+						<h2>Amet Consectetur</h2>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+					</div>
 				</div>
-				<div className="info">
-					<h1 className="text-title">Duis aute irure</h1>
-					<p className="text">
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-						Dignissimos necessitatibus unde ipsa eius nisi consequuntur delectus
-						atque inventore <br /> <br /> ullam nemo, aliquid, ut expedita vitae{' '}
-						<span className="orange">asperiores</span>, incidunt nihil cum
-						nesciunt sunt. Nam perferendis dolorum repellat deserunt doloribus
-						iste fuga laborum.
-					</p>
-				</div>
-				<div className="info">
-					<h1 className="text-title">sunt in culpa</h1>
-					<p className="text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-						aliquam! Id eveniet voluptatem in, totam accusamus sint, culpa
-						expedita provident sapiente nobis maxime voluptas repudiandae
-						quibusdam velit <span className="pink">laborum</span> eius nemo
-						architecto <br /> <br /> impedit sit commodi, voluptates quisquam?
-						Minus tempore ullam exercitationem consequuntur id eveniet <br />{' '}
-						<br /> quae illo voluptatum sit ipsa iusto ex molestiae placeat
-						nulla officiis aliquid, quos cupiditate quam itaque.
-					</p>
-				</div>
-				<div className="info">
-					<h1 className="text-title">Lorem Ipsum</h1>
-					<p className="text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-						officiis suscipit corporis voluptas neque, iusto repudiandae quaerat
-						quas culpa expedita, ipsum sint architecto totam error at adipisci
-						nostrum, <br /> <br /> amet qui?{' '}
-						<span className="pink">Consequuntur</span>
-						debitis, voluptates consectetur eius, beatae natus assumenda ipsam
-						recusandae vero aut ab est accusantium molestiae minus! Odio,
-						molestiae?
-					</p>
-				</div>
-				<div className="info">
-					<h1 className="text-title">Duis aute irure</h1>
-					<p className="text">
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-						Dignissimos necessitatibus voluptatem unde ipsa eius nisi
-						consequuntur atque inventore ullam nemo, aliquid, ut expedita vitae
-						asperiores, incidunt nihil <br /> <br /> cum nesciunt sunt. Nam
-						perferendis dolorum repellat deserunt{' '}
-						<span className="pink">doloribus</span> iste fuga laborum.
-					</p>
-				</div>
-				<div className="info">
-					<h1 className="text-title">sunt in culpa</h1>
-					<p className="text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-						aliquam! Id eveniet voluptatem in, totam accusamus sint, culpa
-						expedita provident <br /> <br /> sapiente nobis maxime voluptas
-						repudiandae quibusdam velit <span className="beige">laborum</span>{' '}
-						eius nemo architecto impedit sit commodi, voluptates quisquam? Minus
-						<br /> <br /> tempore ullam consequuntur id eveniet quae illo
-						voluptatum sit ipsa iusto ex <br /> <br /> molestiae placeat nulla
-						officiis aliquid, quos cupiditate doloribus quam itaque.
-					</p>
+
+				<div className="detailed-infos">
+					<div className="info">
+						<h1>Lorem ipsum</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing{' '}
+							<strong>
+								{' '}
+								<em> elit </em>{' '}
+							</strong>{' '}
+							. Inventore delectus corrupti nulla, fugiat libero qui sapiente!{' '}
+							<br /> <br /> Impedit quos laudantium culpa nisi consequuntur
+							reprehenderit modi optio mollitia sint{' '}
+							<strong>
+								{' '}
+								<em> facere </em>{' '}
+							</strong>{' '}
+							quidem nihil rerum, eveniet harum exercitationem officiis natus
+							neque in dicta?
+							<br /> <br />
+							Tenetur voluptate quo accusamus nesciunt hic quidem maiores magnam
+							magni velit.
+						</p>
+					</div>
+					<div className="info">
+						<h1>Dolor Sit</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+							delectus corrupti nulla, fugiat libero qui sapiente! Impedit quos
+							laudantium culpa nisi{' '}
+							<strong>
+								{' '}
+								<em> consequuntur </em>{' '}
+							</strong>{' '}
+							reprehenderit <br /> <br /> modi optio mollitia sint facere quidem
+							nihil rerum, eveniet harum exercitationem officiis natus neque in
+							dicta? Tenetur voluptate quo <br /> <br />
+							<strong>
+								{' '}
+								<em> Accusamus </em>{' '}
+							</strong>{' '}
+							nesciunt hic quidem maiores magnam magni velit.
+						</p>
+					</div>
+					<div className="info">
+						<h1>Consectetur Amet</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur <br /> <br /> adipisicing
+							elit.
+							<strong>
+								{' '}
+								<em> Inventore </em>{' '}
+							</strong>{' '}
+							delectus corrupti nulla, fugiat libero qui sapiente! Impedit quos
+							laudantium culpa nisi consequuntur <br /> <br /> reprehenderit
+							modi optio mollitia sint facere quidem nihil rerum, eveniet harum
+							<strong>
+								{' '}
+								<em> exercitationem </em>{' '}
+							</strong>{' '}
+							officiis natus neque in dicta? Tenetur voluptate quo accusamus
+							nesciunt hic quidem maiores magnam magni velit.
+						</p>
+					</div>
 				</div>
 			</div>
-			<div className="circle watermark"></div>
-			<div className="square watermark"></div>
-			<div className="logo watermark">FH</div>
 		</section>
 	);
 }
