@@ -7,9 +7,8 @@ import PageTitle from '../components/PageTitle';
 function About(props) {
 	useEffect(() => {
 		// about page timeline
-		const aboutPageTL = TweenLite.timeline();
+		// const aboutPageTL = TweenLite.timeline();
 	}, []);
-
 	return (
 		<section className="about-page">
 			<div className="page-hero">

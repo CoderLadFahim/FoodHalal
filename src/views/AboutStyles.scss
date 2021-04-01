@@ -7,11 +7,15 @@
 		display: grid;
 		place-items: center;
 		margin-bottom: 20px;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			url('../assets/aboutPageBg.jpg');
+		background-size: cover;
 
 		.page-title {
 			text-align: center;
 			width: 60%;
 			overflow: visible;
+			box-sizing: content-box;
 		}
 
 		.page-title .title-text {
@@ -20,10 +24,10 @@
 
 		.page-title .bottom-border {
 			// display: none;
-			width: 75%;
-			height: 3px;
+			width: 60%;
+			height: 5px;
 			left: 50% !important;
-			bottom: -3px;
+			bottom: -5px;
 			transform: translateX(-50%);
 		}
 	}
@@ -93,4 +97,7 @@
 			font-size: 1.1rem;
 		}
 	}
+}
+
+@media only screen and (min-width: 600px) {
 }
