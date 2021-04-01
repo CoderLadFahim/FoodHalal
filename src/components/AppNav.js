@@ -27,7 +27,9 @@ function NavBar({ navToggler, navToggleState }) {
 			parentElement: { className },
 		},
 	}) => {
-		className === 'route-link' && navToggler();
+		if (window.innerWidth < 414) {
+			className === 'route-link' && navToggler();
+		}
 	};
 
 	return (

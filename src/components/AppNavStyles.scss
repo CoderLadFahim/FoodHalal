@@ -101,6 +101,17 @@ nav {
 		place-items: center;
 		border-bottom: 1px solid $lightpink;
 
+		.active-link {
+			// color: $lightpink;
+			border-bottom: 3px solid $orange;
+			font-weight: bold;
+			background: none;
+
+			&::after {
+				display: none !important;
+			}
+		}
+
 		ul.nav-links {
 			display: flex;
 			// border: 1px solid crimson;
@@ -118,48 +129,12 @@ nav {
 		a {
 			color: $white;
 		}
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-	.route-link {
-		font-size: 1.3rem;
-	}
-}
-
-@media only screen and (min-width: 1280px) {
-	nav {
-		height: 8vh;
-		border-width: 2px;
-		border: none;
-		// padding-top: 10px;
-
-		.active-link {
-			// color: $lightpink;
-			border-bottom: 3px solid $orange;
-			font-weight: bold;
-
-			&::after {
-				display: none !important;
-			}
-		}
-
-		.nav-links {
-			// border: 1px solid beige;
-			width: 50%;
-			justify-content: space-between;
-		}
-
-		.route-link {
-			font-size: 1rem;
-			// border: 1px solid crimson;
-			border-radius: 0;
-			flex: 0;
-		}
 
 		.route-link a {
 			position: relative;
 			transition: 200ms;
+			width: auto;
+			height: auto;
 
 			&::after {
 				content: '';
@@ -177,6 +152,65 @@ nav {
 				width: 100%;
 			}
 		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.route-link {
+		font-size: 1.3rem;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	nav {
+		height: 8vh;
+		border-width: 2px;
+		border: none;
+		// padding-top: 10px;
+
+		// .active-link {
+		// 	// color: $lightpink;
+		// 	border-bottom: 3px solid $orange;
+		// 	font-weight: bold;
+
+		// 	&::after {
+		// 		display: none !important;
+		// 	}
+		// }
+
+		.nav-links {
+			// border: 1px solid beige;
+			width: 50%;
+			justify-content: space-between;
+		}
+
+		.route-link {
+			font-size: 1rem;
+			// border: 1px solid crimson;
+			border-radius: 0;
+			flex: 1;
+		}
+
+		// .route-link a {
+		// 	position: relative;
+		// 	transition: 200ms;
+
+		// 	&::after {
+		// 		content: '';
+		// 		position: absolute;
+		// 		height: 3px;
+		// 		bottom: 0;
+		// 		left: 50%;
+		// 		transform: translateX(-50%);
+		// 		width: 0;
+		// 		background: $orange;
+		// 		transition: 150ms;
+		// 	}
+
+		// 	&:hover::after {
+		// 		width: 100%;
+		// 	}
+		// }
 	}
 }
 
