@@ -9,6 +9,7 @@ function About(props) {
 		// about page timeline
 		// const aboutPageTL = TweenLite.timeline();
 	}, []);
+
 	return (
 		<section className="about-page">
 			<div className="page-hero">

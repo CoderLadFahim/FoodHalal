@@ -28,7 +28,7 @@ function PageTitle(props) {
 
 	return (
 		<h1 className="page-title">
-			<span className="title-text">{splitText(props.children, 'tTL')}</span>
+			<span className="title-text">{props.children}</span>
 			<span className="bottom-border"></span>
 		</h1>
 	);

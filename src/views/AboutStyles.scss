@@ -7,9 +7,10 @@
 		display: grid;
 		place-items: center;
 		margin-bottom: 20px;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
 			url('../assets/aboutPageBg.jpg');
 		background-size: cover;
+		background-repeat: no-repeat;
 
 		.page-title {
 			text-align: center;
@@ -18,11 +19,11 @@
 			box-sizing: content-box;
 		}
 
-		.page-title .title-text {
+		.title-text {
 			font-size: 2.5rem;
 		}
 
-		.page-title .bottom-border {
+		.bottom-border {
 			// display: none;
 			width: 60%;
 			height: 5px;
@@ -52,7 +53,7 @@
 
 		.info-card {
 			width: 90%;
-			height: 200px;
+			height: 220px;
 			background: #222;
 			border-radius: 30px;
 			display: flex;
@@ -72,6 +73,7 @@
 		}
 
 		p {
+			width: 95%;
 			text-align: center;
 			font-size: 1.1rem;
 			font-family: $font2;
@@ -100,4 +102,89 @@
 }
 
 @media only screen and (min-width: 600px) {
+	.about-page {
+		.page-hero {
+			.title-text {
+				font-size: 3rem;
+			}
+
+			.bottom-border {
+				width: 50%;
+			}
+		}
+
+		.info-cards {
+			// border: 1px solid crimson;
+			.info-card {
+				width: 90%;
+				height: 250px;
+				margin: 20px 0;
+			}
+
+			h2 {
+				font-size: 2.5rem;
+			}
+
+			p {
+				font-size: 1.7rem;
+			}
+		}
+
+		.detailed-infos {
+			.info {
+				margin-bottom: 70px;
+			}
+			h1 {
+				font-size: 2.7rem;
+				margin-bottom: 30px;
+			}
+
+			p {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.about-page {
+		.page-hero {
+			.title-text {
+				font-size: 3.5rem;
+			}
+
+			.bottom-border {
+				// font-size: 3rem;
+				width: 45%;
+			}
+		}
+
+		.info-cards {
+			.info-card {
+				width: 80%;
+				height: 300px;
+			}
+
+			h2 {
+				font-size: 2.7rem;
+			}
+
+			p {
+				// width: 80%;
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.about-page {
+		.page-title .bottom-border {
+			width: 40%;
+		}
+
+		.info-cards .info-card {
+			width: 70%;
+		}
+	}
 }
