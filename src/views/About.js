@@ -14,7 +14,7 @@ function About(props) {
 		aboutPageTL
 			.from('.page-hero', {
 				duration: 0.85,
-				height: 0,
+				yPercent: -100,
 			})
 			.from('.page-title', {
 				duration: 0.5,

@@ -180,8 +180,14 @@
 
 @media only screen and (min-width: 1024px) {
 	.about-page {
-		.page-title .bottom-border {
-			width: 40%;
+		.page-title {
+			.title-text {
+				font-size: 4rem;
+			}
+
+			.bottom-border {
+				width: 35%;
+			}
 		}
 
 		.info-cards {
