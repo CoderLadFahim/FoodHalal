@@ -18,6 +18,7 @@
 			width: 60%;
 			overflow: visible;
 			box-sizing: content-box;
+			border: 1px solid crimson;
 		}
 
 		.title-text {
@@ -42,14 +43,17 @@
 		// align-items: center;
 		justify-content: space-around;
 
-		&::after {
-			content: '';
-			position: relative;
+		position: relative;
+
+		.line {
+			position: absolute;
 			display: block;
 			width: 70%;
-			height: 2px;
+			height: 4px;
 			background: #999;
-			top: 50px;
+			bottom: -50px;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 
 		.info-card {
@@ -105,13 +109,17 @@
 @media only screen and (min-width: 600px) {
 	.about-page {
 		.page-hero {
+			.page-title {
+				width: 45%;
+			}
+
 			.title-text {
 				font-size: 3rem;
 			}
 
-			.bottom-border {
-				width: 50%;
-			}
+			// .bottom-border {
+			// 	width: 50%;
+			// }
 		}
 
 		.info-cards {
@@ -136,12 +144,12 @@
 				margin-bottom: 70px;
 			}
 			h1 {
-				font-size: 2.7rem;
+				font-size: 2.5rem;
 				margin-bottom: 30px;
 			}
 
 			p {
-				font-size: 1.5rem;
+				font-size: 1.3rem;
 			}
 		}
 	}
@@ -156,7 +164,7 @@
 
 			.bottom-border {
 				// font-size: 3rem;
-				width: 45%;
+				// width: 45%;
 			}
 		}
 
@@ -180,8 +188,16 @@
 
 @media only screen and (min-width: 1024px) {
 	.about-page {
-		.page-title .bottom-border {
-			width: 40%;
+		.page-hero .page-title {
+			width: 35%;
+
+			.title-text {
+				font-size: 4rem;
+			}
+
+			.bottom-border {
+				// width: 35%;
+			}
 		}
 
 		.info-cards {
@@ -203,13 +219,15 @@
 
 @media only screen and (min-width: 1280px) {
 	.about-page {
-		.page-title {
+		.page-hero .page-title {
+			width: 20%;
+
 			.title-text {
 				font-size: 3rem;
 			}
 
 			.bottom-border {
-				width: 25%;
+				// width: 25%;
 			}
 		}
 
@@ -228,7 +246,7 @@
 				width: 30%;
 				height: 250px;
 				// background: none;
-				border: 2px solid $beige;
+				// border: 2px solid $beige;
 			}
 
 			h2 {
@@ -252,13 +270,14 @@
 
 @media only screen and (min-width: 1920px) {
 	.about-page {
-		.page-title {
+		.page-hero .page-title {
 			.title-text {
 				font-size: 3.5rem;
 			}
 
 			.bottom-border {
-				width: 20%;
+				width: 50%;
+				height: 7px;
 			}
 		}
 
@@ -266,7 +285,7 @@
 			// margin-top: 90px;
 
 			.info-card {
-				height: 350px;
+				height: 300px;
 				border-width: 3px;
 			}
 
@@ -280,7 +299,7 @@
 		}
 
 		.detailed-infos {
-			margin-top: 110px;
+			margin-top: 145px;
 
 			h1 {
 				font-size: 3rem;

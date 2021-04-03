@@ -95,12 +95,18 @@ nav {
 		// padding-top: 10px;
 		background: $gray2;
 		padding: 0;
-		position: static;
+		position: fixed;
+		top: 0;
+		z-index: 999;
 		height: 5vh;
 		width: 100%;
 		display: grid;
 		place-items: center;
 		border-bottom: 1px solid $lightpink;
+
+		&.mobile-hide {
+			right: 0;
+		}
 
 		.active-link {
 			// color: $lightpink;
@@ -165,8 +171,8 @@ nav {
 @media only screen and (min-width: 1280px) {
 	nav {
 		height: 8vh;
-		border-width: 2px;
-		border: none;
+		border-width: 1px;
+		// border: none;
 		// padding-top: 10px;
 
 		// .active-link {

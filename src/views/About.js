@@ -14,7 +14,7 @@ function About(props) {
 		aboutPageTL
 			.from('.page-hero', {
 				duration: 0.85,
-				height: 0,
+				yPercent: -100,
 			})
 			.from('.page-title', {
 				duration: 0.5,
@@ -29,8 +29,13 @@ function About(props) {
 				duration: 0.85,
 				yPercent: 30,
 				opacity: 0,
-				stagger: 0.3,
+				stagger: 0.85 / 3,
 				ease: 'power1.out',
+			})
+			.from('.line', {
+				duration: 0.5,
+				width: 0,
+				ease: 'power2.out',
 			});
 	}, []);
 
@@ -54,6 +59,8 @@ function About(props) {
 						<h2>Amet Consectetur</h2>
 						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
 					</div>
+
+					<span className="line"></span>
 				</div>
 
 				<div className="detailed-infos">
