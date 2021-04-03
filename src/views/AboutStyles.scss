@@ -11,6 +11,7 @@
 			url('../assets/aboutPageBg.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
+		// background-attachment: fixed;
 
 		.page-title {
 			text-align: center;
@@ -162,16 +163,16 @@
 		.info-cards {
 			.info-card {
 				width: 80%;
-				height: 300px;
+				height: 350px;
 			}
 
 			h2 {
-				font-size: 2.7rem;
+				font-size: 3rem;
 			}
 
 			p {
 				// width: 80%;
-				font-size: 2rem;
+				font-size: 1.95rem;
 			}
 		}
 	}
@@ -183,8 +184,111 @@
 			width: 40%;
 		}
 
-		.info-cards .info-card {
-			width: 70%;
+		.info-cards {
+			.info-card {
+				width: 80%;
+				height: 400px;
+			}
+
+			h2 {
+				font-size: 3.3rem;
+			}
+
+			p {
+				font-size: 2.5rem;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.about-page {
+		.page-title {
+			.title-text {
+				font-size: 3rem;
+			}
+
+			.bottom-border {
+				width: 25%;
+			}
+		}
+
+		.info-cards {
+			// border: 1px solid crimson;
+			justify-content: space-between;
+			min-height: 200px;
+			margin-top: 25px;
+
+			&::after {
+				margin: 0 auto;
+				top: 40px;
+			}
+
+			.info-card {
+				width: 30%;
+				height: 250px;
+				// background: none;
+				border: 2px solid $beige;
+			}
+
+			h2 {
+				font-size: 2rem;
+			}
+
+			p {
+				font-size: 1.5rem;
+				width: 90%;
+				// font-weight: bold;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.about-page .info-cards {
+		margin-top: 65px;
+	}
+}
+
+@media only screen and (min-width: 1920px) {
+	.about-page {
+		.page-title {
+			.title-text {
+				font-size: 3.5rem;
+			}
+
+			.bottom-border {
+				width: 20%;
+			}
+		}
+
+		.info-cards {
+			// margin-top: 90px;
+
+			.info-card {
+				height: 350px;
+				border-width: 3px;
+			}
+
+			h2 {
+				font-size: 2.7rem;
+			}
+
+			p {
+				font-size: 1.85rem;
+			}
+		}
+
+		.detailed-infos {
+			margin-top: 110px;
+
+			h1 {
+				font-size: 3rem;
+			}
+
+			p {
+				font-size: 2rem;
+			}
 		}
 	}
 }
