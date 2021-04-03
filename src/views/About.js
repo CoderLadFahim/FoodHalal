@@ -7,7 +7,31 @@ import PageTitle from '../components/PageTitle';
 function About(props) {
 	useEffect(() => {
 		// about page timeline
-		// const aboutPageTL = TweenLite.timeline();
+		const aboutPageTL = TweenLite.timeline({
+			defaults: { ease: 'power1.out' },
+		});
+
+		aboutPageTL
+			.from('.page-hero', {
+				duration: 0.85,
+				height: 0,
+			})
+			.from('.page-title', {
+				duration: 0.5,
+				y: 50,
+				opacity: 0,
+			})
+			.from('.page-title .bottom-border', {
+				duration: 0.3,
+				width: 0,
+			})
+			.from('.info-card', {
+				duration: 0.85,
+				yPercent: 30,
+				opacity: 0,
+				stagger: 0.3,
+				ease: 'power1.out',
+			});
 	}, []);
 
 	return (
