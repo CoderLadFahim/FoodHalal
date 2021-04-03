@@ -64,6 +64,7 @@
 
 @media only screen and (min-width: 600px) {
 	.contact-page {
+		margin-top: 85px !important;
 		.submit-btn {
 			padding: 10px 35px;
 			font-size: 1.2rem;
@@ -74,6 +75,8 @@
 
 @media only screen and (min-width: 1024px) {
 	.contact-page {
+		margin-top: 90px !important;
+
 		textarea {
 			font-size: 1.3rem;
 		}
