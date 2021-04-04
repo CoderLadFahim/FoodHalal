@@ -18,6 +18,7 @@
 			width: 60%;
 			overflow: visible;
 			box-sizing: content-box;
+			border: 1px solid crimson;
 		}
 
 		.title-text {
@@ -108,13 +109,17 @@
 @media only screen and (min-width: 600px) {
 	.about-page {
 		.page-hero {
+			.page-title {
+				width: 45%;
+			}
+
 			.title-text {
 				font-size: 3rem;
 			}
 
-			.bottom-border {
-				width: 50%;
-			}
+			// .bottom-border {
+			// 	width: 50%;
+			// }
 		}
 
 		.info-cards {
@@ -156,11 +161,6 @@
 			.title-text {
 				font-size: 3.5rem;
 			}
-
-			.bottom-border {
-				// font-size: 3rem;
-				width: 45%;
-			}
 		}
 
 		.info-cards {
@@ -183,13 +183,11 @@
 
 @media only screen and (min-width: 1024px) {
 	.about-page {
-		.page-title {
+		.page-hero .page-title {
+			width: 35%;
+
 			.title-text {
 				font-size: 4rem;
-			}
-
-			.bottom-border {
-				width: 35%;
 			}
 		}
 
@@ -212,13 +210,11 @@
 
 @media only screen and (min-width: 1280px) {
 	.about-page {
-		.page-title {
+		.page-hero .page-title {
+			width: 20%;
+
 			.title-text {
 				font-size: 3rem;
-			}
-
-			.bottom-border {
-				width: 25%;
 			}
 		}
 
@@ -261,13 +257,13 @@
 
 @media only screen and (min-width: 1920px) {
 	.about-page {
-		.page-title {
+		.page-hero .page-title {
 			.title-text {
-				font-size: 5rem;
+				font-size: 3.5rem;
 			}
 
 			.bottom-border {
-				width: 30%;
+				width: 50%;
 				height: 7px;
 			}
 		}
