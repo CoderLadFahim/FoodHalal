@@ -14,6 +14,7 @@ nav {
 	.active-link {
 		background: $pink;
 		color: $white;
+		font-weight: bold;
 		transition: 200ms;
 	}
 
@@ -102,16 +103,16 @@ nav {
 		width: 100%;
 		display: grid;
 		place-items: center;
-		border-bottom: 1px solid $lightpink;
+		// border-bottom: 1px solid $lightpink;
+		box-shadow: 0px 2px 5px #191919;
 
 		&.mobile-hide {
 			right: 0;
 		}
 
 		.active-link {
-			// color: $lightpink;
+			// color: $orange;
 			border-bottom: 3px solid $orange;
-			font-weight: bold;
 			background: none;
 
 			&::after {
@@ -135,6 +136,7 @@ nav {
 
 		a {
 			color: $white;
+			font-weight: normal;
 		}
 
 		.route-link a {
@@ -171,8 +173,8 @@ nav {
 @media only screen and (min-width: 1280px) {
 	nav {
 		height: 8vh;
-		border-width: 1px;
 		// border: none;
+		// border-width: 1px;
 		// padding-top: 10px;
 
 		// .active-link {

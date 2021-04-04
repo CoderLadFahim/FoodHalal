@@ -32,7 +32,7 @@ function About(props) {
 				stagger: 0.85 / 3,
 				ease: 'power1.out',
 			})
-			.from('.line', {
+			.from('.info-cards .line', {
 				duration: 0.5,
 				width: 0,
 				ease: 'power2.out',
