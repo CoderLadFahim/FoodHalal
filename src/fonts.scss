@@ -1,0 +1,67 @@
+// Poppins
+@font-face {
+	font-family: 'Poppins';
+	src: url('./assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Poppins Bold';
+	src: url('./assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Poppins Semibold';
+	src: url('./assets/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+}
+
+// PT Sans Caption
+@font-face {
+	font-family: 'PT Sans Caption';
+	src: url('./assets/fonts/PT_Sans_Caption/PTSansCaption-Regular.ttf')
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'PT Sans Caption Bold';
+	src: url('./assets/fonts/PT_Sans_Caption/PTSansCaption-Bold.ttf')
+		format('truetype');
+}
+
+// Nunito
+@font-face {
+	font-family: 'Nunito';
+	src: url('./assets/fonts/Nunito/Nunito-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Nunito Bold';
+	src: url('./assets/fonts/Nunito/Nunito-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Nunito Semibold';
+	src: url('./assets/fonts/Nunito/Nunito-SemiBold.ttf') format('truetype');
+}
+
+// Atma
+@font-face {
+	font-family: 'Atma';
+	src: url('./assets/fonts/Atma/Atma-SemiBold.ttf') format('truetype');
+}
+
+// fonts
+$fallback-fonts: Tahoma, Arial, Helvetica, sans-serif;
+
+$logo-font: 'Atma', $fallback-fonts;
+
+$font1: 'Poppins', $fallback-fonts;
+$font1-bold: 'Poppins Bold', $fallback-fonts;
+$font1-semibold: 'Poppins Semibold', $fallback-fonts;
+
+$font2: 'PT Sans Caption', $fallback-fonts;
+$font2-bold: 'PT Sans Caption Bold', $fallback-fonts;
+$font2-semibold: 'PT Sans Caption Semibold', $fallback-fonts;
+
+$font3: 'Nunito', $fallback-fonts;
+$font3-bold: 'Nunito Bold', $fallback-fonts;
+$font3-semibold: 'Nunito Semibold', $fallback-fonts;

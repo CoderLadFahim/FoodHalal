@@ -10,6 +10,7 @@
 
 	.title-text {
 		font-size: 2rem;
+		font-family: $font1-bold;
 	}
 
 	& > span.bottom-border {
@@ -26,9 +27,6 @@
 	.page-title {
 		margin-bottom: 35px;
 		width: 32%;
-		& > span.bottom-border {
-			// width: 50%;
-		}
 	}
 }
 
@@ -60,10 +58,6 @@
 			font-size: 2rem;
 		}
 
-		.tTl {
-			position: relative;
-		}
-
 		& > span.bottom-border {
 			width: 30%;
 			height: 4px;
@@ -73,6 +67,9 @@
 
 @media only screen and (min-width: 1440px) {
 	.page-title {
-		// margin-top: 120px;
+		margin-top: 120px;
+		span.bottom-border {
+			width: 20%;
+		}
 	}
 }
