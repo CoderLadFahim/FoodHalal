@@ -30,7 +30,7 @@
 			width: 60%;
 			height: 5px;
 			left: 50% !important;
-			bottom: -5px;
+			bottom: 0px;
 			transform: translateX(-50%);
 		}
 	}
@@ -73,7 +73,7 @@
 		h2 {
 			font-size: 2rem;
 			color: $beige;
-			font-family: $font3;
+			font-family: $font2;
 			text-align: center;
 		}
 
@@ -81,7 +81,7 @@
 			width: 95%;
 			text-align: center;
 			font-size: 1.1rem;
-			font-family: $font2;
+			font-family: $font3;
 		}
 	}
 
@@ -97,11 +97,13 @@
 		h1 {
 			color: $pink;
 			font-size: 1.85rem;
-			margin-bottom: 10px;
+			font-family: $font1-bold;
+			margin-bottom: 5px;
 		}
 
 		p {
 			font-size: 1.1rem;
+			font-family: $font3;
 		}
 	}
 }
@@ -145,7 +147,7 @@
 			}
 			h1 {
 				font-size: 2.5rem;
-				margin-bottom: 30px;
+				// margin-bottom: 30px;
 			}
 
 			p {
@@ -246,12 +248,25 @@
 				// font-weight: bold;
 			}
 		}
+
+		.detailed-infos {
+			h1 {
+				font-size: 2rem;
+				margin-bottom: 15px;
+			}
+		}
 	}
 }
 
 @media only screen and (min-width: 1440px) {
-	.about-page .info-cards {
-		margin-top: 65px;
+	.about-page {
+		.page-title {
+			margin-top: 70px;
+		}
+
+		.info-cards {
+			margin-top: 65px;
+		}
 	}
 }
 

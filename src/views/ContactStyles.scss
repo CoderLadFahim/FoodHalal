@@ -2,16 +2,17 @@
 
 .contact-page {
 	.contact-form {
-		height: 75vh;
+		height: 82vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
+		margin-bottom: 50px;
 	}
 
 	textarea {
 		background: $gray2;
-		color: $beige;
+		color: $lightbeige;
 		width: 95%;
 		height: 50%;
 		border-radius: 5px;
@@ -24,7 +25,7 @@
 			family: $font3;
 			size: 1rem;
 		}
-		transition: 200ms;
+		transition: 100ms;
 
 		&:focus,
 		&:valid {
@@ -33,9 +34,9 @@
 	}
 
 	.submit-btn {
-		padding: 5px 30px;
+		padding: 5px 25px;
 		border-radius: 10px;
-		font-family: $font1;
+		font-family: $font1-bold;
 		text-transform: uppercase;
 		background: $pink;
 		color: $white;
@@ -62,11 +63,26 @@
 	}
 }
 
+@media only screen and (min-width: 414px) {
+	.contact-page .contact-form {
+		margin-bottom: 70px;
+	}
+}
+
 @media only screen and (min-width: 600px) {
 	.contact-page {
 		margin-top: 85px !important;
+		.contact-form {
+			margin-bottom: 110px;
+			height: 78vh;
+		}
+
+		textarea {
+			font-size: 1.5rem;
+		}
+
 		.submit-btn {
-			padding: 10px 35px;
+			padding: 10px 30px;
 			font-size: 1.2rem;
 			border-radius: 15px;
 		}
@@ -89,6 +105,7 @@
 			height: 65vh;
 			margin: 0 auto;
 			margin-top: -50px;
+			margin-bottom: 140px;
 			width: 95%;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -111,6 +128,7 @@
 		}
 
 		.submit-btn {
+			padding: 10px 25px;
 			justify-self: center;
 			align-self: end;
 			grid-column: 2;
@@ -124,8 +142,28 @@
 
 @media only screen and (min-width: 1440px) {
 	.contact-page {
+		.page-title {
+			.title-text {
+				font-size: 3rem;
+			}
+
+			.bottom-border {
+				height: 5px;
+				width: 30%;
+			}
+		}
+
+		.contact-form {
+			margin-bottom: 250px;
+
+			textarea {
+				font-size: 2rem;
+			}
+		}
+
 		.submit-btn {
 			bottom: 7%;
+			font-size: 1.5rem;
 		}
 	}
 }

@@ -1,11 +1,21 @@
+@import './fonts.scss';
+
 // fonts
 $fallback-fonts: Tahoma, Arial, Helvetica, sans-serif;
 
 $logo-font: 'Atma', $fallback-fonts;
 
 $font1: 'Poppins', $fallback-fonts;
+$font1-bold: 'Poppins Bold', $fallback-fonts;
+$font1-semibold: 'Poppins Semibold', $fallback-fonts;
+
 $font2: 'PT Sans Caption', $fallback-fonts;
+$font2-bold: 'PT Sans Caption Bold', $fallback-fonts;
+$font2-semibold: 'PT Sans Caption Semibold', $fallback-fonts;
+
 $font3: 'Nunito', $fallback-fonts;
+$font3-bold: 'Nunito Bold', $fallback-fonts;
+$font3-semibold: 'Nunito Semibold', $fallback-fonts;
 
 // colors
 $gray1: #303030;

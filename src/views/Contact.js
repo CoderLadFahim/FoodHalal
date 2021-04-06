@@ -17,8 +17,16 @@ function Contact(props) {
 		elementsToAnimate.pop();
 
 		contactPageTimeline
+			.from('.page-title', {
+				duration: 0.5,
+				yPercent: 100,
+				opacity: 0,
+			})
+			.from('.bottom-border', {
+				duration: 0.5,
+				width: 0,
+			})
 			.from(elementsToAnimate, {
-				delay: 1,
 				duration: 1,
 				opacity: 0,
 				y: -50,
