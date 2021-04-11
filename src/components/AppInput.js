@@ -1,11 +1,18 @@
 import './AppInputStyles.scss';
 
-function AppInput(props) {
+function AppInput({ content, contentSetter, children }) {
 	return (
 		<div className="app-input">
-			<input type="text" name="name" autoComplete="off" required />
+			<input
+				value={content}
+				onChange={e => contentSetter(prevContent => e.target.value)}
+				type="text"
+				name="name"
+				autoComplete="off"
+				required
+			/>
 			<label htmlFor="name" className="input-label">
-				<span className="label-content">{props.children}</span>
+				<span className="label-content">{children}</span>
 			</label>
 		</div>
 	);

@@ -14,8 +14,8 @@ nav {
 	.active-link {
 		background: $pink;
 		color: $white;
-		font-weight: bold;
 		transition: 200ms;
+		font-family: $font1-bold;
 	}
 
 	&.mobile-hide {
@@ -29,7 +29,7 @@ nav {
 	a {
 		text-decoration: none;
 		color: $pink;
-		font-weight: bold;
+		font-family: $font1-semibold;
 		width: 100%;
 		height: 100%;
 		display: grid;
@@ -58,30 +58,6 @@ nav {
 			overflow: hidden;
 		}
 	}
-
-	// .hamburger {
-	// 	width: 50px;
-	// 	height: 50px;
-	// 	// background: $beige;
-	// 	border-radius: 50%;
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	align-items: center;
-	// 	justify-content: space-evenly;
-	// 	padding: 6px 0;
-	// 	z-index: 99;
-	// 	position: absolute;
-
-	// 	left: -250px;
-	// 	bottom: 20px;
-
-	// 	.line {
-	// 		width: 65%;
-	// 		height: 5px;
-	// 		background: $orange;
-	// 		border-radius: 10px;
-	// 	}
-	// }
 }
 
 @media only screen and (min-width: 414px) {
@@ -112,20 +88,19 @@ nav {
 
 		.active-link {
 			// color: $orange;
-			border-bottom: 3px solid $orange;
+			// border-bottom: 3px solid $orange;
 			background: none;
+			color: $beige;
 
 			&::after {
-				display: none !important;
+				// display: none !important;
+				width: 100% !important;
 			}
 		}
 
 		ul.nav-links {
 			display: flex;
-			// border: 1px solid crimson;
-			// width: 65%;
 			height: 75%;
-			// justify-content: space-between;
 		}
 
 		ul li {
@@ -136,7 +111,7 @@ nav {
 
 		a {
 			color: $white;
-			font-weight: normal;
+			font-family: $font1;
 		}
 
 		.route-link a {
@@ -173,19 +148,6 @@ nav {
 @media only screen and (min-width: 1280px) {
 	nav {
 		height: 8vh;
-		// border: none;
-		// border-width: 1px;
-		// padding-top: 10px;
-
-		// .active-link {
-		// 	// color: $lightpink;
-		// 	border-bottom: 3px solid $orange;
-		// 	font-weight: bold;
-
-		// 	&::after {
-		// 		display: none !important;
-		// 	}
-		// }
 
 		.nav-links {
 			// border: 1px solid beige;
@@ -199,27 +161,6 @@ nav {
 			border-radius: 0;
 			flex: 1;
 		}
-
-		// .route-link a {
-		// 	position: relative;
-		// 	transition: 200ms;
-
-		// 	&::after {
-		// 		content: '';
-		// 		position: absolute;
-		// 		height: 3px;
-		// 		bottom: 0;
-		// 		left: 50%;
-		// 		transform: translateX(-50%);
-		// 		width: 0;
-		// 		background: $orange;
-		// 		transition: 150ms;
-		// 	}
-
-		// 	&:hover::after {
-		// 		width: 100%;
-		// 	}
-		// }
 	}
 }
 

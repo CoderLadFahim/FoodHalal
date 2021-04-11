@@ -8,6 +8,7 @@ import Menu from './views/Menu';
 import About from './views/About';
 import Contact from './views/Contact';
 import TableBook from './views/TableBook';
+import AppFooter from './components/AppFooter';
 
 // import Opening from './components/Opening';
 // import NavBar from './components/NavBar';
@@ -51,6 +52,7 @@ function App() {
 					</Route>
 				</Switch>
 			</section>
+			<AppFooter></AppFooter>
 		</Router>
 	);
 }
