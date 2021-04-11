@@ -2,7 +2,6 @@
 
 .contact-page {
 	.contact-form {
-		height: 82vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -29,11 +28,11 @@
 
 		&:focus,
 		&:valid {
-			border: 2px solid $pink;
+			border-bottom: 2px solid $beige;
 		}
 	}
 
-	.submit-btn {
+	.btn {
 		padding: 5px 25px;
 		border-radius: 10px;
 		font-family: $font1-bold;
@@ -44,22 +43,59 @@
 		border: none;
 		outline: none;
 		transition: 150ms;
-		transform: translateY(-50px);
-		opacity: 0;
 
-		&:hover {
+		&.submit-btn {
+			opacity: 0;
+			transform: translateY(-50px);
+		}
+
+		&.submit-btn:hover {
 			transform: scale(1.05);
 			cursor: pointer;
 		}
 
 		&:active {
-			margin-bottom: -5px;
+			border: 1px solid $white;
 		}
 
 		&.disabled {
 			background-color: #999;
 			pointer-events: none;
 		}
+	}
+
+	.content-container {
+		height: 82vh;
+		margin-bottom: 50px;
+	}
+
+	.confirmation-msg {
+		// border: 1px solid crimson;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		h3 {
+			text-align: center;
+			margin-bottom: 50px;
+			font-size: 1.5rem;
+		}
+
+		.btn {
+			font-size: 1.5rem;
+			padding: 7px 35px;
+
+			// &:hover {
+			// 	transform: translateY(10px);
+			// }
+		}
+	}
+}
+
+@media only screen and (min-width: 414px) {
+	.contact-page .content-container {
+		margin-bottom: 70px;
 	}
 }
 
@@ -72,7 +108,7 @@
 @media only screen and (min-width: 600px) {
 	.contact-page {
 		margin-top: 85px !important;
-		.contact-form {
+		.content-container {
 			margin-bottom: 110px;
 			height: 78vh;
 		}
@@ -81,10 +117,14 @@
 			font-size: 1.5rem;
 		}
 
-		.submit-btn {
+		.btn {
 			padding: 10px 30px;
 			font-size: 1.2rem;
 			border-radius: 15px;
+
+			&:hover {
+				cursor: pointer;
+			}
 		}
 	}
 }
@@ -96,17 +136,22 @@
 		textarea {
 			font-size: 1.3rem;
 		}
+
+		.confirmation-msg {
+			h3 {
+				font-size: 2.5rem;
+			}
+
+			.btn {
+				font-size: 1.5rem;
+			}
+		}
 	}
 }
 
 @media only screen and (min-width: 1280px) {
 	.contact-page {
 		.contact-form {
-			height: 65vh;
-			margin: 0 auto;
-			margin-top: -50px;
-			margin-bottom: 140px;
-			width: 95%;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: repeat(3, 1fr);
@@ -127,15 +172,24 @@
 			font-size: 1.2rem;
 		}
 
-		.submit-btn {
+		.btn {
 			padding: 10px 25px;
-			justify-self: center;
-			align-self: end;
-			grid-column: 2;
-			position: absolute;
-			left: 50%;
-			bottom: 5%;
-			transform: translateX(-50%) translateY(-50px);
+
+			&.submit-btn,
+			&.disabled {
+				position: absolute;
+				left: 50%;
+				bottom: 5%;
+				transform: translateX(-50%) translateY(-50px);
+			}
+		}
+
+		.content-container {
+			width: 95%;
+			height: 65vh;
+			margin: 0 auto;
+			margin-top: -50px;
+			margin-bottom: 140px;
 		}
 	}
 }
@@ -153,15 +207,15 @@
 			}
 		}
 
-		.contact-form {
-			margin-bottom: 250px;
-
-			textarea {
-				font-size: 2rem;
-			}
+		.contact-form textarea {
+			font-size: 2rem;
 		}
 
-		.submit-btn {
+		.content-container {
+			margin-bottom: 250px;
+		}
+
+		.btn {
 			bottom: 7%;
 			font-size: 1.5rem;
 		}
