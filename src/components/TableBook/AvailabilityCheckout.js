@@ -23,5 +23,5 @@ export default function AvailabilityCheckout({ availabilityState }) {
 
 	const elementToShow = showEditBtnBool ? editBtn : availabilityMsg;
 
-	return { elementToShow };
+	return elementToShow;
 }

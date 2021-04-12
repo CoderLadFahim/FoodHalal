@@ -3,7 +3,6 @@ import './DinerDetailsStyles.scss';
 
 import SectionTitle from './SectionTitle';
 import AppInput from '../AppInput';
-import FormButton from '../FormButton.js';
 
 export default function DinerDetails() {
 	const [name, setName] = useState('');

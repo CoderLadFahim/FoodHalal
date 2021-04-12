@@ -6,11 +6,11 @@ import PageTitle from '../components/PageTitle';
 
 function TableBook(props) {
 	return (
-		<form className="table-booking-page wrapper">
+		<section className="table-booking-page wrapper">
 			<PageTitle> Book a Table </PageTitle>
 
-			<DinerDetails></DinerDetails>
-		</form>
+			<TableDetails></TableDetails>
+		</section>
 	);
 }
 
