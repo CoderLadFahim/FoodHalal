@@ -1,12 +1,12 @@
 import './AppInputStyles.scss';
 
-function AppInput({ content, contentSetter, children }) {
+function AppInput({ type, content, contentSetter, children }) {
 	return (
 		<div className="app-input">
 			<input
 				value={content}
 				onChange={e => contentSetter(prevContent => e.target.value)}
-				type="text"
+				type={type || 'text'}
 				name="name"
 				autoComplete="off"
 				required

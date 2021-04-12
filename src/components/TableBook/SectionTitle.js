@@ -1,7 +1,7 @@
 import './SectionTitleStyles.scss';
 
 const SectionTitle = ({ children }) => (
-	<h1 className="section-title">{children}</h1>
+	<h3 className="section-title">{children}</h3>
 );
 
 export default SectionTitle;

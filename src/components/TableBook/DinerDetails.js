@@ -1,17 +1,30 @@
+import { useState } from 'react';
+import './DinerDetailsStyles.scss';
+
 import SectionTitle from './SectionTitle';
 import AppInput from '../AppInput';
 
 export default function DinerDetails() {
+	const [name, setName] = useState('');
+	const [cell, setCell] = useState('');
+	const [email, setEmail] = useState('');
+
 	return (
-		<section className="diner-details details-input">
+		<form className="diner-details details-input">
 			<SectionTitle>
 				<span className="detail-type">2</span> Diner Details
 			</SectionTitle>
 
-			<AppInput>Main Diner Name</AppInput>
-			<AppInput>Main Diner Cell</AppInput>
-			<AppInput>Main Diner Email (optional)</AppInput>
+			<AppInput content={name} contentSetter={setName}>
+				Main Diner Name
+			</AppInput>
+			<AppInput type="number" content={cell} contentSetter={setCell}>
+				Main Diner Cell
+			</AppInput>
+			<AppInput content={email} contentSetter={setEmail}>
+				Main Diner Email (optional)
+			</AppInput>
 			<button className="btn"> Confirm Table </button>
-		</section>
+		</form>
 	);
 }
