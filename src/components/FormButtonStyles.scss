@@ -1,0 +1,57 @@
+@import '../index.scss';
+
+.btn {
+	padding: 5px 25px;
+	border-radius: 10px;
+	font-family: $font1-bold;
+	text-transform: uppercase;
+	background: $pink;
+	color: $white;
+	font-weight: bold;
+	border: none;
+	outline: none;
+	transition: 150ms;
+
+	&.submit-btn {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+
+	&.submit-btn:hover {
+		transform: scale(1.05);
+		cursor: pointer;
+	}
+
+	&:active {
+		border: 1px solid $white;
+	}
+
+	&.disabled {
+		background-color: #999;
+		pointer-events: none;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.btn {
+		padding: 10px 30px;
+		font-size: 1.2rem;
+		border-radius: 15px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.btn {
+		padding: 10px 25px;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.btn {
+		font-size: 1.5rem;
+	}
+}

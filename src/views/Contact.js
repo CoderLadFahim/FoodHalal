@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 
 import AppInput from '../components/AppInput';
 import PageTitle from '../components/PageTitle';
+import FormButton from '../components/FormButton';
 
 function Contact(props) {
 	// relevant states for this component to function
@@ -63,7 +64,7 @@ function Contact(props) {
 				required
 				placeholder="Tell us your issue"
 			></textarea>
-			<button className={submitBtnClass}>Submit</button>
+			<FormButton disableBtn={!requiredFieldsFilled}> Submit </FormButton>
 		</form>
 	);
 
