@@ -44,11 +44,11 @@ function NavBar({ navToggler, navToggleState }) {
 						Menu
 					</NavLink>
 				</li>
-				{/* <li className="route-link">
+				<li className="route-link">
 					<NavLink activeClassName="active-link" to="/book">
-						Book a Table
+						Book
 					</NavLink>
-				</li> */}
+				</li>
 				<li className="route-link">
 					<NavLink activeClassName="active-link" to="/contact">
 						Contact

@@ -15,6 +15,20 @@ body {
 	overflow-x: hidden;
 }
 
+// classes
+.logo-grad {
+	background: -webkit-linear-gradient(to right, $orange 0%, $pink 100%);
+	background: -moz-linear-gradient(to right, $orange 0%, $pink 100%);
+	background: linear-gradient(to right, $orange 0%, $pink 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.wrapper {
+	width: 85%;
+	margin: 0 auto;
+}
+
 @media only screen and (min-width: 600px) {
 	body {
 		margin-top: 5vh;
