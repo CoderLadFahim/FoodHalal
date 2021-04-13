@@ -6,7 +6,7 @@ import DetailsInput from './DetailsInput';
 import SectionTitle from './SectionTitle';
 import CountControl from '../CountControl';
 
-function TableDetails() {
+function TableDetailsForm() {
 	// getting only the tableDetails and its setter from the TableBookContext
 	const { updateTableDetails, tableDetails } = useContext(TableBookContext);
 
@@ -76,4 +76,4 @@ function TableDetails() {
 	);
 }
 
-export default TableDetails;
+export default TableDetailsForm;

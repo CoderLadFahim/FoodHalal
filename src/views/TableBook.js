@@ -1,7 +1,7 @@
 import './TableBookStyles.scss';
 
-import TableDetails from '../components/TableBook/TableDetails';
-// import DinerDetails from '../components/TableBook/DinerDetails';
+import TableDetailsForm from '../components/TableBook/TableDetailsForm';
+import DinerDetailsForm from '../components/TableBook/DinerDetailsForm';
 import PageTitle from '../components/PageTitle';
 
 function TableBook(props) {
@@ -9,7 +9,8 @@ function TableBook(props) {
 		<section className="table-booking-page wrapper">
 			<PageTitle> Book a Table </PageTitle>
 
-			<TableDetails></TableDetails>
+			{/* <TableDetailsForm></TableDetailsForm> */}
+			<DinerDetailsForm></DinerDetailsForm>
 		</section>
 	);
 }

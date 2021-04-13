@@ -17,11 +17,11 @@ function TableBookContextProvider(props) {
 		dinerEmail: '',
 	});
 
-	const updateTableDetails = newDetails =>
-		setTableDetails(prevState => (prevState = newDetails));
+	const updateTableDetails = newTableDetails =>
+		setTableDetails(prevTableDetails => (prevTableDetails = newTableDetails));
 
-	const updateDinerDetails = (name, cell, email = '') =>
-		setDinerDetails({ dinerName: name, dinerCell: cell, dinerEmail: email });
+	const updateDinerDetails = newDinerDetails =>
+		setDinerDetails(prevDinerDetails => (prevDinerDetails = newDinerDetails));
 
 	return (
 		<TableBookContext.Provider
