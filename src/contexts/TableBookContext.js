@@ -2,7 +2,7 @@ import { useState, createContext } from 'react';
 
 export const TableBookContext = createContext();
 
-// TableBookContext stores TableDetails, DinerDetails and their respective setters
+// TableBookContext stores TableDetails, DinerDetails and their respective setters and a hard resetter
 
 function TableBookContextProvider(props) {
 	const [tableDetails, setTableDetails] = useState({
@@ -23,6 +23,16 @@ function TableBookContextProvider(props) {
 	const updateDinerDetails = newDinerDetails =>
 		setDinerDetails(prevDinerDetails => (prevDinerDetails = newDinerDetails));
 
+	const resetFields = () => {
+		setTableDetails(
+			prevState => (prevState = { dinersCount: 1, dineDate: '', dineTime: '' })
+		);
+		setDinerDetails(
+			prevState =>
+				(prevState = { dinerName: '', dinerCell: '', dinerEmail: '' })
+		);
+	};
+
 	return (
 		<TableBookContext.Provider
 			value={{
@@ -30,6 +40,7 @@ function TableBookContextProvider(props) {
 				dinerDetails,
 				updateTableDetails,
 				updateDinerDetails,
+				resetFields,
 			}}
 		>
 			{props.children}

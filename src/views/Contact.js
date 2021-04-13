@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import AppInput from '../components/AppInput';
 import PageTitle from '../components/PageTitle';
 import FormButton from '../components/FormButton';
+import FormSubmissionView from '../components/FormSubmissionView';
 
 function Contact(props) {
 	// relevant states for this component to function
@@ -68,13 +69,17 @@ function Contact(props) {
 		</form>
 	);
 
+	// const formSubmissionView = (
+	// 	<div className="confirmation-msg content-container">
+	// 		<h3>This site is fictional. Nothing was sent.</h3>
+	// 		<button className="btn" onClick={resetFields}>
+	// 			Okay
+	// 		</button>
+	// 	</div>
+	// );
+
 	const formSubmissionView = (
-		<div className="confirmation-msg content-container">
-			<h3>This site is fictional. Nothing was sent.</h3>
-			<button className="btn" onClick={resetFields}>
-				Okay
-			</button>
-		</div>
+		<FormSubmissionView clickHandler={resetFields}></FormSubmissionView>
 	);
 
 	// Setting the appropriate page contents and displaying them

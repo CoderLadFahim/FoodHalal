@@ -14,7 +14,7 @@ function TableDetailsForm() {
 	const [dineDate, setDineDate] = useState('');
 	const [dineTime, setDineTime] = useState('');
 
-	// checks if the local states have been filled (used to disable the availability checkerBtn)
+	// checks if the local states have been filled (used to add disable functionality to the availability checkerBtn)
 	const requiredFieldsFilled = [dinersCount, dineDate, dineTime].every(
 		field => field
 	);
@@ -70,7 +70,7 @@ function TableDetailsForm() {
 			)}
 
 			<button className="btn" onClick={handleClick}>
-				{!requiredFieldsAdded ? 'Check Availability' : 'Edit Details'}
+				Check Availability{' '}
 			</button>
 		</form>
 	);
