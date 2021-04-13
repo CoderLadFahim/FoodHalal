@@ -6,26 +6,32 @@ import DetailsInput from './DetailsInput';
 import SectionTitle from './SectionTitle';
 import CountControl from '../CountControl';
 
-export default function TableDetails() {
-	const { updateTableDetails } = useContext(TableBookContext);
+function TableDetails() {
+	// getting only the tableDetails and its setter from the TableBookContext
+	const { updateTableDetails, tableDetails } = useContext(TableBookContext);
 
 	const [dinersCount, setDinersCount] = useState(1);
 	const [dineDate, setDineDate] = useState('');
 	const [dineTime, setDineTime] = useState('');
 
+	// checks if the local states have been filled (used to disable the availability checkerBtn)
 	const requiredFieldsFilled = [dinersCount, dineDate, dineTime].every(
 		field => field
 	);
 
-	const handleAvailabilityCheck = e => {
+	// checks to see if the Context's TableDetails have been filled (used to show appropriate availability checkerBtn text and shows the table availability status)
+	const requiredFieldsAdded = Object.values(tableDetails).every(field => field);
+
+	const handleClick = e => {
 		e.preventDefault();
 
+		// setting the TableDetails of the TableBook context and handling empty details input
 		if (requiredFieldsFilled) {
-			updateTableDetails({ dinersCount, dineDate, dineTime });
-			console.log();
-		} else {
-			alert('Please fill in the details');
-		}
+			// checking if TableDetails from the context haven't already been set, resetting if they have (local state remains)
+			if (!requiredFieldsAdded) {
+				updateTableDetails({ dinersCount, dineDate, dineTime });
+			} else updateTableDetails({ dinersCount: 1, dineDate: '', dineTime: '' });
+		} else alert('Please fill in the details');
 	};
 
 	return (
@@ -35,6 +41,7 @@ export default function TableDetails() {
 			</SectionTitle>
 			<DetailsInput>
 				<span className="input-type">Number of Diners</span>
+				{/* CountControl component being used to set the number of diners, takes in the count and the count setter */}
 				<CountControl controller={setDinersCount}>{dinersCount}</CountControl>
 			</DetailsInput>
 			<DetailsInput>
@@ -55,9 +62,18 @@ export default function TableDetails() {
 					onChange={e => setDineTime(e.target.value)}
 				/>
 			</DetailsInput>
-			<button className="btn" onClick={handleAvailabilityCheck}>
-				Check Availability
+
+			{/* Showing availability status and appropriate checkerBtn text */}
+
+			{requiredFieldsAdded && (
+				<p className="availability-status">Table Available!</p>
+			)}
+
+			<button className="btn" onClick={handleClick}>
+				{!requiredFieldsAdded ? 'Check Availability' : 'Edit Details'}
 			</button>
 		</form>
 	);
 }
+
+export default TableDetails;

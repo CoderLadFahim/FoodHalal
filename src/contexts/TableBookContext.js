@@ -2,6 +2,8 @@ import { useState, createContext } from 'react';
 
 export const TableBookContext = createContext();
 
+// TableBookContext stores TableDetails, DinerDetails and their respective setters
+
 function TableBookContextProvider(props) {
 	const [tableDetails, setTableDetails] = useState({
 		dinersCount: 1,
@@ -14,10 +16,6 @@ function TableBookContextProvider(props) {
 		dinerCell: '',
 		dinerEmail: '',
 	});
-
-	const requiredFieldsFilled = [...[tableDetails], ...[dinerDetails]].every(
-		field => field
-	);
 
 	const updateTableDetails = newDetails =>
 		setTableDetails(prevState => (prevState = newDetails));
@@ -32,7 +30,6 @@ function TableBookContextProvider(props) {
 				dinerDetails,
 				updateTableDetails,
 				updateDinerDetails,
-				requiredFieldsFilled,
 			}}
 		>
 			{props.children}
