@@ -36,9 +36,9 @@ function Contact(props) {
 	const requiredFieldsFilled = [name, email, subject, userIssue].every(
 		field => field
 	);
-	const submitBtnClass = `btn submit-btn ${
-		!requiredFieldsFilled && 'disabled'
-	}`;
+	// const submitBtnClass = `btn submit-btn ${
+	// 	!requiredFieldsFilled && 'disabled'
+	// }`;
 
 	// Page contents (they switch when submissionState changes, which happens when user presses the respective buttons)
 	const contactForm = (

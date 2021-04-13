@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 
-import TableBookContextProvider from './views/TableBook';
+import TableBookContextProvider from './contexts/TableBookContext';
 
 import Home from './views/Home';
 import Menu from './views/Menu';
@@ -12,7 +12,7 @@ import Contact from './views/Contact';
 import TableBook from './views/TableBook';
 import AppFooter from './components/AppFooter';
 
-import Opening from './components/Opening';
+// import Opening from './components/Opening';
 import AppNav from './components/AppNav';
 import HamburgerMenu from './components/HamburgerMenu';
 
@@ -23,32 +23,32 @@ function App() {
 
 	return (
 		<Router>
-			<Opening />
+			{/* <Opening /> */}
 			<section className="App">
 				<HamburgerMenu navToggler={toggleNav} navToggleState={navToggleState} />
 				<AppNav navToggler={toggleNav} navToggleState={navToggleState} />
 
 				{/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-				<TableBookContextProvider>
-					<Switch>
-						<Route exact path="/">
-							<Home />
-						</Route>
-						<Route path="/menu">
-							<Menu />
-						</Route>
-						<Route path="/about">
-							<About />
-						</Route>
-						<Route path="/contact">
-							<Contact />
-						</Route>
+				<Switch>
+					<Route exact path="/">
+						<Home />
+					</Route>
+					<Route path="/menu">
+						<Menu />
+					</Route>
+					<Route path="/about">
+						<About />
+					</Route>
+					<Route path="/contact">
+						<Contact />
+					</Route>
+					<TableBookContextProvider>
 						<Route path="/book">
 							<TableBook />
 						</Route>
-					</Switch>
-				</TableBookContextProvider>
+					</TableBookContextProvider>
+				</Switch>
 			</section>
 			<AppFooter></AppFooter>
 		</Router>

@@ -1,6 +1,4 @@
-import { useState } from 'react';
-
-export default function CountControl({ controller, children }) {
+function CountControl({ controller, children }) {
 	const updateCount = e => {
 		e.preventDefault();
 
@@ -21,3 +19,5 @@ export default function CountControl({ controller, children }) {
 		</div>
 	);
 }
+
+export default CountControl;

@@ -1,7 +1,7 @@
 import './TableBookStyles.scss';
 
 import TableDetails from '../components/TableBook/TableDetails';
-import DinerDetails from '../components/TableBook/DinerDetails';
+// import DinerDetails from '../components/TableBook/DinerDetails';
 import PageTitle from '../components/PageTitle';
 
 function TableBook(props) {

@@ -1,14 +1,32 @@
 import { useState, useContext } from 'react';
 
+import { TableBookContext } from '../../contexts/TableBookContext';
+
 import DetailsInput from './DetailsInput';
 import SectionTitle from './SectionTitle';
 import CountControl from '../CountControl';
-// import AvailabilityCheckout from './AvailabilityCheckout';
 
 export default function TableDetails() {
+	const { updateTableDetails } = useContext(TableBookContext);
+
 	const [dinersCount, setDinersCount] = useState(1);
 	const [dineDate, setDineDate] = useState('');
 	const [dineTime, setDineTime] = useState('');
+
+	const requiredFieldsFilled = [dinersCount, dineDate, dineTime].every(
+		field => field
+	);
+
+	const handleAvailabilityCheck = e => {
+		e.preventDefault();
+
+		if (requiredFieldsFilled) {
+			updateTableDetails({ dinersCount, dineDate, dineTime });
+			console.log();
+		} else {
+			alert('Please fill in the details');
+		}
+	};
 
 	return (
 		<form className="table-details details-input">
@@ -37,9 +55,9 @@ export default function TableDetails() {
 					onChange={e => setDineTime(e.target.value)}
 				/>
 			</DetailsInput>
-			<button className="btn">Check Availability</button>
-			||
-			{/* <AvailabilityCheckout /> */}
+			<button className="btn" onClick={handleAvailabilityCheck}>
+				Check Availability
+			</button>
 		</form>
 	);
 }

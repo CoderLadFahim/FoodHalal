@@ -15,8 +15,12 @@ function TableBookContextProvider(props) {
 		dinerEmail: '',
 	});
 
-	const updateTableDetails = (count, date, time) =>
-		setTableDetails({ dinersCount: count, dineDate: date, dineTime: time });
+	const requiredFieldsFilled = [...[tableDetails], ...[dinerDetails]].every(
+		field => field
+	);
+
+	const updateTableDetails = newDetails =>
+		setTableDetails(prevState => (prevState = newDetails));
 
 	const updateDinerDetails = (name, cell, email = '') =>
 		setDinerDetails({ dinerName: name, dinerCell: cell, dinerEmail: email });
@@ -28,6 +32,7 @@ function TableBookContextProvider(props) {
 				dinerDetails,
 				updateTableDetails,
 				updateDinerDetails,
+				requiredFieldsFilled,
 			}}
 		>
 			{props.children}
