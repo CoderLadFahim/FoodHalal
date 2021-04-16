@@ -1,3 +1,5 @@
+import './MenuItemStyles.scss';
+
 function MenuItem(props) {
 	return (
 		<div className="menu-item">

@@ -1,0 +1,10 @@
+{
+	"appetisers": [
+		{
+			"name": "Canape Salmon",
+			"id": 1,
+			"price": "20",
+			"img": "./food_pics/canape_salmon.jpg"
+		}
+	]
+}
