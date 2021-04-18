@@ -1,8 +1,11 @@
 import './FormButtonStyles.scss';
 
-function FormButton({ className, btnDisabler, children }) {
+function FormButton({ className, btnDisabler, children, clickHandler }) {
 	return (
-		<button className={`btn ${className || ''}  ${btnDisabler && 'disabled'}`}>
+		<button
+			onClick={clickHandler}
+			className={`btn ${className || ''}  ${btnDisabler && 'disabled'}`}
+		>
 			{' '}
 			{children}{' '}
 		</button>

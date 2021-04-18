@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import './TableBookStyles.scss';
 
 import PageTitle from '../components/PageTitle';
@@ -6,21 +6,17 @@ import TableDetailsForm from '../components/TableBook/TableDetailsForm';
 import DinerDetailsForm from '../components/TableBook/DinerDetailsForm';
 import FormSubmissionView from '../components/FormSubmissionView';
 
-import { TableBookContext } from '../contexts/TableBookContext';
-
 function TableBook(props) {
 	const [tableDetails, setTableDetails] = useState({
 		dinersCount: 1,
 		dineDate: '',
 		dineTime: '',
 	});
-
 	const [dinerDetails, setDinerDetails] = useState({
 		dinerName: '',
 		dinerCell: '',
 		dinerEmail: '',
 	});
-
 	const resetFields = () => {
 		setTableDetails(
 			prevState => (prevState = { dinersCount: 1, dineDate: '', dineTime: '' })
@@ -37,18 +33,17 @@ function TableBook(props) {
 		...Object.values(dinerDetails),
 	].every(field => field);
 
-	// this hides the DinerDetails if TableDetails is not filled properly
-	const tableDetailsFilled = Object.values(tableDetails).every(field => field);
-
 	return (
 		<section className="table-booking-page wrapper">
 			<PageTitle> Book a Table </PageTitle>
 			{/* Showing the forms if fields are empty, else FormSubmissionView is being rendered*/}
 			{fieldsEmpty ? (
 				<div className="detail-input-forms">
-					<TableDetailsForm></TableDetailsForm>
+					<TableDetailsForm
+						tableDetailsSetter={setTableDetails}
+					></TableDetailsForm>
 					{/* DinerDetailsForm is rendered only when user fills in the TableDetails */}
-					{tableDetailsFilled && <DinerDetailsForm></DinerDetailsForm>}
+					<DinerDetailsForm></DinerDetailsForm>
 				</div>
 			) : (
 				<FormSubmissionView clickHandler={resetFields} />
