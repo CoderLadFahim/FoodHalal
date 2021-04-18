@@ -14,9 +14,6 @@ function DinerDetails() {
 		field => field
 	);
 
-	// checks to see if the Context's DinerDetails have been filled (used to show appropriate availability checkerBtn text and shows the table availability status)
-	const requiredFieldsAdded = [dinerName, dinerCell].every(field => field);
-
 	const handleClick = e => {
 		e.preventDefault();
 	};

@@ -4,11 +4,14 @@ import DetailsInput from './DetailsInput';
 import SectionTitle from './SectionTitle';
 import CountControl from '../CountControl';
 import FormButton from '../FormButton';
+import TableAvailabilityDisplay from './TableAvailabilityDisplay';
 
 function TableDetailsForm({ tableDetailsSetter }) {
 	const [dinersCount, setDinersCount] = useState(1);
 	const [dineDate, setDineDate] = useState('');
 	const [dineTime, setDineTime] = useState('');
+
+	const [tableAvailabilityStatus, setTableAvailabilityStatus] = useState(null);
 
 	// checks if the local states have been filled (used to disable the availability checkerBtn)
 	const requiredFieldsFilled = [dinersCount, dineDate, dineTime].every(
@@ -48,8 +51,12 @@ function TableDetailsForm({ tableDetailsSetter }) {
 				/>
 			</DetailsInput>
 
+			{tableAvailabilityStatus !== null && (
+				<TableAvailabilityDisplay tableAvailability={tableAvailabilityStatus} />
+			)}
+
 			<FormButton
-				btnDisabler={!requiredFieldsFilled}
+				btnDisabler={!requiredFieldsFilled || tableAvailabilityStatus === false}
 				clickHandler={handleClick}
 			>
 				Check Availability{' '}
