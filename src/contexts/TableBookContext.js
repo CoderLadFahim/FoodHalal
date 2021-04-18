@@ -3,7 +3,6 @@ import { useState, createContext } from 'react';
 export const TableBookContext = createContext();
 
 // TableBookContext stores TableDetails, DinerDetails and their respective setters and a hard resetter
-
 function TableBookContextProvider(props) {
 	const [tableDetails, setTableDetails] = useState({
 		dinersCount: 1,

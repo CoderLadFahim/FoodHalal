@@ -5,6 +5,7 @@ import { TableBookContext } from '../../contexts/TableBookContext';
 import DetailsInput from './DetailsInput';
 import SectionTitle from './SectionTitle';
 import CountControl from '../CountControl';
+import FormButton from '../FormButton';
 
 function TableDetailsForm() {
 	// getting only the tableDetails and its setter from the TableBookContext
@@ -22,9 +23,7 @@ function TableDetailsForm() {
 	// checks to see if the Context's TableDetails have been filled (used to show appropriate availability checkerBtn text and shows the table availability status)
 	const requiredFieldsAdded = Object.values(tableDetails).every(field => field);
 
-	const handleClick = e => {
-		e.preventDefault();
-
+	const handleClick = () => {
 		// setting the TableDetails of the TableBook context and handling empty details input
 		if (requiredFieldsFilled) {
 			// checking if TableDetails from the context haven't already been set, resetting if they have (local state remains)
@@ -69,9 +68,9 @@ function TableDetailsForm() {
 				<p className="availability-status">Table Available!</p>
 			)}
 
-			<button className="btn" onClick={handleClick}>
+			<FormButton btnDisabler={!requiredFieldsFilled} onClick={handleClick}>
 				Check Availability{' '}
-			</button>
+			</FormButton>
 		</form>
 	);
 }

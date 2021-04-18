@@ -65,7 +65,10 @@ function Contact(props) {
 				required
 				placeholder="Tell us your issue"
 			></textarea>
-			<FormButton disableBtn={!requiredFieldsFilled}> Submit </FormButton>
+			<FormButton className="submit-btn" btnDisabler={!requiredFieldsFilled}>
+				{' '}
+				Submit{' '}
+			</FormButton>
 		</form>
 	);
 
