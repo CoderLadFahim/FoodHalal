@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import DetailsInput from './DetailsInput';
 import SectionTitle from './SectionTitle';
@@ -13,13 +13,37 @@ function TableDetailsForm({ tableDetailsSetter }) {
 
 	const [tableAvailabilityStatus, setTableAvailabilityStatus] = useState(null);
 
+	useEffect(() => {
+		setTableAvailabilityStatus(null);
+	}, [dinersCount, dineDate, dineTime]);
+
 	// checks if the local states have been filled (used to disable the availability checkerBtn)
 	const requiredFieldsFilled = [dinersCount, dineDate, dineTime].every(
 		field => field
 	);
 
+	const checkTableAvailability = tableDetails => Math.random() > 0.5;
+
 	const handleClick = e => {
 		e.preventDefault();
+
+		const tableAvailable = checkTableAvailability({
+			dinersCount,
+			dineDate,
+			dineTime,
+		});
+
+		if (!tableAvailable) {
+			return setTableAvailabilityStatus(false);
+		} else {
+			setTableAvailabilityStatus(true);
+			tableDetailsSetter({
+				dinersCount,
+				dineDate,
+				dineTime,
+			});
+			// implement the diner details toggling functionality here...
+		}
 	};
 
 	return (
@@ -59,7 +83,7 @@ function TableDetailsForm({ tableDetailsSetter }) {
 				btnDisabler={!requiredFieldsFilled || tableAvailabilityStatus === false}
 				clickHandler={handleClick}
 			>
-				Check Availability{' '}
+				{!tableAvailabilityStatus ? 'Check Availability' : 'Next'}
 			</FormButton>
 		</form>
 	);
