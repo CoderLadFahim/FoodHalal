@@ -3,8 +3,6 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 
-import TableBookContextProvider from './contexts/TableBookContext';
-
 import Home from './views/Home';
 import Menu from './views/Menu';
 import About from './views/About';
@@ -43,11 +41,9 @@ function App() {
 					<Route path="/contact">
 						<Contact />
 					</Route>
-					<TableBookContextProvider>
-						<Route path="/book">
-							<TableBook />
-						</Route>
-					</TableBookContextProvider>
+					<Route path="/book">
+						<TableBook />
+					</Route>
 				</Switch>
 			</section>
 			<AppFooter></AppFooter>

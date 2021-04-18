@@ -1,14 +1,10 @@
 import { useState, useContext } from 'react';
 import './DinerDetailsFormStyles.scss';
 
-import { TableBookContext } from '../../contexts/TableBookContext';
-
 import SectionTitle from './SectionTitle';
 import AppInput from '../AppInput';
 
 function DinerDetails() {
-	const { dinerDetails, updateDinerDetails } = useContext(TableBookContext);
-
 	const [dinerName, setName] = useState('');
 	const [dinerCell, setCell] = useState('');
 	const [dinerEmail, setEmail] = useState('');
@@ -19,19 +15,10 @@ function DinerDetails() {
 	);
 
 	// checks to see if the Context's DinerDetails have been filled (used to show appropriate availability checkerBtn text and shows the table availability status)
-	const requiredFieldsAdded = Object.values(dinerDetails).every(field => field);
+	const requiredFieldsAdded = [dinerName, dinerCell].every(field => field);
 
 	const handleClick = e => {
 		e.preventDefault();
-
-		// setting the DinerDetails of the TableBook context and handling empty details input
-		if (requiredFieldsFilled) {
-			// checking if DinerDetails from the context haven't already been set, resetting if they have (local state remains)
-			if (!requiredFieldsAdded) {
-				updateDinerDetails({ dinerName, dinerCell, dinerEmail });
-			} else
-				updateDinerDetails({ dinerName: '', dinerCell: '', dinerEmail: '' });
-		} else alert('Please fill in the details');
 	};
 
 	return (
