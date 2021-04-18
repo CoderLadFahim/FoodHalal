@@ -27,6 +27,8 @@ function TableBook(props) {
 		);
 	};
 
+	const [tableReadyState, setTableReadyState] = useState(false);
+
 	// this boolean triggers the forms and the FormSubmissionView
 	const fieldsEmpty = ![
 		...Object.values(tableDetails),
@@ -39,11 +41,14 @@ function TableBook(props) {
 			{/* Showing the forms if fields are empty, else FormSubmissionView is being rendered*/}
 			{fieldsEmpty ? (
 				<div className="detail-input-forms">
-					<TableDetailsForm
-						tableDetailsSetter={setTableDetails}
-					></TableDetailsForm>
-					{/* DinerDetailsForm is rendered only when user fills in the TableDetails */}
-					<DinerDetailsForm></DinerDetailsForm>
+					{!tableReadyState ? (
+						<TableDetailsForm
+							tableDetailsSetter={setTableDetails}
+							tableReadyStatusSetter={setTableReadyState}
+						></TableDetailsForm>
+					) : (
+						<DinerDetailsForm></DinerDetailsForm>
+					)}
 				</div>
 			) : (
 				<FormSubmissionView clickHandler={resetFields} />

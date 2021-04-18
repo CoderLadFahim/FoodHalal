@@ -2,17 +2,20 @@ import { useState, useEffect } from 'react';
 
 import DetailsInput from './DetailsInput';
 import SectionTitle from './SectionTitle';
-import CountControl from '../CountControl';
-import FormButton from '../FormButton';
 import TableAvailabilityDisplay from './TableAvailabilityDisplay';
 
-function TableDetailsForm({ tableDetailsSetter }) {
+import CountControl from '../CountControl';
+import FormButton from '../FormButton';
+
+function TableDetailsForm({ tableDetailsSetter, tableReadyStatusSetter }) {
 	const [dinersCount, setDinersCount] = useState(1);
 	const [dineDate, setDineDate] = useState('');
 	const [dineTime, setDineTime] = useState('');
 
+	// table availability status is initially set to null to not show the TableAvailabilityDisplay at all
 	const [tableAvailabilityStatus, setTableAvailabilityStatus] = useState(null);
 
+	// setting the table availability status to null every time the local states change (user tries to change table details)
 	useEffect(() => {
 		setTableAvailabilityStatus(null);
 	}, [dinersCount, dineDate, dineTime]);
@@ -22,11 +25,16 @@ function TableDetailsForm({ tableDetailsSetter }) {
 		field => field
 	);
 
+	// resembling an api call by taking in the table details but returning a 50/50 boolean value
 	const checkTableAvailability = tableDetails => Math.random() > 0.5;
 
 	const handleClick = e => {
 		e.preventDefault();
 
+		// if the table is available, setting the tableReadyStatusState on the parent to be true, which renders the DinerDetailsForm
+		if (tableAvailabilityStatus) return tableReadyStatusSetter(true);
+
+		// calling our "api call" by passing in the local state
 		const tableAvailable = checkTableAvailability({
 			dinersCount,
 			dineDate,
@@ -34,15 +42,16 @@ function TableDetailsForm({ tableDetailsSetter }) {
 		});
 
 		if (!tableAvailable) {
+			// setting the availability status to be false if "api call" returns false
 			return setTableAvailabilityStatus(false);
 		} else {
+			// setting the availability status to be true and sending/setting the local state to the parent tableDetails state
 			setTableAvailabilityStatus(true);
 			tableDetailsSetter({
 				dinersCount,
 				dineDate,
 				dineTime,
 			});
-			// implement the diner details toggling functionality here...
 		}
 	};
 
