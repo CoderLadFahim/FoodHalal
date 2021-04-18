@@ -23,7 +23,9 @@ function TableDetailsForm() {
 	// checks to see if the Context's TableDetails have been filled (used to show appropriate availability checkerBtn text and shows the table availability status)
 	const requiredFieldsAdded = Object.values(tableDetails).every(field => field);
 
-	const handleClick = () => {
+	const handleClick = e => {
+		e.preventDefault();
+
 		// setting the TableDetails of the TableBook context and handling empty details input
 		if (requiredFieldsFilled) {
 			// checking if TableDetails from the context haven't already been set, resetting if they have (local state remains)

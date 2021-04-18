@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import './TableBookStyles.scss';
 
 import PageTitle from '../components/PageTitle';
@@ -9,9 +9,27 @@ import FormSubmissionView from '../components/FormSubmissionView';
 import { TableBookContext } from '../contexts/TableBookContext';
 
 function TableBook(props) {
-	const { tableDetails, dinerDetails, resetFields } = useContext(
-		TableBookContext
-	);
+	const [tableDetails, setTableDetails] = useState({
+		dinersCount: 1,
+		dineDate: '',
+		dineTime: '',
+	});
+
+	const [dinerDetails, setDinerDetails] = useState({
+		dinerName: '',
+		dinerCell: '',
+		dinerEmail: '',
+	});
+
+	const resetFields = () => {
+		setTableDetails(
+			prevState => (prevState = { dinersCount: 1, dineDate: '', dineTime: '' })
+		);
+		setDinerDetails(
+			prevState =>
+				(prevState = { dinerName: '', dinerCell: '', dinerEmail: '' })
+		);
+	};
 
 	// this boolean triggers the forms and the FormSubmissionView
 	const fieldsEmpty = ![
