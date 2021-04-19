@@ -37,56 +37,6 @@ function Contact(props) {
 	const requiredFieldsFilled = [name, email, subject, userIssue].every(
 		field => field
 	);
-	// const submitBtnClass = `btn submit-btn ${
-	// 	!requiredFieldsFilled && 'disabled'
-	// }`;
-
-	// Page contents (they switch when submissionState changes, which happens when user presses the respective buttons)
-	const contactForm = (
-		<form
-			className="contact-form content-container"
-			onSubmit={handleFormSubmission}
-		>
-			<AppInput content={name} contentSetter={setName}>
-				{' '}
-				Full Name{' '}
-			</AppInput>
-			<AppInput content={email} contentSetter={setEmail}>
-				{' '}
-				Email / Phone{' '}
-			</AppInput>
-			<AppInput content={subject} contentSetter={setSubject}>
-				{' '}
-				Subject{' '}
-			</AppInput>
-			<textarea
-				value={userIssue}
-				onChange={e => setUserIssue(prevIssue => e.target.value)}
-				required
-				placeholder="Tell us your issue"
-			></textarea>
-			<FormButton className="submit-btn" btnDisabler={!requiredFieldsFilled}>
-				{' '}
-				Submit{' '}
-			</FormButton>
-		</form>
-	);
-
-	// const formSubmissionView = (
-	// 	<div className="confirmation-msg content-container">
-	// 		<h3>This site is fictional. Nothing was sent.</h3>
-	// 		<button className="btn" onClick={resetFields}>
-	// 			Okay
-	// 		</button>
-	// 	</div>
-	// );
-
-	const formSubmissionView = (
-		<FormSubmissionView clickHandler={resetFields}></FormSubmissionView>
-	);
-
-	// Setting the appropriate page contents and displaying them
-	const pageContent = !submissionState ? contactForm : formSubmissionView;
 
 	useEffect(() => {
 		const contactPageTimeline = TweenLite.timeline();
@@ -95,6 +45,7 @@ function Contact(props) {
 			document.querySelectorAll('.contact-form > *')
 		);
 
+		// removing the submit-btn from the flow
 		elementsToAnimate.pop();
 
 		// running title animation only when page first loads not on submissionState change
@@ -134,8 +85,52 @@ function Contact(props) {
 		<section className="contact-page wrapper">
 			<PageTitle>Contact</PageTitle>
 
-			{pageContent}
-			{/* {formSubmissionView} */}
+			{!submissionState ? (
+				<form
+					className="contact-form content-container"
+					onSubmit={handleFormSubmission}
+				>
+					<AppInput
+						attrs={{ type: 'text', name: 'fullName', required: true }}
+						content={name}
+						contentSetter={setName}
+					>
+						{' '}
+						Full Name{' '}
+					</AppInput>
+					<AppInput
+						attrs={{ type: 'text', name: 'contact', required: true }}
+						content={email}
+						contentSetter={setEmail}
+					>
+						{' '}
+						Email / Phone{' '}
+					</AppInput>
+					<AppInput
+						attrs={{ type: 'text', name: 'subject', required: true }}
+						content={subject}
+						contentSetter={setSubject}
+					>
+						{' '}
+						Subject{' '}
+					</AppInput>
+					<textarea
+						value={userIssue}
+						onChange={e => setUserIssue(prevIssue => e.target.value)}
+						required
+						placeholder="Tell us your issue"
+					></textarea>
+					<FormButton
+						className="submit-btn"
+						btnDisabler={!requiredFieldsFilled}
+					>
+						{' '}
+						Submit{' '}
+					</FormButton>
+				</form>
+			) : (
+				<FormSubmissionView clickHandler={resetFields}></FormSubmissionView>
+			)}
 		</section>
 	);
 }
