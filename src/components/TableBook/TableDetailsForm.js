@@ -16,11 +16,13 @@ function TableDetailsForm({ tableDetailsSetter, tableReadyStatusSetter }) {
 	const [tableAvailabilityStatus, setTableAvailabilityStatus] = useState(null);
 
 	// setting the table availability status to null every time the local states change (user tries to change table details)
-	useEffect(() => {
-		setTableAvailabilityStatus(null);
-	}, [dinersCount, dineDate, dineTime]);
+	useEffect(() => setTableAvailabilityStatus(null), [
+		dinersCount,
+		dineDate,
+		dineTime,
+	]);
 
-	// checks if the local states have been filled (used to disable the availability checkerBtn)
+	// checks if the local states have been filled (used to disable the availability checker btn)
 	const requiredFieldsFilled = [dinersCount, dineDate, dineTime].every(
 		field => field
 	);
