@@ -27,6 +27,7 @@ function TableBook(props) {
 		);
 	};
 
+	// thi boolean values toggle the two forms
 	const [tableReadyState, setTableReadyState] = useState(false);
 
 	// this boolean triggers the forms and the FormSubmissionView
@@ -47,11 +48,20 @@ function TableBook(props) {
 							tableReadyStatusSetter={setTableReadyState}
 						></TableDetailsForm>
 					) : (
-						<DinerDetailsForm></DinerDetailsForm>
+						<DinerDetailsForm
+							dinerDetailsSetter={setDinerDetails}
+							tableReadyStatusSetter={setTableReadyState}
+						></DinerDetailsForm>
 					)}
 				</div>
 			) : (
-				<FormSubmissionView clickHandler={resetFields} />
+				<FormSubmissionView
+					clickHandler={() => {
+						// resetting everything to go back to table details
+						resetFields();
+						setTableReadyState(false);
+					}}
+				/>
 			)}
 		</section>
 	);

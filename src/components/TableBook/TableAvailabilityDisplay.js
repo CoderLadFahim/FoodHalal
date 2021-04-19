@@ -3,7 +3,11 @@ function TableAvailabilityDisplay({ tableAvailability }) {
 
 	return (
 		<p className={statusClass}>
-			{`Table ${!tableAvailability ? 'Unavailable' : 'Availabile!'}`}
+			{`Table ${
+				!tableAvailability
+					? 'Unavailable, try changing your details'
+					: 'Availabile!'
+			}`}
 		</p>
 	);
 }
