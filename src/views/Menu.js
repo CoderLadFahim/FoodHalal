@@ -1,22 +1,24 @@
 import './MenuStyles.scss';
 
-import PageTitle from '../components/PageTitle';
+import { NavLink } from 'react-router-dom';
+import PageTitle from '../components/PageTitle.js';
 
 function Menu(props) {
 	return (
 		<section className="menu-page">
-			<PageTitle>Our Menu</PageTitle>
-
-			<div className="menu">
-				<ul className="items-subnav">
-					<li className="food-type">Appetisers</li>
-					<li className="food-type">Main</li>
-					<li className="food-type">Desserts</li>
-					<li className="food-type">Drinks</li>
-				</ul>
-
-				<div className="items-display">{/* MenuItems GO HERE */}</div>
+			<div className="header-content">
+				<PageTitle> Menu </PageTitle>
+				<NavLink to="/book">
+					<button className="btn">Book a Table</button>
+				</NavLink>
 			</div>
+
+			<ul className="food-menu">
+				<li className="food-link">Appetisers</li>
+				<li className="food-link">Main</li>
+				<li className="food-link">Desserts</li>
+				<li className="food-link">Drinks</li>
+			</ul>
 		</section>
 	);
 }
