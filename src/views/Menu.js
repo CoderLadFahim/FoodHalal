@@ -2,6 +2,7 @@ import './MenuStyles.scss';
 
 import { NavLink } from 'react-router-dom';
 import PageTitle from '../components/PageTitle.js';
+import MenuItems from '../assets/foodItems.json';
 
 function Menu(props) {
 	return (
@@ -12,14 +13,8 @@ function Menu(props) {
 					<button className="btn">Book a Table</button>
 				</NavLink>
 			</div>
-
-			<img
-				src={
-					process.env.PUBLIC_URL + './food_pics/appetizers/canape_salmon.jpg'
-				}
-				alt=""
-			/>
-
+			{/* <img src="./food_pics/appetizers/beef_salami_crackers.jpg" alt="" /> */}
+			Inky Pinkies per donkey monkeys
 			<ul className="food-menu">
 				<li className="food-link">Appetisers</li>
 				<li className="food-link">Main</li>
