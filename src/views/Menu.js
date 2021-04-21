@@ -2,7 +2,7 @@ import './MenuStyles.scss';
 
 import { NavLink } from 'react-router-dom';
 import PageTitle from '../components/PageTitle.js';
-import MenuItems from '../assets/foodItems.json';
+import menuItems from '../assets/foodItems.json';
 
 function Menu(props) {
 	return (
