@@ -1,0 +1,250 @@
+{
+	"appetizers": [
+		{
+			"name": "Beef Salami Crackers",
+			"id": "beef_salami_crackers",
+			"price": "123",
+			"img": "./food_pics/appetizers/beef_salami_crackers.jpg"
+		},
+		{
+			"name": "Canape Salmon",
+			"id": "canape_salmon",
+			"price": "123",
+			"img": "./food_pics/appetizers/canape_salmon.jpg"
+		},
+		{
+			"name": "Caviar Sandwich",
+			"id": "caviar_sandwich",
+			"price": "123",
+			"img": "./food_pics/appetizers/caviar_sandwich.jpg"
+		},
+		{
+			"name": "Cheese Fig Salad",
+			"id": "cheese_fig_salad",
+			"price": "123",
+			"img": "./food_pics/appetizers/cheese_fig_salad.jpg"
+		},
+		{
+			"name": "Dumplings",
+			"id": "dumplings",
+			"price": "123",
+			"img": "./food_pics/appetizers/dumplings.jpg"
+		},
+		{
+			"name": "Egg Sandwich",
+			"id": "egg_sandwich",
+			"price": "123",
+			"img": "./food_pics/appetizers/egg__sandwich.jpg"
+		},
+		{
+			"name": "french_fries",
+			"id": "frech_fries",
+			"price": "123",
+			"img": "./food_pics/appetizers/frech_fries.jpg"
+		},
+		{
+			"name": "Fried Shrimp",
+			"id": "fried_shrimp",
+			"price": "123",
+			"img": "./food_pics/appetizers/fried_shrimp.jpg"
+		},
+		{
+			"name": "Pumpkin Soup",
+			"id": "pumpkin_soup",
+			"price": "123",
+			"img": "./food_pics/appetizers/pumpkin_soup.jpg"
+		},
+		{
+			"name": "Vegetable Skewers",
+			"id": "vegetable_skewers",
+			"price": "123",
+			"img": "./food_pics/appetizers/vegetable_skewers.jpg"
+		}
+	],
+	"desserts": [
+		{
+			"name": "Bread Croissants",
+			"id": "bread_croissants",
+			"price": "123",
+			"img": "./food_pics/desserts/bread_croissants.jpg"
+		},
+		{
+			"name": "Cake Pops",
+			"id": "cake_pops",
+			"price": "123",
+			"img": "./food_pics/desserts/cake_pops.jpg"
+		},
+		{
+			"name": "Chocolate Cake",
+			"id": "chocolate_cake",
+			"price": "123",
+			"img": "./food_pics/desserts/chocolate_cake.jpg"
+		},
+		{
+			"name": "Chocolate Cupcakes",
+			"id": "chocolate_cupcakes",
+			"price": "123",
+			"img": "./food_pics/desserts/chocolate_cupcakes.jpg"
+		},
+		{
+			"name": "Creme Brulee",
+			"id": "creme_brulee",
+			"price": "123",
+			"img": "./food_pics/desserts/creme_brulee.jpg"
+		},
+		{
+			"name": "Doughnuts",
+			"id": "doughnuts",
+			"price": "123",
+			"img": "./food_pics/desserts/doughnuts.jpg"
+		},
+		{
+			"name": "Fresh Bluberries",
+			"id": "fresh_bluberries",
+			"price": "123",
+			"img": "./food_pics/desserts/fresh_bluberries.jpg"
+		},
+		{
+			"name": "Fresh Raspberries",
+			"id": "fresh_raspberries",
+			"price": "123",
+			"img": "./food_pics/desserts/fresh_raspberries.jpg"
+		},
+		{
+			"name": "Macarons",
+			"id": "macarons",
+			"price": "123",
+			"img": "./food_pics/desserts/macarons.jpg"
+		},
+		{
+			"name": "Mango Ice Cream",
+			"id": "mango_icecream",
+			"price": "123",
+			"img": "./food_pics/desserts/mango_icecream.jpg"
+		}
+	],
+	"drinks": [
+		{
+			"name": "Chocolate Milkshake",
+			"id": "chocolate_milkshake",
+			"price": "123",
+			"img": "./food_pics/drinks/chocolate_milkshake.jpg"
+		},
+		{
+			"name": "Coffee",
+			"id": "coffee",
+			"price": "123",
+			"img": "./food_pics/drinks/coffee.jpg"
+		},
+		{
+			"name": "Fruit Smoothie",
+			"id": "fruit_smoothie",
+			"price": "123",
+			"img": "./food_pics/drinks/fruit_smoothie.jpg"
+		},
+		{
+			"name": "Hot Chocolate",
+			"id": "hot_chocolate",
+			"price": "123",
+			"img": "./food_pics/drinks/hot_chocolate.jpg"
+		},
+		{
+			"name": "Lemon Juice",
+			"id": "lemon_juice",
+			"price": "123",
+			"img": "./food_pics/drinks/lemon_juice.jpg"
+		},
+		{
+			"name": "Lime Juice",
+			"id": "lime_juice",
+			"price": "123",
+			"img": "./food_pics/drinks/lime_juice.jpg"
+		},
+		{
+			"name": "Mango Juice",
+			"id": "mango_juice",
+			"price": "123",
+			"img": "./food_pics/drinks/mango_juice.jpg"
+		},
+		{
+			"name": "Mojitos",
+			"id": "mojitos",
+			"price": "123",
+			"img": "./food_pics/drinks/mojitos.jpg"
+		},
+		{
+			"name": "Red Tea",
+			"id": "red_tea",
+			"price": "123",
+			"img": "./food_pics/drinks/red_tea.jpg"
+		},
+		{
+			"name": "Strawberry Milkshake",
+			"id": "strawberry_milkshake",
+			"price": "123",
+			"img": "./food_pics/drinks/strawberry_milkshake.jpg"
+		}
+	],
+	"main": [
+		{
+			"name": "Asian Noodles",
+			"id": "asian_noodles",
+			"price": "123",
+			"img": "./food_pics/main/asian_noodles.jpg"
+		},
+		{
+			"name": "Beef Steak",
+			"id": "beef_steak",
+			"price": "123",
+			"img": "./food_pics/main/beef_steak.jpg"
+		},
+		{
+			"name": "Burger Fries",
+			"id": "burger_and_fries",
+			"price": "123",
+			"img": "./food_pics/main/burger_and_fries.jpg"
+		},
+		{
+			"name": "Cheese Pizza",
+			"id": "cheese_pizza",
+			"price": "123",
+			"img": "./food_pics/main/cheese_pizza.jpg"
+		},
+		{
+			"name": "Fried Chicken",
+			"id": "fried_chicken",
+			"price": "123",
+			"img": "./food_pics/main/fried_chicken.jpg"
+		},
+		{
+			"name": "Grill Chicken",
+			"id": "grill_chicken",
+			"price": "123",
+			"img": "./food_pics/main/grill_chicken.jpg"
+		},
+		{
+			"name": "Potato Casserole",
+			"id": "potato_casserole",
+			"price": "123",
+			"img": "./food_pics/main/potato_casserole.jpg"
+		},
+		{
+			"name": "Punjabi rice",
+			"id": "punjabi_rice",
+			"price": "123",
+			"img": "./food_pics/main/punjabi_rice.jpg"
+		},
+		{
+			"name": "Shrimp Pasta",
+			"id": "shrimp_pasta",
+			"price": "123",
+			"img": "./food_pics/main/shrimp_pasta.jpg"
+		},
+		{
+			"name": "Tacos with Lime",
+			"id": "tacos_with_lime",
+			"price": "123",
+			"img": "./food_pics/main/tacos_with_lime.jpg"
+		}
+	]
+}
