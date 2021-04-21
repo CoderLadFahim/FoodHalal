@@ -13,6 +13,13 @@ function Menu(props) {
 				</NavLink>
 			</div>
 
+			<img
+				src={
+					process.env.PUBLIC_URL + './food_pics/appetizers/canape_salmon.jpg'
+				}
+				alt=""
+			/>
+
 			<ul className="food-menu">
 				<li className="food-link">Appetisers</li>
 				<li className="food-link">Main</li>
