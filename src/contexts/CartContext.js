@@ -22,29 +22,32 @@ const cartReducer = (state, action) => {
 			return state.filter(item => item.id !== action.itemID);
 		case 'INCREMENT_ITEM_COUNT':
 			const itemToIncrement = state.find(item => item.id === action.itemID);
-			itemToIncrement.count++;
+			// itemToIncrement.count++;
 
 			// removing the item with old count value and adding the new one with update count value
 			return [
 				...state.filter(item => item.id !== action.itemID),
-				itemToIncrement,
+				{ ...itemToIncrement, count: itemToIncrement.count + 1 },
 			];
 		case 'DECREMENT_ITEM_COUNT':
 			// replicating the same functionality as the INCREMENT_ITEM_COUNT case  but decrementing
 			const itemToDecrement = state.find(item => item.id === action.itemID);
 
-			// removing the item if only 1 exists
-			if (itemToDecrement.count === 1)
-				return cartReducer(state, {
-					type: 'REMOVE_ITEM',
-					itemID: action.itemID,
-				});
+			//	removing the item if only 1 exists
+			// if (itemToDecrement.count === 1)
+			// return cartReducer(state, {
+			// 	type: 'REMOVE_ITEM',
+			// 	itemID: action.itemID,
+			// });
 
-			itemToDecrement.count--;
+			// itemToDecrement.count--;
 
 			return [
 				...state.filter(item => item.id !== action.itemID),
-				itemToDecrement,
+				{
+					...itemToDecrement,
+					count: itemToDecrement.count - 1,
+				},
 			];
 		default:
 			throw new Error('Invalid action type');
