@@ -1,10 +1,32 @@
 import './MenuStyles.scss';
 
+import { useContext, useEffect } from 'react';
+
+import { CartContext } from '../contexts/CartContext';
 import { NavLink } from 'react-router-dom';
 import PageTitle from '../components/PageTitle.js';
 import menuItems from '../assets/foodItems.json';
 
 function Menu(props) {
+	const { dispatch } = useContext(CartContext);
+
+	const createCartItem = item => {
+		const { name, id, price } = item;
+		return {
+			name,
+			id,
+			price,
+			count: 1,
+		};
+	};
+
+	useEffect(() => {
+		// dispatch({
+		// 	type: '<ACTION_TYPE_HERE>',
+		// 	actionPayload: '<ACTION_PAYLOAD_HERE>',
+		// });
+	}, []);
+
 	return (
 		<section className="menu-page">
 			<div className="header-content">
