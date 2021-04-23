@@ -1,14 +1,23 @@
 import './MenuItemStyles.scss';
+import CountControl from '../CountControl';
 
 function MenuItem(props) {
 	return (
 		<div className="menu-item">
-			<div className="food-image">
-				<span className="price">$10</span>
-			</div>
 			<div className="item-control">
-				<p className="item-name">Chicken Skewers</p>
-				<button className="add-cart-btn">Add</button>
+				<button className="add-remove-btn">Add Item</button>
+				<div className="item-count-control">
+					<CountControl></CountControl>
+					<p className="total-item-price">
+						Total:
+						<span className="total-price"></span>
+					</p>
+				</div>
+			</div>
+
+			<div className="item-label">
+				<p className="item-name">ITEM_NAME</p>
+				<p className="item-price">ITEM_PRICE</p>
 			</div>
 		</div>
 	);

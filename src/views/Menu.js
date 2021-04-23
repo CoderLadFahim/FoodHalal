@@ -35,8 +35,7 @@ function Menu(props) {
 					<button className="btn">Book a Table</button>
 				</NavLink>
 			</div>
-			{/* <img src="./food_pics/appetizers/beef_salami_crackers.jpg" alt="" /> */}
-			Inky Pinkies per donkey monkeys
+
 			<ul className="food-menu">
 				<li className="food-link">Appetisers</li>
 				<li className="food-link">Main</li>
