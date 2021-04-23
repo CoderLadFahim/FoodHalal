@@ -52,7 +52,26 @@ const cartReducer = (state, action) => {
 };
 
 function CartContextProvider({ children }) {
-	const [cartItems, dispatch] = useReducer(cartReducer, []);
+	const [cartItems, dispatch] = useReducer(cartReducer, [
+		// {
+		// 	name: 'Caviar Sandwich',
+		// 	id: 'caviar_sandwich',
+		// 	price: '123',
+		// 	count: 1,
+		// },
+		// {
+		// 	name: 'Dumplings',
+		// 	id: 'dumplings',
+		// 	price: '123',
+		// 	count: 1,
+		// },
+		// {
+		// 	name: 'Pumpkin Soup',
+		// 	id: 'pumpkin_soup',
+		// 	price: '123',
+		// 	count: 1,
+		// },
+	]);
 
 	return (
 		<CartContext.Provider

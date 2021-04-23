@@ -2,7 +2,7 @@ import './CountControlStyles.scss';
 
 function CountControl({ decrementor, incrementor, children }) {
 	const updateCount = e => {
-		e.preventDefault();
+		e.preventDefault?.();
 
 		e.target.textContent === '+'
 			? incrementor()

@@ -34,13 +34,13 @@
 			"name": "Egg Sandwich",
 			"id": "egg_sandwich",
 			"price": "123",
-			"img": "./food_pics/appetizers/egg__sandwich.jpg"
+			"img": "./food_pics/appetizers/egg_sandwich.jpg"
 		},
 		{
 			"name": "french_fries",
 			"id": "frech_fries",
 			"price": "123",
-			"img": "./food_pics/appetizers/frech_fries.jpg"
+			"img": "./food_pics/appetizers/french_fries.jpg"
 		},
 		{
 			"name": "Fried Shrimp",
@@ -84,7 +84,7 @@
 			"name": "Chocolate Cupcakes",
 			"id": "chocolate_cupcakes",
 			"price": "123",
-			"img": "./food_pics/desserts/chocolate_cupcakes.jpg"
+			"img": "./food_pics/desserts/chocolate_cupcake.jpg"
 		},
 		{
 			"name": "Creme Brulee",
@@ -102,7 +102,7 @@
 			"name": "Fresh Bluberries",
 			"id": "fresh_bluberries",
 			"price": "123",
-			"img": "./food_pics/desserts/fresh_bluberries.jpg"
+			"img": "./food_pics/desserts/fresh_blueberries.jpg"
 		},
 		{
 			"name": "Fresh Raspberries",

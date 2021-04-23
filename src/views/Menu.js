@@ -11,16 +11,6 @@ import MenuItem from '../components/MenuPage/MenuItem';
 function Menu(props) {
 	const { dispatch } = useContext(CartContext);
 
-	const createCartItem = item => {
-		const { name, id, price } = item;
-		return {
-			name,
-			id,
-			price,
-			count: 1,
-		};
-	};
-
 	const [activeItemType, setActiveItemType] = useState('appetizers');
 
 	useEffect(() => {
