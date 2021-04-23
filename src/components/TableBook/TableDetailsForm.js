@@ -65,7 +65,12 @@ function TableDetailsForm({ tableDetailsSetter, tableReadyStatusSetter }) {
 			<DetailsInput>
 				<span className="input-type">Number of Diners</span>
 				{/* CountControl component being used to set the number of diners, takes in the count and the count setter */}
-				<CountControl controller={setDinersCount}>{dinersCount}</CountControl>
+				<CountControl
+					incrementor={() => setDinersCount(prevCount => prevCount + 1)}
+					decrementor={() => setDinersCount(prevCount => prevCount - 1)}
+				>
+					{dinersCount}
+				</CountControl>
 			</DetailsInput>
 			<DetailsInput>
 				<span className="input-type">Date</span>

@@ -1,10 +1,12 @@
-function CountControl({ controller, children }) {
+import './CountControlStyles.scss';
+
+function CountControl({ decrementor, incrementor, children }) {
 	const updateCount = e => {
 		e.preventDefault();
 
 		e.target.textContent === '+'
-			? controller(prevCount => prevCount + 1)
-			: children > 1 && controller(prevCount => prevCount - 1);
+			? incrementor()
+			: children > 1 && decrementor();
 	};
 
 	return (
