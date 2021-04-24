@@ -1,24 +1,24 @@
 import './MenuStyles.scss';
 
-import { useContext, useEffect, useState } from 'react';
+import { /*useContext, useEffect,*/ useState } from 'react';
 
-import { CartContext } from '../contexts/CartContext';
+// import { CartContext } from '../contexts/CartContext';
 import { NavLink } from 'react-router-dom';
 import PageTitle from '../components/PageTitle';
 import menuItems from '../assets/foodItems.json';
 import MenuItem from '../components/MenuPage/MenuItem';
 
 function Menu(props) {
-	const { dispatch } = useContext(CartContext);
+	// const { dispatch } = useContext(CartContext);
 
 	const [activeItemType, setActiveItemType] = useState('appetizers');
 
-	useEffect(() => {
-		// dispatch({
-		// 	type: '<ACTION_TYPE_HERE>',
-		// 	actionPayload: '<ACTION_PAYLOAD_HERE>',
-		// });
-	}, []);
+	// useEffect(() => {
+	// 	// dispatch({
+	// 	// 	type: '<ACTION_TYPE_HERE>',
+	// 	// 	actionPayload: '<ACTION_PAYLOAD_HERE>',
+	// 	// });
+	// }, []);
 
 	const itemsToShow = menuItems[activeItemType].map(item => (
 		<MenuItem foodItem={item} key={item.id} />
