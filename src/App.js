@@ -13,6 +13,7 @@ import AppFooter from './components/AppFooter';
 // import Opening from './components/Opening';
 import AppNav from './components/AppNav';
 import HamburgerMenu from './components/HamburgerMenu';
+import AppCart from './components/Cart/AppCart';
 
 function App() {
 	const [navToggleState, setNavToggleState] = useState(false);
@@ -23,12 +24,17 @@ function App() {
 		<Router>
 			{/* <Opening /> */}
 			<section className="App">
-				<HamburgerMenu navToggler={toggleNav} navToggleState={navToggleState} />
-				<AppNav navToggler={toggleNav} navToggleState={navToggleState} />
-
-				{/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
 				<CartContextProvider>
+					<HamburgerMenu
+						navToggler={toggleNav}
+						navToggleState={navToggleState}
+					/>
+					<AppNav navToggler={toggleNav} navToggleState={navToggleState} />
+
+					<AppCart></AppCart>
+
+					{/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
 					<Switch>
 						<Route exact path="/">
 							<Home />
