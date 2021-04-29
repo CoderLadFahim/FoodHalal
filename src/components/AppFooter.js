@@ -1,10 +1,15 @@
 import './AppFooterStyles.scss';
+import { useLocation } from 'react-router-dom';
 
-export default function AppFooter() {
+function AppFooter() {
+	const { pathname: currentRoutePath } = useLocation();
+
 	return (
-		<footer style={{ display: 'none' }}>
+		<footer className={currentRoutePath === '/' ? 'homeFooter' : ''}>
 			<h1>This site is completely fictional</h1>
 			<p>Made by CoderLadFahim</p>
 		</footer>
 	);
 }
+
+export default AppFooter;
