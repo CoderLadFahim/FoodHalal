@@ -15,7 +15,7 @@ function AppCart(props) {
 	const [cartDiscardPromptDisplay, setCartDiscardPromptDisplay] = useState(
 		false
 	);
-	// this state, triggers the FormSubmissionView of user clicks the order btn
+	// this state, triggers the FormSubmissionView if user clicks the order btn
 	const [userOrdering, setUserOrdering] = useState(false);
 
 	const totalItemsInCart = cartItems.reduce((a, v) => a + v.count, 0);
@@ -36,6 +36,7 @@ function AppCart(props) {
 				onClick={() => setCartToggleState(prevState => !prevState)}
 			>
 				Cart
+				<span className="quantity-peek">{totalItemsInCart}</span>
 			</div>
 
 			{cartToggleState && (

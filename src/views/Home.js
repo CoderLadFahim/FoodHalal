@@ -1,5 +1,8 @@
 import './HomeStyles.scss';
 import { Link } from 'react-router-dom';
+import picMain from '../assets/images_global/pic-main.png';
+import bottomLeft from '../assets/images_global/bottom-left.png';
+import bottomRight from '../assets/images_global/bottom-right.png';
 
 function Home(props) {
 	return (
@@ -11,12 +14,21 @@ function Home(props) {
 				<span className="line3">that are 100% Halal certified</span>
 			</p>
 			<div className="app-btns">
-				<button className="table-btn">
-					BOOK A TABLE
-					{/* Arrow here */}
-				</button>
+				<Link to="/book">
+					<button className="table-btn">
+						BOOK A TABLE
+						{/* Arrow here */}
+					</button>
+				</Link>
 
-				<button className="order-btn">ORDER NOW</button>
+				<Link to="/menu">
+					<button className="order-btn">ORDER NOW</button>
+				</Link>
+			</div>
+			<div className="decorations">
+				<img src={picMain} alt="Large meal on white plate" />
+				<img src={bottomLeft} alt="Tacos on serving platter" />
+				<img src={bottomRight} alt="Fresh green salad" />
 			</div>
 		</section>
 	);
