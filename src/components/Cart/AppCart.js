@@ -15,6 +15,7 @@ function AppCart(props) {
 	const [cartDiscardPromptDisplay, setCartDiscardPromptDisplay] = useState(
 		false
 	);
+	// this state, triggers the FormSubmissionView of user clicks the order btn
 	const [userOrdering, setUserOrdering] = useState(false);
 
 	const totalItemsInCart = cartItems.reduce((a, v) => a + v.count, 0);

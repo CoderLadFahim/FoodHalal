@@ -1,10 +1,13 @@
 import TweenLite from 'gsap';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import './AppNavStyles.scss';
 
 function NavBar({ navToggler, navToggleState }) {
+	// getting the pathname, (used to add the homeNav class to the AppNav)
+	const { pathname: currentRoutePath } = useLocation();
+
 	useEffect(() => {
 		// animates only on mobile when the hamburger menu is clicked adding the 'mobile-show' class
 		const navTimeline = TweenLite.timeline();
@@ -32,7 +35,10 @@ function NavBar({ navToggler, navToggleState }) {
 	};
 
 	return (
-		<nav className={navClass} onClick={handleLinkClick}>
+		<nav
+			className={navClass + `${currentRoutePath === '/' ? ' homeNav' : ''}`}
+			onClick={handleLinkClick}
+		>
 			<ul className="wrapper nav-links">
 				<li className="route-link">
 					<NavLink activeClassName="active-link" exact to="/">
