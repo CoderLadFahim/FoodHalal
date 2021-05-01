@@ -1,6 +1,8 @@
 import './AppCartStyles.scss';
 import { useState, useContext } from 'react';
 import { CartContext } from '../../contexts/CartContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 import CartHeader from './CartHeader';
 import CartItem from './CartItem';
@@ -35,7 +37,7 @@ function AppCart(props) {
 				className="cart-toggler"
 				onClick={() => setCartToggleState(prevState => !prevState)}
 			>
-				Cart
+				<FontAwesomeIcon className="cart-icon" icon={faShoppingCart} />
 				<span className="quantity-peek">{totalItemsInCart}</span>
 			</div>
 

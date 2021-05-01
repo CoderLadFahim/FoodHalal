@@ -1,5 +1,8 @@
 import './HomeStyles.scss';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 import picMain from '../assets/images_global/pic-main.png';
 import bottomLeft from '../assets/images_global/bottom-left.png';
 import bottomRight from '../assets/images_global/bottom-right.png';
@@ -17,6 +20,7 @@ function Home(props) {
 				<Link to="/book">
 					<button className="table-btn">
 						BOOK A TABLE
+						<FontAwesomeIcon className="arrow-right" icon={faArrowRight} />
 						{/* Arrow here */}
 					</button>
 				</Link>
