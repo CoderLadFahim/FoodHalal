@@ -18,7 +18,7 @@ function Home(props) {
 			</p>
 			<div className="app-btns">
 				<Link to="/book">
-					<button className="table-btn">
+					<button className="btn">
 						BOOK A TABLE
 						<FontAwesomeIcon className="arrow-right" icon={faArrowRight} />
 						{/* Arrow here */}
@@ -26,7 +26,7 @@ function Home(props) {
 				</Link>
 
 				<Link to="/menu">
-					<button className="order-btn">ORDER NOW</button>
+					<button className="btn btn-secondary">ORDER NOW</button>
 				</Link>
 			</div>
 			<div className="decorations">

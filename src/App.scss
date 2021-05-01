@@ -29,6 +29,43 @@ body {
 	margin: 0 auto;
 }
 
+.btn {
+	padding: 5px 25px;
+	border-radius: 10px;
+	font-family: $font1-bold;
+	text-transform: uppercase;
+	background: $pink;
+	color: $white;
+	font-weight: bold;
+	border: none;
+	outline: none;
+	transition: 150ms;
+
+	&.submit-btn {
+		opacity: 0;
+		transform: translateY(-50px);
+
+		&:hover {
+			transform: scale(1.05);
+			cursor: pointer;
+		}
+	}
+
+	&:active {
+		border: 1px solid $white;
+	}
+
+	&.disabled {
+		background-color: #999;
+		pointer-events: none;
+	}
+
+	&.btn-secondary {
+		background-color: $white;
+		color: $pink;
+	}
+}
+
 @media only screen and (min-width: 600px) {
 	body {
 		margin-top: 5vh;

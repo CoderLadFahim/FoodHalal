@@ -25,7 +25,7 @@ function Menu(props) {
 	));
 
 	return (
-		<section className="menu-page">
+		<section className="menu-page wrapper">
 			<div className="header-content">
 				<PageTitle> Menu </PageTitle>
 				<NavLink to="/book">
