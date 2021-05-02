@@ -8,8 +8,6 @@ import FormButton from '../FormButton';
 function DinerDetails({ dinerDetailsSetter, tableReadyStatusSetter }) {
 	const [dinerName, setName] = useState('');
 	const [dinerCell, setCell] = useState('');
-	// dinerEmail is optional
-	const [dinerEmail, setEmail] = useState('');
 
 	// checks if the local states have been filled (used to disable the availability checkerBtn)
 	const requiredFieldsFilled = [dinerName, dinerCell].every(field => field);
@@ -23,7 +21,6 @@ function DinerDetails({ dinerDetailsSetter, tableReadyStatusSetter }) {
 		dinerDetailsSetter({
 			dinerName,
 			dinerCell,
-			dinerEmail: dinerEmail || '',
 		});
 	};
 
@@ -57,18 +54,6 @@ function DinerDetails({ dinerDetailsSetter, tableReadyStatusSetter }) {
 			>
 				Main Diner Cell
 			</AppInput>
-			<AppInput
-				attrs={{
-					type: 'text',
-					name: 'dinerEmail',
-					// requiredStatus: false,
-					required: false,
-				}}
-				content={dinerEmail}
-				contentSetter={setEmail}
-			>
-				Main Diner Email (optional)
-			</AppInput>
 
 			{/* this button triggers submission */}
 			<FormButton
@@ -77,9 +62,11 @@ function DinerDetails({ dinerDetailsSetter, tableReadyStatusSetter }) {
 			>
 				Confirm Table
 			</FormButton>
-
 			{/* the go back button */}
-			<button className="btn" onClick={e => handleClick(e, false)}>
+			<button
+				className="btn btn-secondary"
+				onClick={e => handleClick(e, false)}
+			>
 				{' '}
 				Go Back{' '}
 			</button>

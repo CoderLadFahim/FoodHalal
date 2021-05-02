@@ -46,7 +46,7 @@ function AppCart(props) {
 					{/* CART HEADER */}
 					<CartHeader
 						totalItemsInCart={totalItemsInCart}
-						itemsExistInCart={cartItems.length == true}
+						itemsExistInCart={cartItems.length}
 						cartDiscardPromptDisplayer={() => setCartDiscardPromptDisplay(true)}
 						cartHider={() => setCartToggleState(false)}
 					/>

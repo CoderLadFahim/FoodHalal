@@ -1,0 +1,92 @@
+@import '../../index.scss';
+
+.detail-input {
+	background-color: #414141;
+	width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+	border-radius: 10px;
+
+	.input-type {
+		font-family: $font3-semibold;
+	}
+
+	input {
+		width: 60%;
+		background-color: inherit;
+		color: $beige;
+		font-family: $font2-bold;
+		text-transform: uppercase;
+		border: none;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.detail-input {
+		padding: 15px 25px;
+
+		.input-type {
+			font-size: 1.2rem;
+		}
+
+		input {
+			font-size: 1.1rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.detail-input {
+		padding: 20px 25px;
+
+		.input-type {
+			font-size: 1.5rem;
+		}
+
+		input {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.detail-input {
+		padding: 10px 15px;
+
+		.input-type {
+			font-size: 1.05rem;
+		}
+
+		input {
+			font-size: 0.9rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	.detail-input {
+		.input-type {
+			font-size: 1.3rem;
+		}
+
+		input {
+			font-size: 1.2rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 1920px) {
+	.detail-input {
+		padding: 15px 20px;
+
+		.input-type {
+			font-size: 1.5rem;
+		}
+
+		input {
+			font-size: 1.4rem;
+		}
+	}
+}

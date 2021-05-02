@@ -1,0 +1,23 @@
+@import '../../index.scss';
+
+$success-col: rgb(72, 255, 72);
+$error-col: $pink;
+
+.table-availbility-status {
+	font-size: 1.4rem;
+	text-align: center;
+	width: 90%;
+
+	&.unavailable {
+		color: $error-col;
+	}
+	&.available {
+		color: $success-col;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.table-availbility-status {
+		grid-column: span 3;
+	}
+}

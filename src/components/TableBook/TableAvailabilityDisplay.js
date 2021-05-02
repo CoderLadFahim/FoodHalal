@@ -1,5 +1,9 @@
+import './TableAvailabilityDisplayStyles.scss';
+
 function TableAvailabilityDisplay({ tableAvailability }) {
-	const statusClass = `${!tableAvailability ? 'unavailable' : 'available'}`;
+	const statusClass = `table-availbility-status ${
+		!tableAvailability ? 'unavailable' : 'available'
+	}`;
 
 	return (
 		<p className={statusClass}>

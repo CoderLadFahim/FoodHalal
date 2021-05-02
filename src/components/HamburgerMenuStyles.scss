@@ -12,12 +12,13 @@
 	position: absolute;
 	right: 15px;
 	bottom: 15px;
-	background-color: $beige;
+	// background-color: $beige;
 	border-radius: 50%;
 	cursor: pointer;
+	// transform: scale(0.8);
 
 	.line {
-		width: 55%;
+		width: 60%;
 		list-style-type: none;
 		height: 5px;
 		background: $orange;

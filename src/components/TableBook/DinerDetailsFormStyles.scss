@@ -4,3 +4,9 @@
 	width: 100%;
 	height: 90vh;
 }
+
+@media only screen and (min-width: 1280px) {
+	.details-input.diner-details {
+		grid-template-columns: 1fr 1fr;
+	}
+}

@@ -38,7 +38,7 @@ function TableBook(props) {
 
 	return (
 		<section className="table-booking-page wrapper">
-			<PageTitle> Book a Table </PageTitle>
+			<PageTitle> Table-Book </PageTitle>
 			{/* Showing the forms if fields are empty, else FormSubmissionView is being rendered*/}
 			{fieldsEmpty ? (
 				<div className="detail-input-forms">

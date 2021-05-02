@@ -3,7 +3,7 @@
 .page-title {
 	width: 53%;
 	position: relative;
-	margin: 20px 0;
+	margin: 15px 0;
 	text-transform: uppercase;
 	overflow: hidden;
 	color: $pink;
@@ -25,25 +25,28 @@
 
 @media only screen and (min-width: 600px) {
 	.page-title {
-		margin-bottom: 35px;
+		margin-top: 70px;
+		// margin-bottom: 35px;
 		width: 32%;
 	}
 }
 
 @media only screen and (min-width: 768px) {
 	.page-title {
-		margin: 40px 0;
-		span.bottom-border {
-			width: 65%;
-		}
+		margin-top: 80px;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.page-title {
+		margin-top: 90px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
 	.page-title {
-		width: 40%;
 		.title-text {
-			font-size: 3.5rem;
+			font-size: 2.5rem;
 		}
 		margin-bottom: 50px;
 	}

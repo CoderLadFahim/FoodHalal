@@ -4,7 +4,7 @@ function FormButton({ className, btnDisabler, children, clickHandler }) {
 	return (
 		<button
 			onClick={clickHandler}
-			className={`btn ${className || ''}${btnDisabler && 'disabled'}`}
+			className={`btn ${className || ''} ${btnDisabler && 'disabled'}`}
 		>
 			{' '}
 			{children}{' '}
