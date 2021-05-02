@@ -16,22 +16,17 @@ function About(props) {
 				duration: 0.85,
 				yPercent: -100,
 			})
-			.from('.page-title', {
-				duration: 0.5,
-				y: 50,
-				opacity: 0,
-			})
-			.from('.page-title .bottom-border', {
-				duration: 0.3,
-				width: 0,
-			})
-			.from('.info-card', {
-				duration: 0.85,
-				yPercent: 30,
-				opacity: 0,
-				stagger: 0.85 / 3,
-				ease: 'power1.out',
-			})
+			.from(
+				'.info-card',
+				{
+					duration: 0.85,
+					yPercent: 30,
+					opacity: 0,
+					stagger: 0.85 / 3,
+					ease: 'power1.out',
+				},
+				'+=1'
+			)
 			.from('.info-cards .line', {
 				duration: 0.5,
 				width: 0,
