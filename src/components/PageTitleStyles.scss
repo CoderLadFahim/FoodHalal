@@ -10,12 +10,13 @@
 
 	.title-text {
 		font-size: 2rem;
-		font-family: $font1-bold;
+		// font-family: $font1-bold;
+		font-family: $logo-font;
 	}
 
 	& > span.bottom-border {
 		position: absolute;
-		bottom: 0;
+		bottom: 5px;
 		left: 0;
 		background: $beige;
 		width: 60%;
