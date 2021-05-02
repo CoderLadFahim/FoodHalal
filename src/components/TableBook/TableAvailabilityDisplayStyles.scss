@@ -7,6 +7,7 @@ $error-col: $pink;
 	font-size: 1.4rem;
 	text-align: center;
 	width: 90%;
+	transform: scale(0);
 
 	&.unavailable {
 		color: $error-col;

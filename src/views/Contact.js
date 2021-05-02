@@ -39,7 +39,7 @@ function Contact(props) {
 	);
 
 	useEffect(() => {
-		const contactPageTimeline = TweenLite.timeline();
+		const contactPageTimeline = TweenLite.timeline({ delay: 1 });
 
 		const elementsToAnimate = Array.from(
 			document.querySelectorAll('.contact-form > *')
@@ -47,20 +47,6 @@ function Contact(props) {
 
 		// removing the submit-btn from the flow
 		elementsToAnimate.pop();
-
-		// running title animation only when page first loads not on submissionState change
-		if (!submissionState) {
-			contactPageTimeline
-				.from('.page-title', {
-					duration: 0.5,
-					yPercent: 100,
-					opacity: 0,
-				})
-				.from('.bottom-border', {
-					duration: 0.5,
-					width: 0,
-				});
-		}
 
 		contactPageTimeline
 			.from(elementsToAnimate, {

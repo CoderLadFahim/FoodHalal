@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import TweenLite from 'gsap';
 import './TableBookStyles.scss';
 
 import PageTitle from '../components/PageTitle';
@@ -27,7 +28,7 @@ function TableBook(props) {
 		);
 	};
 
-	// thi boolean values toggle the two forms
+	// this boolean value toggles the two forms
 	const [tableReadyState, setTableReadyState] = useState(false);
 
 	// this boolean triggers the forms and the FormSubmissionView
@@ -35,6 +36,18 @@ function TableBook(props) {
 		...Object.values(tableDetails),
 		...Object.values(dinerDetails),
 	].every(field => field);
+
+	useEffect(() => {
+		const tableBookTL = TweenLite.timeline({ delay: 1 });
+
+		tableBookTL.from('.details-input > *', {
+			duration: 1,
+			yPercent: -100,
+			opacity: 0,
+			stagger: 0.1,
+			ease: 'power1.out',
+		});
+	}, []);
 
 	return (
 		<section className="table-booking-page wrapper">
