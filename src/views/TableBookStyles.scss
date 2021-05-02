@@ -17,13 +17,14 @@
 			background-color: #414141;
 			width: 90%;
 			display: flex;
-			justify-content: space-around;
-			padding: 15px 0;
+			align-items: center;
+			justify-content: space-between;
+			padding: 15px;
 			border-radius: 10px;
 		}
 
 		.detail-input input {
-			width: 55%;
+			width: 60%;
 			background-color: inherit;
 			color: $beige;
 			font-family: $font2-bold;

@@ -14,7 +14,7 @@ function CountControl({ decrementor, incrementor, children }) {
 			<button className="add" onClick={updateCount}>
 				+
 			</button>
-			<p className="diners-count">{children}</p>
+			<p className="count-display">{children}</p>
 			<button className="subtract" onClick={updateCount}>
 				-
 			</button>

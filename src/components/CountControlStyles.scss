@@ -1,0 +1,53 @@
+@import '../index.scss';
+
+.count-control {
+	width: 90px;
+	display: flex;
+	align-items: center;
+	& > * {
+		flex: 1;
+	}
+
+	button {
+		color: $white;
+		border: none;
+		font-size: 1.5rem;
+		outline: none;
+		cursor: pointer;
+		height: 30px;
+		&:active {
+			background: #f1f1f1;
+		}
+	}
+
+	$btn-radius: 5px;
+
+	.add {
+		background-color: $lightpink;
+		border-radius: $btn-radius 0 0 $btn-radius;
+
+		&:active {
+			color: $lightpink;
+		}
+	}
+	.subtract {
+		background-color: $lightorange;
+		border-radius: 0 $btn-radius $btn-radius 0;
+
+		&:active {
+			color: $lightorange;
+		}
+	}
+
+	.count-display {
+		box-sizing: content-box;
+		padding: 3px;
+		border-radius: 3.5px;
+		background-color: $white;
+		display: grid;
+		place-items: center;
+		color: $pink;
+		font-size: 1.1rem;
+		font-family: $font1-bold;
+	}
+}
