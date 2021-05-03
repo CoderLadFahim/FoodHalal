@@ -31,6 +31,13 @@ function About(props) {
 				duration: 0.5,
 				width: 0,
 				ease: 'power2.out',
+			})
+			.from('.info', {
+				duration: 1,
+				y: -50,
+				opacity: 0,
+				stagger: 0.5,
+				ease: 'power4.out',
 			});
 	}, []);
 
