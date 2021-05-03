@@ -1,10 +1,16 @@
-export default function FormSubmissonView({ clickHandler }) {
+import './FormSubmissionViewStyles.scss';
+
+function FormSubmissionView({ clickHandler }) {
 	return (
-		<div className="confirmation-msg content-container">
-			<h3>This site is fictional. Nothing was sent.</h3>
+		<div className="submission-view">
+			<h3>
+				This site is fictional. <br /> Nothing was sent
+			</h3>
 			<button className="btn" onClick={clickHandler}>
 				Okay
 			</button>
 		</div>
 	);
 }
+
+export default FormSubmissionView;

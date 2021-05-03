@@ -68,29 +68,6 @@
 		height: 82vh;
 		margin-bottom: 50px;
 	}
-
-	.confirmation-msg {
-		// border: 1px solid crimson;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-
-		h3 {
-			text-align: center;
-			margin-bottom: 50px;
-			font-size: 1.5rem;
-		}
-
-		.btn {
-			font-size: 1.5rem;
-			padding: 7px 35px;
-
-			// &:hover {
-			// 	transform: translateY(10px);
-			// }
-		}
-	}
 }
 
 @media only screen and (min-width: 414px) {
@@ -135,16 +112,6 @@
 
 		textarea {
 			font-size: 1.3rem;
-		}
-
-		.confirmation-msg {
-			h3 {
-				font-size: 2.5rem;
-			}
-
-			.btn {
-				font-size: 1.5rem;
-			}
 		}
 	}
 }
