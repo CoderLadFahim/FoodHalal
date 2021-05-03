@@ -61,6 +61,68 @@
 			"img": "./food_pics/appetizers/vegetable_skewers.jpg"
 		}
 	],
+	"main": [
+		{
+			"name": "Asian Noodles",
+			"id": "asian_noodles",
+			"price": "123",
+			"img": "./food_pics/main/asian_noodles.jpg"
+		},
+		{
+			"name": "Beef Steak",
+			"id": "beef_steak",
+			"price": "123",
+			"img": "./food_pics/main/beef_steak.jpg"
+		},
+		{
+			"name": "Burger Fries",
+			"id": "burger_and_fries",
+			"price": "123",
+			"img": "./food_pics/main/burger_and_fries.jpg"
+		},
+		{
+			"name": "Cheese Pizza",
+			"id": "cheese_pizza",
+			"price": "123",
+			"img": "./food_pics/main/cheese_pizza.jpg"
+		},
+		{
+			"name": "Fried Chicken",
+			"id": "fried_chicken",
+			"price": "123",
+			"img": "./food_pics/main/fried_chicken.jpg"
+		},
+		{
+			"name": "Grill Chicken",
+			"id": "grill_chicken",
+			"price": "123",
+			"img": "./food_pics/main/grill_chicken.jpg"
+		},
+		{
+			"name": "Potato Casserole",
+			"id": "potato_casserole",
+			"price": "123",
+			"img": "./food_pics/main/potato_casserole.jpg"
+		},
+		{
+			"name": "Punjabi rice",
+			"id": "punjabi_rice",
+			"price": "123",
+			"img": "./food_pics/main/punjabi_rice.jpg"
+		},
+		{
+			"name": "Shrimp Pasta",
+			"id": "shrimp_pasta",
+			"price": "123",
+			"img": "./food_pics/main/shrimp_pasta.jpg"
+		},
+		{
+			"name": "Tacos with Lime",
+			"id": "tacos_with_lime",
+			"price": "123",
+			"img": "./food_pics/main/tacos_with_lime.jpg"
+		}
+	],
 	"desserts": [
 		{
 			"name": "Bread Croissants",
@@ -183,68 +245,6 @@
 			"id": "strawberry_milkshake",
 			"price": "123",
 			"img": "./food_pics/drinks/strawberry_milkshake.jpg"
-		}
-	],
-	"main": [
-		{
-			"name": "Asian Noodles",
-			"id": "asian_noodles",
-			"price": "123",
-			"img": "./food_pics/main/asian_noodles.jpg"
-		},
-		{
-			"name": "Beef Steak",
-			"id": "beef_steak",
-			"price": "123",
-			"img": "./food_pics/main/beef_steak.jpg"
-		},
-		{
-			"name": "Burger Fries",
-			"id": "burger_and_fries",
-			"price": "123",
-			"img": "./food_pics/main/burger_and_fries.jpg"
-		},
-		{
-			"name": "Cheese Pizza",
-			"id": "cheese_pizza",
-			"price": "123",
-			"img": "./food_pics/main/cheese_pizza.jpg"
-		},
-		{
-			"name": "Fried Chicken",
-			"id": "fried_chicken",
-			"price": "123",
-			"img": "./food_pics/main/fried_chicken.jpg"
-		},
-		{
-			"name": "Grill Chicken",
-			"id": "grill_chicken",
-			"price": "123",
-			"img": "./food_pics/main/grill_chicken.jpg"
-		},
-		{
-			"name": "Potato Casserole",
-			"id": "potato_casserole",
-			"price": "123",
-			"img": "./food_pics/main/potato_casserole.jpg"
-		},
-		{
-			"name": "Punjabi rice",
-			"id": "punjabi_rice",
-			"price": "123",
-			"img": "./food_pics/main/punjabi_rice.jpg"
-		},
-		{
-			"name": "Shrimp Pasta",
-			"id": "shrimp_pasta",
-			"price": "123",
-			"img": "./food_pics/main/shrimp_pasta.jpg"
-		},
-		{
-			"name": "Tacos with Lime",
-			"id": "tacos_with_lime",
-			"price": "123",
-			"img": "./food_pics/main/tacos_with_lime.jpg"
 		}
 	]
 }
