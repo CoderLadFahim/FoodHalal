@@ -33,15 +33,13 @@ function MenuItem({ foodItem }) {
 		<div
 			className="menu-item"
 			style={{
-				width: 360,
-				height: 300,
 				backgroundImage: `url(${foodItem.img})`,
 			}}
 		>
 			<div className="item-control">
 				<button
 					onClick={() => handleCartInteraction(itemInCart ? 'REMOVE' : 'ADD')}
-					className={`add-remove-btn ${itemInCart ? 'remove' : 'add'}`}
+					className={`btn add-remove-btn ${itemInCart ? 'remove' : 'add'}`}
 				>
 					{itemInCart ? 'Remove' : 'Add'} Item
 				</button>
