@@ -45,7 +45,7 @@ function AppCart(props) {
 			</div>
 
 			{cartToggleState && (
-				<section className="cart" style={{ border: '1px solid white' }}>
+				<div className="cart" style={{ border: '1px solid white' }}>
 					{/* CART HEADER */}
 					<CartHeader
 						totalItemsInCart={totalItemsInCart}
@@ -56,7 +56,7 @@ function AppCart(props) {
 
 					{/* AppCart displays a message if the cart is empty and shows an order btn if user os not on the menu page, else it shows the CartItems */}
 					{!cartItems.length ? (
-						<CartEmptyDisplay />
+						<CartEmptyDisplay cartHider={() => setCartToggleState()} />
 					) : (
 						<div className="cart-display">
 							{/* CART DISPLAY */}
@@ -89,8 +89,9 @@ function AppCart(props) {
 							}}
 						/>
 					)}
-				</section>
+				</div>
 			)}
+			<div className="backdrop"></div>
 		</section>
 	);
 }

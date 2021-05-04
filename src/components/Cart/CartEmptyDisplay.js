@@ -1,7 +1,7 @@
 import './CartEmptyDisplayStyles.scss';
 import { useLocation, Link } from 'react-router-dom';
 
-function CartEmptyDisplay() {
+function CartEmptyDisplay({ cartHider }) {
 	const { pathname: currentRoutePath } = useLocation();
 
 	return (
@@ -10,7 +10,9 @@ function CartEmptyDisplay() {
 
 			{currentRoutePath !== '/menu' && (
 				<Link to="/menu">
-					<button className="btn btn-secondary">ORDER NOW</button>
+					<button onClick={cartHider} className="btn btn-secondary">
+						ORDER NOW
+					</button>
 				</Link>
 			)}
 		</div>
