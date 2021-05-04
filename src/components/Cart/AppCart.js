@@ -1,5 +1,6 @@
 import './AppCartStyles.scss';
 import { useState, useContext } from 'react';
+
 import { CartContext } from '../../contexts/CartContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
@@ -7,6 +8,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import CartHeader from './CartHeader';
 import CartItem from './CartItem';
 import CartDiscardPrompt from './CartDiscardPrompt';
+import CartEmptyDisplay from './CartEmptyDisplay';
 import CartFooter from './CartFooter';
 import FormSubmissionView from '../FormSubmissionView';
 
@@ -19,6 +21,7 @@ function AppCart(props) {
 	);
 	// this state, triggers the FormSubmissionView if user clicks the order btn
 	const [userOrdering, setUserOrdering] = useState(false);
+	// getting the current location to show menu-link if cart is empty and user is not on the menu page
 
 	const totalItemsInCart = cartItems.reduce((a, v) => a + v.count, 0);
 	const totalPrice = cartItems
@@ -51,14 +54,19 @@ function AppCart(props) {
 						cartHider={() => setCartToggleState(false)}
 					/>
 
-					{/* CART DISPLAY */}
-					<div className="cart-display">
-						{!userOrdering ? (
-							cartItems.map(item => <CartItem item={item} key={item.id} />)
-						) : (
-							<FormSubmissionView clickHandler={resetCart} />
-						)}
-					</div>
+					{/* AppCart displays a message if the cart is empty and shows an order btn if user os not on the menu page, else it shows the CartItems */}
+					{!cartItems.length ? (
+						<CartEmptyDisplay />
+					) : (
+						<div className="cart-display">
+							{/* CART DISPLAY */}
+							{!userOrdering ? (
+								cartItems.map(item => <CartItem item={item} key={item.id} />)
+							) : (
+								<FormSubmissionView clickHandler={resetCart} />
+							)}
+						</div>
+					)}
 
 					{/* CART FOOTER */}
 					<CartFooter
