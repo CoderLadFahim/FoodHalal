@@ -68,19 +68,21 @@ function AppCart(props) {
 						cartHider={hideCart}
 					/>
 
-					{/* AppCart displays a message if the cart is empty and shows an order btn if user os not on the menu page, else it shows the CartItems */}
-					{!cartItems.length ? (
-						<CartEmptyDisplay cartHider={hideCart} />
-					) : (
-						<div className="cart-display">
-							{/* CART DISPLAY */}
-							{!userOrdering ? (
-								cartItems.map(item => <CartItem item={item} key={item.id} />)
-							) : (
-								<FormSubmissionView clickHandler={resetCart} />
-							)}
-						</div>
-					)}
+					<div className="cart-body">
+						{/* AppCart displays a message if the cart is empty and shows an order btn if user os not on the menu page, else it shows the CartItems */}
+						{!cartItems.length ? (
+							<CartEmptyDisplay cartHider={hideCart} />
+						) : (
+							<div className="cart-display">
+								{/* CART DISPLAY */}
+								{!userOrdering ? (
+									cartItems.map(item => <CartItem item={item} key={item.id} />)
+								) : (
+									<FormSubmissionView clickHandler={resetCart} />
+								)}
+							</div>
+						)}
+					</div>
 
 					{/* CART FOOTER */}
 					<CartFooter
