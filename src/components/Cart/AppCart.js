@@ -59,7 +59,7 @@ function AppCart(props) {
 			</div>
 
 			{cartToggleState && (
-				<div className="cart" style={{ border: '1px solid white' }}>
+				<div className="cart">
 					{/* CART HEADER */}
 					<CartHeader
 						totalItemsInCart={totalItemsInCart}
