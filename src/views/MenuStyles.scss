@@ -5,7 +5,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 
 		.btn {
 			width: 100%;
@@ -25,12 +25,13 @@
 		justify-content: space-between;
 		border-bottom: 3px solid #999999;
 		padding-bottom: 5px;
-		margin-bottom: 15px;
+		margin-bottom: 30px;
 		font-family: $font3-semibold;
 
 		.food-link {
 			position: relative;
 			text-transform: capitalize;
+			cursor: pointer;
 		}
 
 		.active {

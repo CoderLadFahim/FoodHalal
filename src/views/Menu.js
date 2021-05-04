@@ -58,7 +58,7 @@ function Menu(props) {
 				{foodLinks}
 			</ul>
 
-			{itemsToShow}
+			<div className="items-display">{itemsToShow}</div>
 		</section>
 	);
 }
