@@ -1,0 +1,36 @@
+@import '../../index.scss';
+
+.app-cart {
+	.cart-toggler {
+		background-color: $white;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		position: absolute;
+		display: grid;
+		place-items: center;
+		right: 15px;
+		bottom: 65px;
+		box-shadow: 2px 2px 3px $gray2;
+
+		.cart-icon {
+			color: $pink;
+			width: 50%;
+			height: 50%;
+		}
+
+		.quantity-peek {
+			display: grid;
+			place-items: center;
+			border-radius: 50%;
+			position: absolute;
+			background-color: $lightorange;
+			color: $white;
+			font-family: $font2-bold;
+			width: 50%;
+			height: 50%;
+			top: -7px;
+			right: -5px;
+		}
+	}
+}

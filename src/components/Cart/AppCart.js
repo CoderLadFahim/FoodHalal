@@ -32,7 +32,7 @@ function AppCart(props) {
 	};
 
 	return (
-		<section className="app-cart" style={{ display: 'none' }}>
+		<section className="app-cart">
 			<div
 				className="cart-toggler"
 				onClick={() => setCartToggleState(prevState => !prevState)}
