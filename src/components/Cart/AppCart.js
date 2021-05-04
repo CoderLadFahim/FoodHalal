@@ -28,6 +28,20 @@ function AppCart(props) {
 		.map(item => item.count * item.price)
 		.reduce((a, v) => a + v, 0);
 
+	const hideCart = () => setCartToggleState(false);
+	const showCartDiscardPrompt = () => setCartDiscardPromptDisplay(true);
+
+	const changeUserOrderingState = () =>
+		cartItems.length
+			? setUserOrdering(prevState => !prevState)
+			: alert('Order some items first!');
+
+	const keepCartItems = () => setCartDiscardPromptDisplay(false);
+	const discardCartItems = () => {
+		dispatch({ type: 'CLEAR_CART' });
+		setCartDiscardPromptDisplay(false);
+	};
+
 	const resetCart = () => {
 		setUserOrdering(false);
 		dispatch({ type: 'CLEAR_CART' });
@@ -50,13 +64,13 @@ function AppCart(props) {
 					<CartHeader
 						totalItemsInCart={totalItemsInCart}
 						itemsExistInCart={cartItems.length}
-						cartDiscardPromptDisplayer={() => setCartDiscardPromptDisplay(true)}
-						cartHider={() => setCartToggleState(false)}
+						cartDiscardPromptDisplayer={showCartDiscardPrompt}
+						cartHider={hideCart}
 					/>
 
 					{/* AppCart displays a message if the cart is empty and shows an order btn if user os not on the menu page, else it shows the CartItems */}
 					{!cartItems.length ? (
-						<CartEmptyDisplay cartHider={() => setCartToggleState()} />
+						<CartEmptyDisplay cartHider={hideCart} />
 					) : (
 						<div className="cart-display">
 							{/* CART DISPLAY */}
@@ -72,21 +86,14 @@ function AppCart(props) {
 					<CartFooter
 						totalPrice={totalPrice}
 						userOrderingState={userOrdering}
-						userOrderingStateChanger={() =>
-							cartItems.length
-								? setUserOrdering(prevState => !prevState)
-								: alert('Order some items first!')
-						}
+						userOrderingStateChanger={changeUserOrderingState}
 					/>
 
 					{/* CART DISCARD PROMPT */}
 					{cartDiscardPromptDisplay && (
 						<CartDiscardPrompt
-							cartItemsKeeper={() => setCartDiscardPromptDisplay(false)}
-							cartItemsDiscarder={() => {
-								dispatch({ type: 'CLEAR_CART' });
-								setCartDiscardPromptDisplay(false);
-							}}
+							cartItemsKeeper={keepCartItems}
+							cartItemsDiscarder={discardCartItems}
 						/>
 					)}
 				</div>
