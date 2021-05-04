@@ -3,15 +3,17 @@
 .app-cart {
 	.cart-toggler {
 		background-color: $white;
-		width: 40px;
-		height: 40px;
+		width: 45px;
+		height: 45px;
 		border-radius: 50%;
 		position: absolute;
 		display: grid;
 		place-items: center;
 		right: 15px;
-		bottom: 65px;
-		box-shadow: 2px 2px 3px $gray2;
+		bottom: 75px;
+		cursor: pointer;
+		z-index: 98;
+		box-shadow: 2px 2px 10px $gray1;
 
 		.cart-icon {
 			color: $pink;
@@ -27,10 +29,50 @@
 			background-color: $lightorange;
 			color: $white;
 			font-family: $font2-bold;
-			width: 50%;
-			height: 50%;
+			font-size: 0.85rem;
+			width: 51%;
+			height: 51%;
 			top: -7px;
 			right: -5px;
+		}
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.app-cart {
+		.cart-toggler {
+			right: 20px;
+			bottom: 20px;
+		}
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.app-cart {
+		.cart-toggler {
+			transform: scale(1.35);
+			right: 45px;
+			bottom: 45px;
+		}
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.app-cart {
+		.cart-toggler {
+			transform: scale(1);
+			right: 25px;
+			bottom: 25px;
+		}
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	.app-cart {
+		.cart-toggler {
+			transform: scale(1.25);
+			right: 45px;
+			bottom: 40px;
 		}
 	}
 }
