@@ -44,6 +44,14 @@
 
 	.cart {
 		background-color: #292929;
+		height: 90vh;
+		width: 80vw;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 101;
+		box-shadow: 0px 0px 0px 35px rgba(17, 17, 17, 0.9);
 	}
 }
 
