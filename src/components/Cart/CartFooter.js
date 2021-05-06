@@ -12,7 +12,9 @@ function CartFooter({
 			</h3>
 
 			{!userOrderingState && (
-				<button onClick={userOrderingStateChanger}>Order</button>
+				<button className="btn order-btn" onClick={userOrderingStateChanger}>
+					Order
+				</button>
 			)}
 		</div>
 	);

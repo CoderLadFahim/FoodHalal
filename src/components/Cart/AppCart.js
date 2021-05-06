@@ -21,7 +21,6 @@ function AppCart(props) {
 	);
 	// this state, triggers the FormSubmissionView if user clicks the order btn
 	const [userOrdering, setUserOrdering] = useState(false);
-	// getting the current location to show menu-link if cart is empty and user is not on the menu page
 
 	const totalItemsInCart = cartItems.reduce((a, v) => a + v.count, 0);
 	const totalPrice = cartItems
