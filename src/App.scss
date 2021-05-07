@@ -41,14 +41,14 @@ body {
 	outline: none;
 	transition: 150ms;
 
+	&:hover {
+		transform: scale(1.05);
+		cursor: pointer;
+	}
+
 	&.submit-btn {
 		opacity: 0;
 		transform: translateY(-50px);
-
-		&:hover {
-			transform: scale(1.05);
-			cursor: pointer;
-		}
 	}
 
 	&:active {

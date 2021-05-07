@@ -76,6 +76,15 @@
 		.cart-footer {
 			border-top: 1px solid $lightpink;
 		}
+
+		.cart-body .submission-view {
+			height: 100%;
+
+			.btn {
+				padding: 5px 30px;
+				border-radius: 15px;
+			}
+		}
 	}
 }
 
@@ -111,6 +120,14 @@
 				flex: 9;
 			}
 
+			.cart-display {
+				padding: 20px 0;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 20px;
+				align-items: center;
+			}
+
 			& > * {
 				padding: 0 30px;
 			}
@@ -135,6 +152,10 @@
 				&::-webkit-scrollbar {
 					display: none;
 				}
+			}
+
+			.cart-display {
+				grid-template-columns: 1fr 1fr 1fr;
 			}
 
 			& > * {
@@ -178,6 +199,14 @@
 
 		.cart .cart-body {
 			flex: 9;
+		}
+	}
+}
+
+@media only screen and (min-width: 1920px) {
+	.app-cart {
+		.cart .cart-display {
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 }

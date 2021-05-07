@@ -3,13 +3,16 @@ import './CartDiscardPromptStyles.scss';
 function CartDiscardPrompt({ cartItemsKeeper, cartItemsDiscarder }) {
 	return (
 		<div className="cart-clear-confirm">
-			<p className="prompt">Are you sure you want to clear your cart?</p>
+			<h3 className="prompt">Are you sure you want to clear your cart?</h3>
 
 			<div className="confirm-btns">
-				<button className="keep-btn" onClick={cartItemsKeeper}>
+				<button className="btn keep-btn" onClick={cartItemsKeeper}>
 					Keep
 				</button>
-				<button className="discard-btn" onClick={cartItemsDiscarder}>
+				<button
+					className="btn btn-secondary discard-btn"
+					onClick={cartItemsDiscarder}
+				>
 					Clear
 				</button>
 			</div>

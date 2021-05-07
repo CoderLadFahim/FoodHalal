@@ -9,13 +9,22 @@ function CountControl({ decrementor, incrementor, children }) {
 			: children > 1 && decrementor();
 	};
 
+	const disabledStyles = {
+		pointerEvents: 'none',
+		color: '#111',
+	};
+
 	return (
 		<div className="count-control">
 			<button className="add" onClick={updateCount}>
 				+
 			</button>
 			<p className="count-display">{children}</p>
-			<button className="subtract" onClick={updateCount}>
+			<button
+				className="subtract"
+				onClick={updateCount}
+				style={+children === 1 ? disabledStyles : {}}
+			>
 				-
 			</button>
 		</div>

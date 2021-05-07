@@ -32,8 +32,8 @@ function AppCart(props) {
 
 	const changeUserOrderingState = () =>
 		cartItems.length
-			? setUserOrdering(prevState => !prevState)
-			: alert('Order some items first!');
+			? setUserOrdering(true)
+			: alert('Add some items to cart first!');
 
 	const keepCartItems = () => setCartDiscardPromptDisplay(false);
 	const discardCartItems = () => {
@@ -47,14 +47,38 @@ function AppCart(props) {
 		setCartToggleState(false);
 	};
 
+	// generating the cart body content (using an immediately invoking function)
+	const cartBodyContent = (() => {
+		// rendering the cartDiscardingPrompt if user attempts to clear cart
+		if (cartDiscardPromptDisplay)
+			return (
+				<CartDiscardPrompt
+					cartItemsKeeper={keepCartItems}
+					cartItemsDiscarder={discardCartItems}
+				/>
+			);
+
+		// rendering a cart empty message
+		if (!cartItems.length) return <CartEmptyDisplay cartHider={hideCart} />;
+
+		// rendering the cart items if cartItems exist
+		if (!userOrdering)
+			return (
+				<div className="cart-display">
+					{' '}
+					{cartItems.map(item => (
+						<CartItem item={item} key={item.id} />
+					))}{' '}
+				</div>
+			);
+		// rendering the FormSubmissionView if user attempts to order items
+		else return <FormSubmissionView clickHandler={resetCart} />;
+	})();
+
 	// disabling the vertical scroll on body when the cart is toggled
-	useEffect(
-		() =>
-			(document.body.style.overflow = `${
-				cartToggleState ? 'hidden' : 'scroll'
-			}`),
-		[cartToggleState]
-	);
+	useEffect(() => {
+		document.body.style.overflowY = `${cartToggleState ? 'hidden' : ''}`;
+	}, [cartToggleState]);
 
 	return (
 		<section className="app-cart">
@@ -76,21 +100,7 @@ function AppCart(props) {
 						cartHider={hideCart}
 					/>
 
-					<div className="cart-body">
-						{/* AppCart displays a message if the cart is empty and shows an order btn if user os not on the menu page, else it shows the CartItems */}
-						{!cartItems.length ? (
-							<CartEmptyDisplay cartHider={hideCart} />
-						) : (
-							<div className="cart-display">
-								{/* CART DISPLAY */}
-								{!userOrdering ? (
-									cartItems.map(item => <CartItem item={item} key={item.id} />)
-								) : (
-									<FormSubmissionView clickHandler={resetCart} />
-								)}
-							</div>
-						)}
-					</div>
+					<div className="cart-body">{cartBodyContent}</div>
 
 					{/* CART FOOTER */}
 					<CartFooter
@@ -98,17 +108,8 @@ function AppCart(props) {
 						userOrderingState={userOrdering}
 						userOrderingStateChanger={changeUserOrderingState}
 					/>
-
-					{/* CART DISCARD PROMPT */}
-					{cartDiscardPromptDisplay && (
-						<CartDiscardPrompt
-							cartItemsKeeper={keepCartItems}
-							cartItemsDiscarder={discardCartItems}
-						/>
-					)}
 				</div>
 			)}
-			<div className="backdrop"></div>
 		</section>
 	);
 }
