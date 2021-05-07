@@ -68,10 +68,6 @@
 		.cart-body {
 			flex: 7;
 			overflow-y: scroll;
-
-			&::-webkit-scrollbar {
-				display: none;
-			}
 		}
 
 		.cart-header {
@@ -135,6 +131,10 @@
 
 			.cart-body {
 				flex: 7;
+
+				&::-webkit-scrollbar {
+					display: none;
+				}
 			}
 
 			& > * {

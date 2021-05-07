@@ -1,5 +1,5 @@
 import './AppCartStyles.scss';
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 
 import { CartContext } from '../../contexts/CartContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -46,6 +46,15 @@ function AppCart(props) {
 		dispatch({ type: 'CLEAR_CART' });
 		setCartToggleState(false);
 	};
+
+	// disabling the vertical scroll on body when the cart is toggled
+	useEffect(
+		() =>
+			(document.body.style.overflow = `${
+				cartToggleState ? 'hidden' : 'scroll'
+			}`),
+		[cartToggleState]
+	);
 
 	return (
 		<section className="app-cart">
