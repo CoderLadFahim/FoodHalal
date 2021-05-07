@@ -31,9 +31,7 @@ function AppCart(props) {
 	const showCartDiscardPrompt = () => setCartDiscardPromptDisplay(true);
 
 	const changeUserOrderingState = () =>
-		cartItems.length
-			? setUserOrdering(prevState => !prevState)
-			: alert('Order some items first!');
+		cartItems.length ? setUserOrdering(true) : alert('Order some items first!');
 
 	const keepCartItems = () => setCartDiscardPromptDisplay(false);
 	const discardCartItems = () => {
@@ -48,13 +46,9 @@ function AppCart(props) {
 	};
 
 	// disabling the vertical scroll on body when the cart is toggled
-	useEffect(
-		() =>
-			(document.body.style.overflow = `${
-				cartToggleState ? 'hidden' : 'scroll'
-			}`),
-		[cartToggleState]
-	);
+	useEffect(() => {
+		document.body.style.overflowY = `${cartToggleState ? 'hidden' : ''}`;
+	}, [cartToggleState]);
 
 	return (
 		<section className="app-cart">

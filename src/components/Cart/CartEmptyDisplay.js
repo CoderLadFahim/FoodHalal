@@ -10,7 +10,7 @@ function CartEmptyDisplay({ cartHider }) {
 
 			{currentRoutePath !== '/menu' && (
 				<Link to="/menu">
-					<button onClick={cartHider} className="btn btn-secondary">
+					<button onClick={cartHider} className="btn btn-secondary order-btn">
 						ORDER NOW
 					</button>
 				</Link>

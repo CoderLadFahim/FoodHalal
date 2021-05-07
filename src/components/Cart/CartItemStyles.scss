@@ -1,0 +1,55 @@
+@import '../../index.scss';
+
+$remove-btn-col: #ff4747;
+$cart-item-bg: #333;
+
+.cart-item {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	background-color: $cart-item-bg;
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow: 1px 2px 3px $gray1;
+	margin: 15px 0;
+
+	.item-label {
+		font-size: 0.85rem;
+		grid-column: span 2;
+		flex-basis: 50%;
+		font-family: $font3-bold;
+
+		.item-name {
+			color: $beige;
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+
+		.item-price {
+			color: $pink;
+		}
+	}
+
+	.count-control {
+		transform: scale(0.7);
+		flex-basis: 40%;
+	}
+
+	.remove-btn {
+		align-self: center;
+		justify-self: center;
+		color: $remove-btn-col;
+		cursor: pointer;
+		transition: 50ms;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.cart-item {
+		width: 100%;
+		margin: 0;
+	}
+}
