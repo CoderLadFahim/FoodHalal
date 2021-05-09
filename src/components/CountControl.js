@@ -11,7 +11,7 @@ function CountControl({ decrementor, incrementor, children }) {
 
 	const disabledStyles = {
 		pointerEvents: 'none',
-		color: '#111',
+		opacity: 0.5,
 	};
 
 	return (
