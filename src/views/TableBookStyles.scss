@@ -9,7 +9,7 @@
 
 	.details-input {
 		// border: 1px solid #fff;
-		height: 550px;
+		height: 75vh;
 		// margin-bottom: 10px;
 		display: flex;
 		flex-direction: column;
@@ -25,10 +25,6 @@
 		.page-title {
 			width: 75%;
 		}
-
-		.details-input {
-			height: 600px;
-		}
 	}
 }
 
@@ -39,10 +35,6 @@
 		.page-title {
 			width: 50%;
 		}
-
-		.details-input {
-			height: 760px;
-		}
 	}
 }
 
@@ -50,10 +42,6 @@
 	.table-booking-page {
 		.page-title {
 			width: 40%;
-		}
-
-		.details-input {
-			height: 850px;
 		}
 	}
 }
@@ -65,10 +53,6 @@
 		.page-title {
 			width: 50%;
 		}
-
-		.details-input {
-			height: 990px;
-		}
 	}
 }
 
@@ -78,7 +62,6 @@
 
 		.details-input {
 			width: 85%;
-			height: 1150px;
 
 			margin: 0 auto;
 		}
@@ -91,7 +74,6 @@
 
 		.details-input {
 			margin-top: -70px;
-			height: 70vh;
 			width: 90%;
 			// border: 1px solid White;
 			display: grid;

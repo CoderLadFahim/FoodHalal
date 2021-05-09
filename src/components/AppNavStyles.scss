@@ -75,7 +75,9 @@ nav {
 		background: $gray2;
 		padding: 0;
 		position: fixed;
-		top: 0;
+		top: 0%;
+		left: 100%;
+		transform: translate(-50%, -50%);
 		// z-index: 999;
 		height: 5vh;
 		width: 100%;
