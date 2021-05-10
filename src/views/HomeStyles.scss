@@ -1,8 +1,23 @@
 @import '../index.scss';
 
 .home-page {
+	height: 100vh;
+	background-image: url('../assets/images_global/landingPageBg.jpg');
+	background-size: cover;
+
+	.decorations {
+		background-image: linear-gradient(-45deg, $pink 0%, $orange 100%);
+	}
+
+	.page-content {
+	}
+
+	.app-logo {
+		font-family: $logo-font;
+	}
+
 	img {
-		width: 200px;
-		height: 200px;
+		width: 150px;
+		height: 150px;
 	}
 }
