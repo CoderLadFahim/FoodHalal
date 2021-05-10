@@ -9,8 +9,39 @@
 		background-image: linear-gradient(-45deg, $pink 0%, $orange 100%);
 		width: 75%;
 		height: 50%;
-		border-bottom-right-radius: 100px;
+		border-bottom-right-radius: 150px;
 		position: relative;
+
+		img {
+			width: 150px;
+			height: 150px;
+			position: absolute;
+		}
+
+		.top-left {
+			top: 60px;
+			transform: scale(1.1);
+		}
+
+		.top-right {
+			right: -40px;
+			top: 50px;
+			transform: scale(1.1);
+			width: 155px;
+		}
+
+		.bottom-right {
+			bottom: -30px;
+			right: -60px;
+			width: 200px;
+			transform: scale(0.8);
+		}
+
+		.bottom-left {
+			bottom: -20px;
+			left: 17px;
+			transform: scale(0.9);
+		}
 	}
 
 	.page-content {
@@ -18,10 +49,5 @@
 
 	.app-logo {
 		font-family: $logo-font;
-	}
-
-	img {
-		width: 150px;
-		height: 150px;
 	}
 }
