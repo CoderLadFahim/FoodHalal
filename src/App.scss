@@ -52,7 +52,7 @@ body {
 	}
 
 	&:active {
-		border: 1px solid $white;
+		transform: translateY(5px) scale(1.05);
 	}
 
 	&.disabled {
