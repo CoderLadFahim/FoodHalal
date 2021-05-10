@@ -6,6 +6,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import picMain from '../assets/images_global/pic-main.png';
 import bottomLeft from '../assets/images_global/bottom-left.png';
 import bottomRight from '../assets/images_global/bottom-right.png';
+import small1 from '../assets/images_global/small1.png';
 
 function Home(props) {
 	return (
@@ -33,6 +34,7 @@ function Home(props) {
 				<img src={picMain} alt="Large meal on white plate" />
 				<img src={bottomLeft} alt="Tacos on serving platter" />
 				<img src={bottomRight} alt="Fresh green salad" />
+				<img src={small1} alt="Fish Grill with Salad" />
 			</div>
 		</section>
 	);
