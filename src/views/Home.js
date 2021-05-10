@@ -1,7 +1,7 @@
 import './HomeStyles.scss';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+import TableBookBtn from '../components/TableBookBtn';
 
 import picMain from '../assets/images_global/pic-main.png';
 import bottomLeft from '../assets/images_global/bottom-left.png';
@@ -26,13 +26,7 @@ function Home(props) {
 					<span className="line3">that are 100% Halal certified</span>
 				</p>
 				<div className="app-btns">
-					<Link to="/book">
-						<button className="btn">
-							BOOK A TABLE
-							<FontAwesomeIcon className="arrow-right" icon={faArrowRight} />
-							{/* Arrow here */}
-						</button>
-					</Link>
+					<TableBookBtn />
 
 					<Link to="/menu">
 						<button className="btn btn-secondary">ORDER NOW</button>
