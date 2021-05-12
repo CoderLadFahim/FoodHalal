@@ -12,19 +12,19 @@ function Home(props) {
 	return (
 		<section className="home-page">
 			<div className="decorations">
-				<img className="top-left" src={bottomRight} alt="Fresh green salad" />
 				<img
-					className="top-right"
+					className="small-salad"
+					src={bottomRight}
+					alt="Fresh green salad"
+				/>
+				<img
+					className="platter-tacos"
 					src={bottomLeft}
 					alt="Tacos on serving platter"
 				/>
+				<img className="fish-grill" src={small1} alt="Fish Grill with Salad" />
 				<img
-					className="bottom-right"
-					src={small1}
-					alt="Fish Grill with Salad"
-				/>
-				<img
-					className="bottom-left"
+					className="large-meal"
 					src={picMain}
 					alt="Large meal on white plate"
 				/>
