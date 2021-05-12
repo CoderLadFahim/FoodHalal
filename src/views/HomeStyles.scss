@@ -89,3 +89,29 @@
 		}
 	}
 }
+
+@media only screen and (min-width: 600px) {
+	.home-page {
+		.decorations {
+			height: 45%;
+		}
+
+		.page-content {
+			.app-logo {
+				font-size: 5rem;
+			}
+
+			.app-description {
+				font-size: 1.5rem;
+			}
+
+			.app-btns {
+				margin-top: 20px;
+
+				.btn-secondary {
+					padding: 10px 25px;
+				}
+			}
+		}
+	}
+}
