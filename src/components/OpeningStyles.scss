@@ -11,7 +11,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	z-index: 99;
+	z-index: 99999;
 
 	.app-title {
 		font-family: $logo-font;
@@ -19,6 +19,7 @@
 	}
 
 	.disclaimer {
+		font-family: $font1-bold;
 		text-transform: uppercase;
 		font-size: 2rem;
 		color: $beige;
