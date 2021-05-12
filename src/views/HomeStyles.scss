@@ -9,47 +9,34 @@
 		background-image: linear-gradient(-45deg, $pink 0%, $orange 100%);
 		width: 70%;
 		height: 50%;
-		border-bottom-right-radius: 150px;
+		border-bottom-right-radius: 110px;
 		position: relative;
 
 		img {
-			// width: 150px;
-			// height: 150px;
-			width: 35%;
-			height: 45%;
 			position: absolute;
+			// setting a default size
+			transform: scale(0.5);
+			top: 0;
+			left: 0;
 		}
 
 		.small-salad {
-			top: 60px;
-			left: 10px;
-			transform: scale(1.1);
-			width: 57%;
+			transform: scale(0.2);
+			bottom: 50%;
+			left: -150px;
 		}
 
 		.platter-tacos {
-			right: -40px;
-			top: 50px;
-			transform: scale(1.1);
-			width: 155px;
+			transform: scale(0.45);
 		}
 
 		.fish-grill {
-			bottom: -30px;
-			right: -60px;
-			width: 70%;
-			transform: scale(0.8);
+			transform: scale(0.3);
 		}
 
 		.large-meal {
-			width: 57%;
-			bottom: -20px;
-			left: 25px;
-			transform: scale(0.9);
+			transform: scale(0.15);
 		}
-	}
-
-	.page-content {
 	}
 
 	.app-logo {
