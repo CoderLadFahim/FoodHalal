@@ -53,6 +53,11 @@
 		.app-logo {
 			font-family: $logo-font;
 			font-size: 3.5rem;
+			color: $orange;
+			background: -webkit-linear-gradient(0deg, $orange 0%, $pink 50%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
 
 		.app-description {
