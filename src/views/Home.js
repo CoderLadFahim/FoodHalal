@@ -30,7 +30,7 @@ function Home(props) {
 				/>
 			</div>
 
-			<div className="page-content">
+			<div className="page-content wrapper">
 				<h1 className="app-logo">FoodHalal</h1>
 				<p className="app-description">
 					<span className="line1">Enjoy our top-quality</span>
