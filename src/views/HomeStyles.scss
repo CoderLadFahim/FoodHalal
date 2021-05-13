@@ -18,7 +18,6 @@
 			transform: scale(0.5);
 			top: 0;
 			left: 0;
-			display: none;
 		}
 
 		.small-salad {
@@ -29,11 +28,13 @@
 
 		.platter-tacos {
 			transform: scale(0.45);
+			left: 15%;
 		}
 
 		.fish-grill {
-			transform: scale(0.3);
-			right: -100%;
+			transform: scale(0.35);
+			left: 4%;
+			top: 40%;
 		}
 
 		.large-meal {
