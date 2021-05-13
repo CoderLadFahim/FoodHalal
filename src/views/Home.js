@@ -31,7 +31,7 @@ function Home(props) {
 			</div>
 
 			<div className="page-content wrapper">
-				<h1 className="app-logo">FoodHalal</h1>
+				<h1 className="app-logo logo-grad">FoodHalal</h1>
 				<p className="app-description">
 					<span className="line1">Enjoy our top-quality</span>
 					<span className="line2">professionally cooked meals</span>

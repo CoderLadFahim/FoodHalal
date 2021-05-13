@@ -53,11 +53,6 @@
 		.app-logo {
 			font-family: $logo-font;
 			font-size: 3.5rem;
-			color: $orange;
-			background: -webkit-linear-gradient(0deg, $orange 0%, $pink 50%);
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
 		}
 
 		.app-description {
@@ -96,14 +91,14 @@
 
 		.decorations {
 			background: transparent;
-			position: absolute;
 			pointer-events: none;
+			position: relative;
 
 			.large-meal,
 			.small-salad {
 				transform: scale(1);
 				display: block;
-				opacity: 20%;
+				opacity: 0.2;
 				top: 0;
 				left: 0;
 			}
