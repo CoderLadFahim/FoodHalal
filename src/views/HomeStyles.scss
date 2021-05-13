@@ -96,6 +96,10 @@
 			position: relative;
 			z-index: 1;
 
+			img {
+				display: none;
+			}
+
 			.large-meal,
 			.small-salad {
 				transform: scale(1);
@@ -221,57 +225,6 @@
 		.page-content {
 			height: 45%;
 			margin-top: -7%;
-		}
-	}
-}
-
-// height adjustments for decoration images
-@media only screen and (min-height: 760px) {
-	.home-page .decorations {
-		.small-salad {
-			transform: scale(0.25);
-			top: -33%;
-			left: -95%;
-		}
-
-		.large-meal {
-			transform: scale(0.17);
-			top: -13%;
-			left: -107%;
-		}
-
-		.platter-tacos {
-			transform: scale(0.5);
-			left: 25%;
-			top: 8%;
-		}
-
-		.fish-grill {
-			transform: scale(0.4);
-			left: 13%;
-			top: 50%;
-		}
-	}
-}
-
-@media only screen and (min-height: 780px) {
-	.home-page .decorations {
-		.small-salad {
-			transform: scale(0.25);
-			top: -30%;
-			left: -95%;
-		}
-
-		.large-meal {
-			transform: scale(0.17);
-			top: -10%;
-			left: -107%;
-		}
-
-		.platter-tacos {
-			transform: scale(0.5);
-			left: 25%;
-			top: 10%;
 		}
 	}
 }
