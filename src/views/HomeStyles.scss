@@ -253,3 +253,25 @@
 		}
 	}
 }
+
+@media only screen and (min-height: 780px) {
+	.home-page .decorations {
+		.small-salad {
+			transform: scale(0.25);
+			top: -30%;
+			left: -95%;
+		}
+
+		.large-meal {
+			transform: scale(0.17);
+			top: -10%;
+			left: -107%;
+		}
+
+		.platter-tacos {
+			transform: scale(0.5);
+			left: 25%;
+			top: 10%;
+		}
+	}
+}
