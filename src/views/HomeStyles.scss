@@ -93,6 +93,7 @@
 			background: transparent;
 			pointer-events: none;
 			position: relative;
+			z-index: 1;
 
 			.large-meal,
 			.small-salad {
@@ -117,12 +118,20 @@
 		}
 
 		.page-content {
+			position: relative;
+			opacity: 1;
+			margin-top: -60%;
+			height: 60vh;
+			justify-content: space-between;
+			z-index: 2;
+
 			.app-logo {
-				font-size: 5rem;
+				font-size: 6.5rem;
 			}
 
 			.app-description {
-				font-size: 1.5rem;
+				font-size: 2rem;
+				font-family: $font1;
 			}
 
 			.app-btns {
