@@ -92,8 +92,33 @@
 
 @media only screen and (min-width: 600px) {
 	.home-page {
+		background: $gray1;
+
 		.decorations {
-			height: 45%;
+			background: transparent;
+			position: absolute;
+			pointer-events: none;
+
+			.large-meal,
+			.small-salad {
+				transform: scale(1);
+				display: block;
+				opacity: 20%;
+				top: 0;
+				left: 0;
+			}
+
+			.large-meal {
+				top: auto;
+				left: auto;
+				bottom: -100%;
+				right: -110%;
+			}
+
+			.small-salad {
+				top: -40%;
+				left: -50%;
+			}
 		}
 
 		.page-content {
