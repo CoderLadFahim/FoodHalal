@@ -22,7 +22,7 @@
 
 		.small-salad {
 			transform: scale(0.2);
-			top: -49%;
+			top: -50%;
 			left: -100%;
 		}
 
@@ -221,6 +221,35 @@
 		.page-content {
 			height: 45%;
 			margin-top: -7%;
+		}
+	}
+}
+
+// height adjustments for decoration images
+@media only screen and (min-height: 760px) {
+	.home-page .decorations {
+		.small-salad {
+			transform: scale(0.25);
+			top: -33%;
+			left: -95%;
+		}
+
+		.large-meal {
+			transform: scale(0.17);
+			top: -13%;
+			left: -107%;
+		}
+
+		.platter-tacos {
+			transform: scale(0.5);
+			left: 25%;
+			top: 8%;
+		}
+
+		.fish-grill {
+			transform: scale(0.4);
+			left: 13%;
+			top: 50%;
 		}
 	}
 }
