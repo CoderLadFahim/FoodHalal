@@ -96,9 +96,7 @@
 			z-index: 1;
 
 			.large-meal,
-			.small-salad,
-			.platter-tacos,
-			.fish-grill {
+			.small-salad {
 				transform: scale(1);
 				display: block;
 				opacity: 0.2;
@@ -113,19 +111,9 @@
 				right: -110%;
 			}
 
-			.platter-tacos {
-				left: 80%;
-				top: -50px;
-			}
-
 			.small-salad {
 				top: -40%;
 				left: -50%;
-			}
-
-			.fish-grill {
-				top: 150%;
-				left: -40%;
 			}
 		}
 
@@ -152,6 +140,27 @@
 
 			.app-btns .btn-secondary {
 				padding: 10px 25px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.home-page {
+		.decorations {
+			.large-meal {
+				transform: scale(1.2);
+				bottom: -83%;
+				right: -95%;
+			}
+
+			.small-salad {
+				transform: scale(1.1);
+			}
+
+			.platter-tacos,
+			.fish-grill {
+				display: none;
 			}
 		}
 	}
