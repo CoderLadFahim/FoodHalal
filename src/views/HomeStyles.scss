@@ -184,6 +184,19 @@
 
 @media only screen and (min-width: 800px) {
 	.home-page {
+		.decorations {
+			.small-salad {
+				transform: scale(1.35);
+				top: -25%;
+				left: -35%;
+				opacity: 1;
+			}
+
+			.large-meal {
+				transform: scale(1.5);
+			}
+		}
+
 		.page-content {
 			height: 55%;
 			margin-top: -25%;
@@ -193,6 +206,17 @@
 
 @media only screen and (min-width: 1024px) {
 	.home-page {
+		.decorations {
+			.small-salad {
+				transform: scale(1.65);
+				top: -25%;
+				left: -30%;
+			}
+
+			.large-meal {
+				transform: scale(1.75);
+			}
+		}
 		.page-content {
 			height: 45%;
 			margin-top: -7%;
