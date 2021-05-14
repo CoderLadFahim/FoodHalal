@@ -1,26 +1,14 @@
 import './MenuStyles.scss';
 
-import { /*useContext, useEffect,*/ useState } from 'react';
+import { useState } from 'react';
 
-// import { CartContext } from '../contexts/CartContext';
-import { NavLink } from 'react-router-dom';
 import PageTitle from '../components/PageTitle';
 import menuItems from '../assets/foodItems.json';
 import MenuItem from '../components/MenuPage/MenuItem';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import TableBookBtn from '../components/TableBookBtn';
 
 function Menu(props) {
-	// const { dispatch } = useContext(CartContext);
-
 	const [activeItemType, setActiveItemType] = useState('appetizers');
-
-	// useEffect(() => {
-	// 	// dispatch({
-	// 	// 	type: '<ACTION_TYPE_HERE>',
-	// 	// 	actionPayload: '<ACTION_PAYLOAD_HERE>',
-	// 	// });
-	// }, []);
 
 	const foodLinks = Object.keys(menuItems).map(foodType => (
 		<li
@@ -39,12 +27,7 @@ function Menu(props) {
 		<section className="menu-page wrapper">
 			<div className="header-content">
 				<PageTitle> Menu </PageTitle>
-				<NavLink to="/book">
-					<button className="btn">
-						Book a Table
-						<FontAwesomeIcon className="arrow-right" icon={faArrowRight} />
-					</button>
-				</NavLink>
+				<TableBookBtn />
 			</div>
 
 			<ul

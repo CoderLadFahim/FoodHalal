@@ -31,7 +31,7 @@ function App() {
 					/>
 					<AppNav navToggler={toggleNav} navToggleState={navToggleState} />
 
-					<AppCart></AppCart>
+					<AppCart />
 
 					{/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}

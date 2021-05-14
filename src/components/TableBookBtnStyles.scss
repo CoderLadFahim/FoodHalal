@@ -1,0 +1,11 @@
+@import '../index.scss';
+
+.table-book-btn {
+	background-image: linear-gradient(to right, $pink 0%, $lightpink 100%);
+	padding: 5px 10px;
+	font-family: $font1-semibold;
+
+	.btn-text {
+		padding-right: 10px;
+	}
+}

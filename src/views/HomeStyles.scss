@@ -1,8 +1,241 @@
 @import '../index.scss';
 
 .home-page {
-	img {
-		width: 200px;
-		height: 200px;
+	height: 100vh;
+	background-image: url('../assets/images_global/landingPageBg.jpg');
+	background-size: cover;
+
+	.decorations {
+		// background-image: linear-gradient(-45deg, $pink 0%, $orange 100%);
+		width: 70%;
+		height: 50%;
+		border-bottom-right-radius: 110px;
+		position: relative;
+		pointer-events: none;
+
+		img {
+			position: absolute;
+			// setting a default size
+			transform: scale(0.5);
+			top: 0;
+			left: 0;
+			display: none;
+		}
+
+		.small-salad {
+			transform: scale(1);
+			top: -70%;
+			left: -90%;
+			display: block;
+		}
+
+		.platter-tacos {
+			transform: scale(0.45);
+			left: 15%;
+		}
+
+		.fish-grill {
+			transform: scale(0.35);
+			left: 4%;
+			top: 40%;
+		}
+
+		.large-meal {
+			transform: scale(0.15);
+			top: -33%;
+			left: -112%;
+		}
+	}
+
+	.page-content {
+		// border: 1px solid white;
+		height: 45%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+
+		.app-logo {
+			font-family: $logo-font;
+			font-size: 3.5rem;
+			width: 80%;
+		}
+
+		.app-description {
+			font-family: $font1-semibold;
+			color: $white;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			height: 40%;
+		}
+
+		.app-btns .btn-secondary {
+			padding: 5px 15px;
+			margin-left: 10px;
+		}
+	}
+}
+
+@media only screen and (min-width: 414px) {
+	.home-page {
+		.decorations .small-salad {
+			top: -50%;
+			left: -70%;
+		}
+
+		.page-content {
+			.app-logo {
+				font-size: 4.5rem;
+				width: 90%;
+			}
+
+			.app-description {
+				font-size: 1.25rem;
+			}
+
+			.app-btns .btn-secondary {
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.home-page {
+		.decorations {
+			background: transparent;
+			pointer-events: none;
+			position: relative;
+			z-index: 1;
+
+			img {
+				display: none;
+			}
+
+			.small-salad {
+				transform: scale(1.25);
+				display: block;
+				opacity: 1;
+				top: -40%;
+				left: -50%;
+			}
+		}
+
+		.page-content {
+			position: relative;
+			opacity: 1;
+			margin-top: -16%;
+			height: 50vh;
+			justify-content: space-between;
+			z-index: 2;
+
+			.app-logo {
+				font-size: 6.5rem;
+			}
+
+			.app-description {
+				font-size: 2rem;
+				font-family: $font1;
+			}
+
+			.app-btns {
+				margin-top: 20px;
+			}
+
+			.app-btns .btn-secondary {
+				padding: 10px 25px;
+				margin-left: 30px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.home-page {
+		// background: $gray1;
+
+		.decorations {
+			.large-meal {
+				transform: scale(1.2);
+				bottom: -83%;
+				right: -95%;
+			}
+
+			.small-salad {
+				transform: scale(1.35);
+			}
+
+			.platter-tacos,
+			.fish-grill {
+				display: none;
+			}
+		}
+
+		.page-content {
+			height: 55%;
+			margin-top: -20%;
+
+			.app-logo {
+				font-size: 8rem;
+				width: 85%;
+			}
+
+			.app-description {
+				font-size: 2.5rem;
+			}
+
+			.app-btns .btn {
+				font-size: 1.5rem;
+			}
+
+			.app-btns .btn-secondary {
+				margin-left: 35px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.home-page {
+		.decorations {
+			.small-salad {
+				transform: scale(1.75);
+				top: -20%;
+				left: -35%;
+			}
+
+			.large-meal {
+				transform: scale(1.5);
+			}
+		}
+
+		.page-content {
+			height: 45%;
+			margin-top: -7%;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.home-page {
+		.decorations {
+			.small-salad {
+				transform: scale(2.25);
+				top: -25%;
+				left: -20%;
+			}
+
+			.large-meal {
+				transform: scale(1.75);
+			}
+		}
+		.page-content {
+			height: 45%;
+			margin-top: -7%;
+
+			.app-logo {
+				font-size: 9rem;
+			}
+		}
 	}
 }
