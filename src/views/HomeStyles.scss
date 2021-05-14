@@ -104,7 +104,7 @@
 			.small-salad {
 				transform: scale(1);
 				display: block;
-				opacity: 0.2;
+				opacity: 0.1;
 				top: 0;
 				left: 0;
 			}
@@ -119,14 +119,15 @@
 			.small-salad {
 				top: -40%;
 				left: -50%;
+				opacity: 50%;
 			}
 		}
 
 		.page-content {
 			position: relative;
 			opacity: 1;
-			margin-top: -60%;
-			height: 60vh;
+			margin-top: -16%;
+			height: 50vh;
 			justify-content: space-between;
 			z-index: 2;
 
@@ -170,7 +171,8 @@
 		}
 
 		.page-content {
-			height: 75%;
+			height: 55%;
+			margin-top: -20%;
 
 			.app-logo {
 				font-size: 8rem;
@@ -183,6 +185,10 @@
 			.app-btns .btn {
 				font-size: 1.5rem;
 			}
+
+			.app-btns .btn-secondary {
+				margin-left: 35px;
+			}
 		}
 	}
 }
@@ -194,7 +200,6 @@
 				transform: scale(1.35);
 				top: -25%;
 				left: -35%;
-				opacity: 1;
 			}
 
 			.large-meal {
@@ -203,8 +208,8 @@
 		}
 
 		.page-content {
-			height: 55%;
-			margin-top: -25%;
+			height: 45%;
+			margin-top: -7%;
 		}
 	}
 }
@@ -225,6 +230,10 @@
 		.page-content {
 			height: 45%;
 			margin-top: -7%;
+
+			.app-logo {
+				font-size: 9rem;
+			}
 		}
 	}
 }
