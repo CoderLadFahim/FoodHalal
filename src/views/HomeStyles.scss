@@ -239,3 +239,27 @@
 		}
 	}
 }
+
+@media only screen and (min-width: 1280px) {
+	.home-page {
+		.decorations {
+			background-image: linear-gradient($orange 0%, $pink 100%);
+
+			.small-salad,
+			.platter-tacos,
+			.fish-grill,
+			.large-meal {
+				display: block;
+				transform: scale(1);
+			}
+		}
+
+		.page-content {
+			.app-logo,
+			.app-description,
+			.app-btns {
+				font-size: 2rem;
+			}
+		}
+	}
+}
