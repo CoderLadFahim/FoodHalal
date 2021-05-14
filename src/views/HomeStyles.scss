@@ -6,11 +6,12 @@
 	background-size: cover;
 
 	.decorations {
-		background-image: linear-gradient(-45deg, $pink 0%, $orange 100%);
+		// background-image: linear-gradient(-45deg, $pink 0%, $orange 100%);
 		width: 70%;
 		height: 50%;
 		border-bottom-right-radius: 110px;
 		position: relative;
+		pointer-events: none;
 
 		img {
 			position: absolute;
@@ -18,12 +19,14 @@
 			transform: scale(0.5);
 			top: 0;
 			left: 0;
+			display: none;
 		}
 
 		.small-salad {
-			transform: scale(0.2);
-			top: -50%;
-			left: -100%;
+			transform: scale(1);
+			top: -70%;
+			left: -90%;
+			display: block;
 		}
 
 		.platter-tacos {
@@ -54,6 +57,7 @@
 		.app-logo {
 			font-family: $logo-font;
 			font-size: 3.5rem;
+			width: 80%;
 		}
 
 		.app-description {
@@ -67,20 +71,30 @@
 
 		.app-btns .btn-secondary {
 			padding: 5px 15px;
-			margin-left: 25px;
+			margin-left: 10px;
 		}
 	}
 }
 
 @media only screen and (min-width: 414px) {
 	.home-page {
+		.decorations .small-salad {
+			top: -50%;
+			left: -70%;
+		}
+
 		.page-content {
 			.app-logo {
-				font-size: 4rem;
+				font-size: 4.5rem;
+				width: 90%;
 			}
 
 			.app-description {
 				font-size: 1.25rem;
+			}
+
+			.app-btns .btn-secondary {
+				margin-left: 20px;
 			}
 		}
 	}
@@ -88,8 +102,6 @@
 
 @media only screen and (min-width: 600px) {
 	.home-page {
-		background: $gray1;
-
 		.decorations {
 			background: transparent;
 			pointer-events: none;
@@ -100,26 +112,12 @@
 				display: none;
 			}
 
-			.large-meal,
 			.small-salad {
-				transform: scale(1);
+				transform: scale(1.25);
 				display: block;
-				opacity: 0.1;
-				top: 0;
-				left: 0;
-			}
-
-			.large-meal {
-				top: auto;
-				left: auto;
-				bottom: -100%;
-				right: -110%;
-			}
-
-			.small-salad {
+				opacity: 1;
 				top: -40%;
 				left: -50%;
-				opacity: 50%;
 			}
 		}
 
@@ -146,6 +144,7 @@
 
 			.app-btns .btn-secondary {
 				padding: 10px 25px;
+				margin-left: 30px;
 			}
 		}
 	}
@@ -153,6 +152,8 @@
 
 @media only screen and (min-width: 768px) {
 	.home-page {
+		// background: $gray1;
+
 		.decorations {
 			.large-meal {
 				transform: scale(1.2);
@@ -161,7 +162,7 @@
 			}
 
 			.small-salad {
-				transform: scale(1.1);
+				transform: scale(1.35);
 			}
 
 			.platter-tacos,
@@ -176,6 +177,7 @@
 
 			.app-logo {
 				font-size: 8rem;
+				width: 85%;
 			}
 
 			.app-description {
@@ -197,8 +199,8 @@
 	.home-page {
 		.decorations {
 			.small-salad {
-				transform: scale(1.35);
-				top: -25%;
+				transform: scale(1.75);
+				top: -20%;
 				left: -35%;
 			}
 
@@ -218,9 +220,9 @@
 	.home-page {
 		.decorations {
 			.small-salad {
-				transform: scale(1.65);
+				transform: scale(2.25);
 				top: -25%;
-				left: -30%;
+				left: -20%;
 			}
 
 			.large-meal {
