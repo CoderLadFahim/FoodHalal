@@ -51,11 +51,6 @@ function NavBar({ navToggler, navToggleState }) {
 					</NavLink>
 				</li>
 				<li className="route-link">
-					<NavLink activeClassName="active-link" to="/book">
-						Book
-					</NavLink>
-				</li>
-				<li className="route-link">
 					<NavLink activeClassName="active-link" to="/contact">
 						Contact
 					</NavLink>

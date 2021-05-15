@@ -11,13 +11,6 @@ nav {
 	padding-top: 10px;
 	transition: 200ms;
 
-	.active-link {
-		background: $pink;
-		color: $white;
-		transition: 200ms;
-		font-family: $logo-font;
-	}
-
 	&.mobile-hide {
 		transform: translateX(-100%);
 	}
@@ -26,6 +19,13 @@ nav {
 		// right: 0;
 		transform: translateX(0);
 		left: 0;
+	}
+
+	.active-link {
+		background: $pink;
+		color: $white;
+		transition: 200ms;
+		font-family: $logo-font;
 	}
 
 	a {
@@ -166,10 +166,51 @@ nav {
 			flex: 1;
 		}
 	}
+
+	// landing page nav bar styles
+	nav.homeNav {
+		background: none;
+		border: none;
+		margin-top: 25px;
+
+		ul {
+			display: flex;
+			justify-content: flex-start;
+			width: 100%;
+			margin-left: 50px;
+
+			li {
+				font-size: 1.25rem;
+				margin-right: 55px;
+
+				&.route-link {
+					flex: none;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	nav.homeNav {
+		ul li {
+			margin-right: 100px;
+		}
+	}
 }
 
 @media only screen and (min-width: 1920px) {
 	nav .route-link {
 		font-size: 1.5rem;
+	}
+
+	nav.homeNav {
+		ul {
+			margin-left: 75px;
+		}
+
+		ul li {
+			font-size: 1.5rem;
+		}
 	}
 }

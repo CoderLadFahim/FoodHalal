@@ -16,9 +16,8 @@ function AppCart(props) {
 	const { cartItems, dispatch } = useContext(CartContext);
 	const [cartToggleState, setCartToggleState] = useState(false);
 	// shows the cart clearing/discarding prompt display
-	const [cartDiscardPromptDisplay, setCartDiscardPromptDisplay] = useState(
-		false
-	);
+	const [cartDiscardPromptDisplay, setCartDiscardPromptDisplay] =
+		useState(false);
 	// this state, triggers the FormSubmissionView if user clicks the order btn
 	const [userOrdering, setUserOrdering] = useState(false);
 

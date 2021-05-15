@@ -4,6 +4,7 @@
 	height: 100vh;
 	background-image: url('../assets/images_global/landingPageBg.jpg');
 	background-size: cover;
+	overflow: hidden;
 
 	.decorations {
 		// background-image: linear-gradient(-45deg, $pink 0%, $orange 100%);
@@ -11,7 +12,7 @@
 		height: 50%;
 		border-bottom-right-radius: 110px;
 		position: relative;
-		pointer-events: none;
+		// pointer-events: none;
 
 		img {
 			position: absolute;
@@ -242,23 +243,198 @@
 
 @media only screen and (min-width: 1280px) {
 	.home-page {
+		height: 100vh;
+		display: flex;
+		overflow: hidden;
+
 		.decorations {
 			background-image: linear-gradient($orange 0%, $pink 100%);
+			order: 1;
+			position: relative;
+			height: 100vh;
+			width: 70vw;
+			margin-right: -100px;
+			border-radius: 0;
+			transform: skew(-10deg);
 
-			.small-salad,
+			.large-meal,
 			.platter-tacos,
 			.fish-grill,
-			.large-meal {
+			.small-salad {
 				display: block;
-				transform: scale(1);
+				position: absolute;
+				transform: skew(10deg);
+			}
+
+			.large-meal {
+				transform: scale(0.4) skew(10deg);
+				left: 5%;
+				top: -45%;
+			}
+
+			.small-salad {
+				display: block;
+				transform: scale(1.25) skew(10deg);
+				top: 0;
+				left: -40%;
+			}
+
+			.platter-tacos {
+				transform: scale(0.75) skew(10deg);
+				top: 80%;
+				left: -20%;
+			}
+
+			.fish-grill {
+				transform: scale(0.9) skew(10deg);
+				top: 70%;
+				left: 50%;
+				opacity: 0.85;
+			}
+
+			// .platter-tacos {
+			// 	top: 75%;
+			// 	left: -18%;
+			// }
+
+			// .small-salad {
+			// 	transform: scale(0.4) skewX(10deg);
+			// 	top: 50%;
+			// 	left: 100%;
+			// }
+		}
+
+		.page-content {
+			margin-top: 10%;
+			margin-left: 50px;
+			height: 75vh;
+			justify-content: space-between;
+
+			.app-logo {
+				width: 65%;
+				font-size: 7rem;
+			}
+
+			.app-description {
+				font-size: 2rem;
+			}
+
+			.app-btns .btn {
+				font-size: 1.25rem;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1366px) {
+	.home-page {
+		.decorations {
+			.small-salad {
+				transform: scale(1) skew(10deg);
+				top: -10%;
+			}
+
+			.large-meal {
+				transform: scale(0.4) skew(10deg);
+				left: 5%;
+				top: -55%;
+			}
+
+			.platter-tacos {
+				top: 75%;
+			}
+
+			.fish-grill {
+				transform: scale(1.15) skew(10deg);
 			}
 		}
 
 		.page-content {
-			.app-logo,
-			.app-description,
-			.app-btns {
+			margin-top: 7%;
+
+			.app-logo {
+				font-size: 6.5rem;
+			}
+
+			.app-description {
+				font-size: 1.75rem;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.home-page {
+		.decorations {
+			.small-salad {
+				transform: scale(1.25) skew(10deg);
+				top: 8%;
+			}
+
+			.large-meal {
+				transform: scale(0.45) skew(10deg);
+				top: -35%;
+				left: 13%;
+			}
+
+			.platter-tacos {
+				transform: scale(0.85) skew(10deg);
+				top: 80%;
+			}
+		}
+
+		.page-content {
+			height: 65vh;
+			margin-top: 10%;
+			.app-logo {
+				font-size: 7.5rem;
+			}
+
+			.app-description {
 				font-size: 2rem;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1920px) {
+	.home-page {
+		.decorations {
+			.small-salad {
+				transform: scale(1.6) skew(10deg);
+				top: 10%;
+				left: -20%;
+			}
+
+			.large-meal {
+				transform: scale(0.5) skew(10deg);
+				top: -25%;
+				left: 30%;
+			}
+
+			.platter-tacos {
+				transform: scale(1.15) skew(10deg);
+				top: 80%;
+				left: -15%;
+			}
+
+			.fish-grill {
+				transform: scale(1.35) skew(10deg);
+				top: 75%;
+				left: 60%;
+			}
+		}
+
+		.page-content {
+			height: 75vh;
+			margin-top: 10%;
+			margin-left: 75px;
+			.app-logo {
+				font-size: 10rem;
+			}
+
+			.app-description {
+				font-size: 3rem;
 			}
 		}
 	}
