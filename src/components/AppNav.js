@@ -34,6 +34,11 @@ function NavBar({ navToggler, navToggleState }) {
 			className === 'route-link' && setTimeout(navToggler, 150);
 	};
 
+	const hamburgerMenuStyles = {
+		bottom: 'auto',
+		top: '30px',
+	};
+
 	return (
 		<nav
 			className={navClass + `${currentRoutePath === '/' ? ' homeNav' : ''}`}
