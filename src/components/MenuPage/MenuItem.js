@@ -34,7 +34,6 @@ function MenuItem({ foodItem }) {
 			className="menu-item"
 			style={{
 				backgroundImage: `url(${foodItem.img})`,
-				border: `1px solid white`,
 			}}
 		>
 			<div className="item-control">
@@ -63,7 +62,14 @@ function MenuItem({ foodItem }) {
 			</div>
 
 			<div className="item-label">
-				<p className="item-name">{foodItem.name}</p>
+				<p
+					className="item-name"
+					style={{
+						'font-size': foodItem.name.length >= 15 ? '0.85rem' : '1.15rem',
+					}}
+				>
+					{foodItem.name}
+				</p>
 				<p className="item-price">{foodItem.price}</p>
 			</div>
 		</div>

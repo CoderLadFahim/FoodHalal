@@ -125,8 +125,8 @@
 	],
 	"desserts": [
 		{
-			"name": "Bread Croissants",
-			"id": "bread_croissants",
+			"name": "Croissants",
+			"id": "croissants",
 			"price": "123",
 			"img": "./food_pics/desserts/bread_croissants.jpg"
 		},

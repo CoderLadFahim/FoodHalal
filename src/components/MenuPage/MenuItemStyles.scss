@@ -7,13 +7,14 @@
 	background-repeat: no-repeat;
 	border-radius: 15px;
 	margin-bottom: 20px;
+	position: relative;
 
 	.item-control {
 		// border: 1px solid $pink;
 		width: 90%;
 		height: 40%;
 		margin: 0 auto;
-		margin-top: 15px;
+		padding-top: 15px;
 		display: flex;
 		justify-content: space-between;
 
@@ -65,5 +66,27 @@
 
 	.item-label {
 		border: 1px solid $beige;
+		height: 30%;
+
+		.item-name {
+			font-family: $logo-font;
+			// font-size: 1.15rem;
+			background-image: url(../../assets/food-item-title-bg.svg);
+			background-repeat: no-repeat;
+			// background-size: cover;
+			border: 1px solid orange;
+			// text-align: center;
+			display: flex;
+			align-items: center;
+			// justify-content: start;
+			padding-left: 10px;
+			height: 50%;
+			width: 55%;
+		}
+
+		.item-price {
+			background-color: $gray3;
+			font-family: $font1-bold;
+		}
 	}
 }
