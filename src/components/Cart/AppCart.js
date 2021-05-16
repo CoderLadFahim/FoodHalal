@@ -1,5 +1,6 @@
 import './AppCartStyles.scss';
 import { useState, useContext, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import { CartContext } from '../../contexts/CartContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,6 +14,7 @@ import CartFooter from './CartFooter';
 import FormSubmissionView from '../FormSubmissionView';
 
 function AppCart(props) {
+	const { pathname: currentRoutePath } = useLocation();
 	const { cartItems, dispatch } = useContext(CartContext);
 	const [cartToggleState, setCartToggleState] = useState(false);
 	// shows the cart clearing/discarding prompt display
@@ -74,6 +76,12 @@ function AppCart(props) {
 		else return <FormSubmissionView clickHandler={resetCart} />;
 	})();
 
+	// these styles are applied when user is on the homepage on mobile
+	const cartTogglerStyles = {
+		bottom: 'auto',
+		top: '20px',
+	};
+
 	// disabling the vertical scroll on body when the cart is toggled
 	useEffect(() => {
 		document.body.style.overflowY = `${cartToggleState ? 'hidden' : ''}`;
@@ -82,6 +90,11 @@ function AppCart(props) {
 	return (
 		<section className="app-cart">
 			<div
+				style={
+					window.innerWidth <= 414 && currentRoutePath === '/'
+						? cartTogglerStyles
+						: {}
+				}
 				className="cart-toggler"
 				onClick={() => setCartToggleState(prevState => !prevState)}
 			>
