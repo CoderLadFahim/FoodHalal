@@ -97,8 +97,8 @@ nav {
 			color: $beige;
 
 			&::after {
-				// display: none !important;
-				width: 100% !important;
+				display: none;
+				// width: 100% !important;
 			}
 		}
 
@@ -172,6 +172,13 @@ nav {
 		background: none;
 		border: none;
 		margin-top: 25px;
+		box-shadow: none;
+
+		.active-link::after {
+			left: 0;
+			display: block;
+			width: 100% !important;
+		}
 
 		ul {
 			display: flex;
