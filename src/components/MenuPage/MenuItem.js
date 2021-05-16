@@ -33,7 +33,7 @@ function MenuItem({ foodItem }) {
 		<div
 			className="menu-item"
 			style={{
-				// backgroundImage: `url(${foodItem.img})`,
+				backgroundImage: `url(${foodItem.img})`,
 				border: `1px solid white`,
 			}}
 		>
@@ -55,7 +55,7 @@ function MenuItem({ foodItem }) {
 						<p className="total-item-price">
 							Total:
 							<span className="total-price">
-								{itemInCart.price * itemInCart.count}
+								{itemInCart.price * itemInCart.count}Tk/-
 							</span>
 						</p>
 					</div>
