@@ -33,7 +33,8 @@ function MenuItem({ foodItem }) {
 		<div
 			className="menu-item"
 			style={{
-				backgroundImage: `url(${foodItem.img})`,
+				// backgroundImage: `url(${foodItem.img})`,
+				border: `1px solid white`,
 			}}
 		>
 			<div className="item-control">

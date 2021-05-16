@@ -6,4 +6,21 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 15px;
+
+	.item-control {
+		border: 1px solid $pink;
+
+		.add-remove-btn {
+			padding: 3px 10px;
+			border-radius: 10px;
+		}
+
+		.add {
+			background-color: $orange;
+		}
+
+		.remove {
+			background-color: $gray2;
+		}
+	}
 }
