@@ -1,11 +1,12 @@
 @import '../../index.scss';
 
 .menu-item {
-	width: 100%;
+	width: 300px;
 	height: 250px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 15px;
+	margin: 0 auto;
 	margin-bottom: 20px;
 	position: relative;
 
@@ -26,8 +27,9 @@
 		.add-remove-btn {
 			padding: 3px 10px;
 			height: 30%;
-			box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+			box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 			border-radius: 10px;
+
 			&.add {
 				background-color: $orange;
 			}
@@ -53,7 +55,7 @@
 			display: flex;
 			align-items: baseline;
 			justify-content: space-between;
-			box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+			box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
 			border-radius: 10px;
 		}
 
@@ -67,9 +69,9 @@
 	.item-label {
 		height: 30%;
 		position: absolute;
-		bottom: -42px;
+		bottom: -43px;
 		right: 0;
-		left: 0;
+		left: -3px;
 
 		.item-name {
 			position: relative;
@@ -97,5 +99,43 @@
 			width: 25%;
 			padding-left: 30px;
 		}
+	}
+}
+
+@media only screen and (min-width: 414px) {
+	.menu-item {
+		width: 340px;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	$margin: 170px;
+
+	.menu-item {
+		&:nth-child(odd) {
+			margin-right: $margin;
+		}
+		&:nth-child(even) {
+			margin-left: $margin;
+		}
+
+		.item-control .add-remove-btn {
+			box-sizing: content-box;
+			padding: 5px 15px;
+			font-size: 1rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.menu-item:nth-child(odd),
+	.menu-item:nth-child(even) {
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.menu-item {
+		width: 300px;
+		align-items: space-between;
 	}
 }
