@@ -5,7 +5,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: baseline;
-		margin-bottom: 15px;
+		margin-bottom: 30px;
 
 		.page-title {
 			width: 30%;
@@ -27,7 +27,7 @@
 		display: flex;
 		list-style: none;
 		justify-content: space-between;
-		border-bottom: 3px solid #999999;
+		border-bottom: 3px solid $pink;
 		padding-bottom: 5px;
 		margin-bottom: 30px;
 		font-family: $font3-semibold;
@@ -36,19 +36,23 @@
 			position: relative;
 			text-transform: capitalize;
 			cursor: pointer;
+
+			&:hover {
+				color: $lightbeige;
+			}
 		}
 
 		.active {
-			font-family: $font3-bold;
-			color: $lightbeige;
+			font-family: $font1-bold;
+			color: $beige;
 			&::after {
 				content: '';
 				position: absolute;
 				display: block;
 				width: 100%;
 				height: 3px;
-				background-color: #999;
-				bottom: -5px;
+				background-color: $lightpink;
+				bottom: -6px;
 			}
 		}
 	}
@@ -58,11 +62,49 @@
 	}
 }
 
+@media only screen and (min-width: 600px) {
+	.menu-page {
+		.food-menu {
+			font-size: 1.25rem;
+			// padding-bottom: 10px;
+
+			.active::after {
+				height: 4px;
+				bottom: -6px;
+			}
+		}
+	}
+}
+
 @media only screen and (min-width: 768px) {
-	.items-display {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		grid-gap: 20px;
-		justify-items: center;
+	.menu-page {
+		.items-display {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			grid-gap: 20px;
+			justify-items: center;
+		}
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.menu-page .header-content {
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (min-width: 1366px) {
+	.menu-page {
+		.food-menu {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 1920px) {
+	.menu-page {
+		.items-display {
+			margin-bottom: 200px;
+		}
 	}
 }
