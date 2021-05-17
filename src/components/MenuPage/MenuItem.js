@@ -65,7 +65,7 @@ function MenuItem({ foodItem }) {
 				<p
 					className="item-name"
 					style={{
-						'font-size': foodItem.name.length >= 16 ? '0.85rem' : '1.15rem',
+						fontSize: foodItem.name.length >= 16 ? '0.85rem' : '1.15rem',
 					}}
 				>
 					{foodItem.name}
