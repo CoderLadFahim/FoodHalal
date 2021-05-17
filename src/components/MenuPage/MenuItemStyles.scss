@@ -65,28 +65,37 @@
 	}
 
 	.item-label {
-		border: 1px solid $beige;
 		height: 30%;
+		position: absolute;
+		bottom: -42px;
+		right: 0;
+		left: 0;
 
 		.item-name {
+			position: relative;
+			z-index: 2;
 			font-family: $logo-font;
-			// font-size: 1.15rem;
 			background-image: url(../../assets/food-item-title-bg.svg);
 			background-repeat: no-repeat;
-			// background-size: cover;
-			border: 1px solid orange;
-			// text-align: center;
 			display: flex;
 			align-items: center;
-			// justify-content: start;
 			padding-left: 10px;
 			height: 50%;
-			width: 55%;
 		}
 
 		.item-price {
-			background-color: $gray3;
+			position: absolute;
+			top: 4px;
+			left: 130px;
+			box-sizing: content-box;
+			background-color: #818181;
+			border-radius: 20px;
+			padding: 3px 0;
 			font-family: $font1-bold;
+			font-size: 1rem;
+			color: $beige;
+			width: 25%;
+			padding-left: 30px;
 		}
 	}
 }

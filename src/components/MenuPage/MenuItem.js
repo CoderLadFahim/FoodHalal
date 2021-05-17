@@ -70,7 +70,7 @@ function MenuItem({ foodItem }) {
 				>
 					{foodItem.name}
 				</p>
-				<p className="item-price">{foodItem.price}</p>
+				<p className="item-price">{foodItem.price}Tk/-</p>
 			</div>
 		</div>
 	);
