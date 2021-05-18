@@ -17,8 +17,10 @@ import AppCart from './components/Cart/AppCart';
 
 function App() {
 	const [navToggleState, setNavToggleState] = useState(false);
-
 	const toggleNav = () => setNavToggleState(prevState => !prevState);
+
+	// this state control the homeview anim, anim plays if its true, its set to false when anim first plays
+	const [playHomePageAnim, setPlayHomePageAnim] = useState(true);
 
 	return (
 		<Router>
@@ -37,7 +39,10 @@ function App() {
             renders the first one that matches the current URL. */}
 					<Switch>
 						<Route exact path="/">
-							<Home />
+							<Home
+								playState={playHomePageAnim}
+								setPlayState={() => setPlayHomePageAnim(false)}
+							/>
 						</Route>
 
 						<Route path="/menu">

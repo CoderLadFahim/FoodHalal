@@ -95,7 +95,7 @@ function AppCart(props) {
 						? cartTogglerStyles
 						: {}
 				}
-				className="cart-toggler"
+				className="cart-toggler toggler"
 				onClick={() => setCartToggleState(prevState => !prevState)}
 			>
 				<FontAwesomeIcon className="cart-icon" icon={faShoppingCart} />
