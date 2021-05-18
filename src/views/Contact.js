@@ -15,6 +15,8 @@ function Contact(props) {
 	const [subject, setSubject] = useState('');
 	const [userIssue, setUserIssue] = useState('');
 
+	const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
+
 	// this state determines what to show on the contact page
 	const [submissionState, setSubmissionState] = useState(false);
 
@@ -85,12 +87,18 @@ function Contact(props) {
 						Full Name{' '}
 					</AppInput>
 					<AppInput
-						attrs={{ type: 'text', name: 'contact', required: true }}
+						attrs={{
+							type: 'text',
+							name: 'contact',
+							required: true,
+							// adding color red if entered email is not valid
+							style: { color: `${!emailChecker.test(email) ? 'red' : ''}` },
+						}}
 						content={email}
 						contentSetter={setEmail}
 					>
 						{' '}
-						Email / Phone{' '}
+						Email{' '}
 					</AppInput>
 					<AppInput
 						attrs={{ type: 'text', name: 'subject', required: true }}
@@ -108,7 +116,8 @@ function Contact(props) {
 					></textarea>
 					<FormButton
 						className="submit-btn"
-						btnDisabler={!requiredFieldsFilled}
+						// disabling FormButton if fields aren't filled properly
+						btnDisabler={!requiredFieldsFilled || !emailChecker.test(email)}
 					>
 						{' '}
 						Submit{' '}
