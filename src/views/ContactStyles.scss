@@ -7,6 +7,7 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 50px;
+		height: 525px;
 	}
 
 	textarea {
@@ -65,20 +66,26 @@
 	}
 
 	.content-container {
-		height: 82vh;
+		// height: 82vh;
 		margin-bottom: 50px;
 	}
 }
 
 @media only screen and (min-width: 414px) {
-	.contact-page .content-container {
-		margin-bottom: 70px;
+	.contact-page {
+		.contact-form {
+			height: 650px;
+		}
+
+		// .content-container {
+		// 	margin-bottom: 170px;
+		// }
 	}
 }
 
 @media only screen and (min-width: 414px) {
 	.contact-page .contact-form {
-		margin-bottom: 70px;
+		margin-bottom: 170px;
 	}
 }
 
