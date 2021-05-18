@@ -10,10 +10,14 @@ import bottomLeft from '../assets/images_global/bottom-left.png';
 import bottomRight from '../assets/images_global/bottom-right.png';
 import small1 from '../assets/images_global/small1.png';
 
-function Home(props) {
+function Home({ playState, setPlayState }) {
 	useEffect(() => {
+		// checking if anim has alaready been played, returning out
+		if (!playState) return;
+
 		const homePageTL = TweenLite.timeline({
-			defaults: { ease: 'back.out' /*delay: 5 */ },
+			delay: 8,
+			defaults: { ease: 'back.out' },
 		});
 
 		if (window.innerWidth < 1280) {
@@ -23,18 +27,16 @@ function Home(props) {
 				{
 					duration: 1,
 					scale: 0,
-					ease: 'back.out',
 				}
 				// '-=1'
 			);
 		} else {
-			homePageTL.from('.homeNav .route-link', {
+			homePageTL.from('nav.homeNav .route-link', {
 				duration: 0.5,
 				y: 100,
 				rotate: 45,
 				stagger: 0.1,
 				opacity: 0,
-				ease: 'power1.out',
 			});
 		}
 
@@ -45,13 +47,34 @@ function Home(props) {
 			opacity: 0,
 		});
 
+		// decoration animation, only for desktop
+		if (window.innerWidth >= 1280)
+			homePageTL
+				.from(
+					'.decorations',
+					{
+						duration: 1,
+						xPercent: 100,
+					},
+					'-=1'
+				)
+				.from('.decorations img', {
+					duration: 1,
+					scale: 0,
+					stagger: 0.1,
+				});
+
 		// the description lines
-		homePageTL.from('.desc-line', {
-			duration: 1,
-			yPercent: 300,
-			opacity: 0,
-			stagger: 0.1,
-		});
+		homePageTL.from(
+			'.desc-line',
+			{
+				duration: 1,
+				yPercent: 300,
+				opacity: 0,
+				stagger: 0.1,
+			},
+			'-=1'
+		);
 
 		homePageTL.from('.app-btns button', {
 			duration: 0.5,
@@ -59,6 +82,31 @@ function Home(props) {
 			opacity: 0,
 			stagger: 0.1,
 		});
+
+		// AppNav animation, only for tablets
+		if (window.innerWidth < 1280 && window.innerWidth > 600)
+			homePageTL
+				.from('.mobile-hide', {
+					duration: 0.5,
+					yPercent: -100,
+				})
+				.from('.mobile-hide .route-link', {
+					duration: 0.5,
+					y: -100,
+					rotate: -45,
+					stagger: 0.1,
+					opacity: 0,
+				});
+
+		// animating the togglers
+		homePageTL.from('.toggler', {
+			xPercent: 100,
+			opacity: 0,
+		});
+
+		homePageTL.timeScale(1.5);
+		// setting the playState to be false to stop anim from playing everytime user visits the homeview
+		setPlayState();
 	}, []);
 
 	return (

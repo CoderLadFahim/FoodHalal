@@ -2,7 +2,9 @@ import './HamburgerMenuStyles.scss';
 import { useLocation } from 'react-router-dom';
 
 function Hamburger({ navToggler, navToggleState }) {
-	let hamburgerClass = `hamburger ${navToggleState ? 'hamburger-close' : ''}`;
+	let hamburgerClass = `hamburger ${
+		navToggleState ? 'hamburger-close' : ''
+	} toggler`;
 	const { pathname: currentRoutePath } = useLocation();
 
 	const hamburgerMenuStyles = {
