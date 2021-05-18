@@ -75,17 +75,8 @@
 	.contact-page {
 		.contact-form {
 			height: 650px;
+			margin-bottom: 170px;
 		}
-
-		// .content-container {
-		// 	margin-bottom: 170px;
-		// }
-	}
-}
-
-@media only screen and (min-width: 414px) {
-	.contact-page .contact-form {
-		margin-bottom: 170px;
 	}
 }
 
@@ -135,6 +126,14 @@
 			}
 		}
 
+		.content-container {
+			width: 95%;
+			height: 65vh;
+			margin: 0 auto;
+			margin-top: -50px;
+			margin-bottom: 140px;
+		}
+
 		textarea {
 			align-self: center;
 			justify-self: center;
@@ -157,14 +156,6 @@
 				transform: translateX(-50%) translateY(-50px);
 			}
 		}
-
-		.content-container {
-			width: 95%;
-			height: 65vh;
-			margin: 0 auto;
-			margin-top: -50px;
-			margin-bottom: 140px;
-		}
 	}
 }
 
@@ -175,11 +166,13 @@
 		}
 
 		.content-container {
+			height: 70vh;
+			margin-top: -70px;
 			margin-bottom: 250px;
 		}
 
-		.btn {
-			bottom: 7%;
+		.btn.submit-btn {
+			bottom: 5%;
 			font-size: 1.5rem;
 		}
 	}
