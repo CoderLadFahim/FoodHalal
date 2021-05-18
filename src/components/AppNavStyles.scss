@@ -173,6 +173,7 @@ nav {
 		border: none;
 		margin-top: 25px;
 		box-shadow: none;
+		position: absolute;
 
 		.active-link::after {
 			left: 0;
