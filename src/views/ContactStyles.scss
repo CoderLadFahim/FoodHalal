@@ -128,7 +128,7 @@
 
 		.content-container {
 			width: 95%;
-			height: 65vh;
+			// height: 65vh;
 			margin: 0 auto;
 			margin-top: -50px;
 			margin-bottom: 140px;
@@ -146,13 +146,13 @@
 		}
 
 		.btn {
-			padding: 10px 25px;
+			padding: 10px 200px;
 
 			&.submit-btn,
 			&.disabled {
 				position: absolute;
 				left: 50%;
-				bottom: 5%;
+				bottom: -50px;
 				transform: translateX(-50%) translateY(-50px);
 			}
 		}
@@ -162,18 +162,30 @@
 @media only screen and (min-width: 1440px) {
 	.contact-page {
 		.contact-form textarea {
-			font-size: 2rem;
+			font-size: 1.5rem;
 		}
 
 		.content-container {
-			height: 70vh;
+			height: 100vh;
 			margin-top: -70px;
 			margin-bottom: 250px;
 		}
 
 		.btn.submit-btn {
-			bottom: 5%;
+			bottom: -250px;
 			font-size: 1.5rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 1920px) {
+	.contact-page {
+		.content-container {
+			height: 80vh;
+		}
+
+		.btn.submit-btn {
+			bottom: -130px;
 		}
 	}
 }
