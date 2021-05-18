@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3fa4ae34.chunk.css",
+    "main.js": "/static/js/main.f02f0a88.chunk.js",
+    "main.js.map": "/static/js/main.f02f0a88.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4c1410c2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4c1410c2.js.map",
+    "static/js/2.9a5c6576.chunk.js": "/static/js/2.9a5c6576.chunk.js",
+    "static/js/2.9a5c6576.chunk.js.map": "/static/js/2.9a5c6576.chunk.js.map",
+    "static/js/3.d152a3fd.chunk.js": "/static/js/3.d152a3fd.chunk.js",
+    "static/js/3.d152a3fd.chunk.js.map": "/static/js/3.d152a3fd.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.3fa4ae34.chunk.css.map": "/static/css/main.3fa4ae34.chunk.css.map",
+    "static/js/2.9a5c6576.chunk.js.LICENSE.txt": "/static/js/2.9a5c6576.chunk.js.LICENSE.txt",
+    "static/media/CartFooterStyles.scss": "/static/media/Poppins-SemiBold.cce5625b.ttf",
+    "static/media/AboutStyles.scss": "/static/media/aboutPageBg.328cc7e2.jpg",
+    "static/media/bottom-left.5b9cb0a9.png": "/static/media/bottom-left.5b9cb0a9.png",
+    "static/media/bottom-right.f2bdba00.png": "/static/media/bottom-right.f2bdba00.png",
+    "static/media/MenuItemStyles.scss": "/static/media/food-item-title-bg.c51bb45a.svg",
+    "static/media/HomeStyles.scss": "/static/media/landingPageBg.3de355c5.jpg",
+    "static/media/pic-main.974f6def.png": "/static/media/pic-main.974f6def.png",
+    "static/media/small1.9c199c4a.png": "/static/media/small1.9c199c4a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c1410c2.js",
+    "static/js/2.9a5c6576.chunk.js",
+    "static/css/main.3fa4ae34.chunk.css",
+    "static/js/main.f02f0a88.chunk.js"
+  ]
+}
