@@ -37,7 +37,7 @@ function Menu(props) {
 				opacity: 0,
 			})
 			.from('.food-menu', {
-				duration: 1,
+				duration: 0.5,
 				xPercent: 100,
 				opacity: 0,
 			})

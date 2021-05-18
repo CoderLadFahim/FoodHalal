@@ -82,11 +82,6 @@ function AppCart(props) {
 		top: '20px',
 	};
 
-	// disabling the vertical scroll on body when the cart is toggled
-	useEffect(() => {
-		document.body.style.overflowY = `${cartToggleState ? 'hidden' : ''}`;
-	}, [cartToggleState]);
-
 	return (
 		<section className="app-cart">
 			<div
@@ -122,6 +117,7 @@ function AppCart(props) {
 					/>
 				</div>
 			)}
+			{cartToggleState && <div onClick={hideCart} className="backdrop"></div>}
 		</section>
 	);
 }

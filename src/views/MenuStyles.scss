@@ -43,7 +43,7 @@
 		}
 
 		.active {
-			font-family: $font1-bold;
+			font-family: $font1-semibold;
 			color: $beige;
 			&::after {
 				content: '';
@@ -61,7 +61,7 @@
 		height: 100vh;
 		padding-top: 20px;
 		overflow: scroll;
-		// border: 3px solid $pink;
+		border-bottom: 3px solid $pink;
 		margin-bottom: 50px;
 		border-radius: 10px;
 		align-content: start;
@@ -104,10 +104,11 @@
 		}
 
 		.items-display {
-			border-bottom: 3px solid $pink;
+			border: none;
 			height: auto;
 			overflow: hidden;
 			border: none;
+			margin-top: 20px;
 		}
 	}
 }
