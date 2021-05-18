@@ -43,7 +43,7 @@
 		}
 
 		.active {
-			font-family: $font1-bold;
+			font-family: $font1-semibold;
 			color: $beige;
 			&::after {
 				content: '';
@@ -108,6 +108,7 @@
 			height: auto;
 			overflow: hidden;
 			border: none;
+			margin-top: 20px;
 		}
 	}
 }
