@@ -7,7 +7,26 @@ function AppFooter() {
 	return (
 		<footer className={currentRoutePath === '/' ? 'homeFooter' : ''}>
 			<h1>This site is completely fictional</h1>
-			<p>Made by CoderLadFahim</p>
+			<p>
+				Made by{' '}
+				<a
+					className="author-link"
+					href="https://github.com/CoderLadFahim"
+					target="_blank"
+					rel="noreferrer"
+				>
+					CoderLadFahim
+				</a>
+			</p>
+
+			<a
+				className="source-code-link"
+				href="https://github.com/CoderLadFahim/FoodHalal"
+				target="_blank"
+				rel="noreferrer"
+			>
+				Application source code
+			</a>
 		</footer>
 	);
 }

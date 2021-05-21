@@ -17,6 +17,30 @@ footer {
 
 	p {
 		font-family: $font3;
+
+		.author-link {
+			color: #0097e6;
+			text-decoration: none;
+			font-family: $font1-semibold;
+			transition: 200ms;
+
+			&:hover {
+				color: #00a8ff;
+			}
+		}
+	}
+
+	.source-code-link {
+		position: absolute;
+		color: #8c7ae6;
+		font-size: 1rem;
+		text-decoration: none;
+		left: 20px;
+		bottom: 10px;
+
+		&:hover {
+			color: #9c88ff;
+		}
 	}
 
 	img {
