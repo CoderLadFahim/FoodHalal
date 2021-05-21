@@ -12,6 +12,7 @@ import TableBook from './views/TableBook';
 import AppFooter from './components/AppFooter';
 import Opening from './components/Opening';
 import AppNav from './components/AppNav';
+import NotFound from './components/NotFound';
 import HamburgerMenu from './components/HamburgerMenu';
 import AppCart from './components/Cart/AppCart';
 
@@ -56,6 +57,9 @@ function App() {
 						</Route>
 						<Route path="/book">
 							<TableBook />
+						</Route>
+						<Route path="*">
+							<NotFound />
 						</Route>
 					</Switch>
 				</CartContextProvider>
