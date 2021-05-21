@@ -1,5 +1,12 @@
 /  / 200
+<<<<<<< HEAD
 /menu  /menu 200
 /book  /book 200
 /contact  /contact 200
 /about  /about 200
+=======
+/  /menu 200
+/  /book 200
+/  /contact 200
+/  /about 200
+>>>>>>> 4d4774b5dd4fed2a4014714ec8b7f47aa7ca29f5
