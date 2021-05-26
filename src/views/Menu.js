@@ -8,6 +8,9 @@ import menuItems from '../assets/foodItems.json';
 import MenuItem from '../components/MenuPage/MenuItem';
 import TableBookBtn from '../components/TableBookBtn';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPizzaSlice } from '@fortawesome/free-solid-svg-icons';
+import { faHamburger } from '@fortawesome/free-solid-svg-icons';
 function Menu(props) {
 	const [activeItemType, setActiveItemType] = useState('appetizers');
 
@@ -74,6 +77,25 @@ function Menu(props) {
 			</ul>
 
 			<div className="items-display">{itemsToShow}</div>
+			{/* WATERMARKS */}
+			<FontAwesomeIcon
+				className="watermark"
+				icon={faHamburger}
+				style={{
+					top: '26%',
+					left: '15%',
+					color: '#ff834d',
+				}}
+			/>
+			<FontAwesomeIcon
+				className="watermark"
+				icon={faPizzaSlice}
+				style={{
+					bottom: '20%',
+					right: '15%',
+					color: '#ff7979',
+				}}
+			/>
 		</section>
 	);
 }

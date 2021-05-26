@@ -10,7 +10,7 @@ import About from './views/About';
 import Contact from './views/Contact';
 import TableBook from './views/TableBook';
 import AppFooter from './components/AppFooter';
-import Opening from './components/Opening';
+// import Opening from './components/Opening';
 import AppNav from './components/AppNav';
 import NotFound from './components/NotFound';
 import HamburgerMenu from './components/HamburgerMenu';
@@ -25,7 +25,7 @@ function App() {
 
 	return (
 		<Router>
-			<Opening />
+			{/* <Opening /> */}
 			<section className="App">
 				<CartContextProvider>
 					<HamburgerMenu

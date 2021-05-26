@@ -71,10 +71,11 @@ html {
 	}
 }
 
-@media only screen and (min-width: 600px) {
-	body {
-		// margin-top: 5vh;
-	}
+svg.watermark {
+	position: fixed;
+	transform: scale(30);
+	opacity: 0.05;
+	z-index: -99;
 }
 
 @media only screen and (min-width: 1280px) {

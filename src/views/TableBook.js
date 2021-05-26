@@ -6,6 +6,9 @@ import PageTitle from '../components/PageTitle';
 import TableDetailsForm from '../components/TableBook/TableDetailsForm';
 import DinerDetailsForm from '../components/TableBook/DinerDetailsForm';
 import FormSubmissionView from '../components/FormSubmissionView';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAppleAlt } from '@fortawesome/free-solid-svg-icons';
+import { faHotdog } from '@fortawesome/free-solid-svg-icons';
 
 function TableBook(props) {
 	const [tableDetails, setTableDetails] = useState({
@@ -76,6 +79,24 @@ function TableBook(props) {
 					}}
 				/>
 			)}
+			<FontAwesomeIcon
+				className="watermark"
+				icon={faAppleAlt}
+				style={{
+					bottom: '17%',
+					left: '10%',
+					color: '#ff7979',
+				}}
+			/>
+			<FontAwesomeIcon
+				className="watermark"
+				icon={faHotdog}
+				style={{
+					top: '20%',
+					right: '20%',
+					color: '#ff834d',
+				}}
+			/>
 		</section>
 	);
 }

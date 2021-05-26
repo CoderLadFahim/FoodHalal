@@ -16,6 +16,10 @@
 		align-items: center;
 		justify-content: space-around;
 	}
+
+	svg.watermark {
+		display: none;
+	}
 }
 
 @media only screen and (min-width: 414px) {
@@ -52,6 +56,10 @@
 
 		.page-title {
 			width: 50%;
+		}
+
+		svg.watermark {
+			display: inline;
 		}
 	}
 }

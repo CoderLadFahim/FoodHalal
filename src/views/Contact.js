@@ -7,6 +7,9 @@ import AppInput from '../components/AppInput';
 import PageTitle from '../components/PageTitle';
 import FormButton from '../components/FormButton';
 import FormSubmissionView from '../components/FormSubmissionView';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 function Contact(props) {
 	// relevant states for this component to function
@@ -126,6 +129,24 @@ function Contact(props) {
 			) : (
 				<FormSubmissionView clickHandler={resetFields}></FormSubmissionView>
 			)}
+			<FontAwesomeIcon
+				className="watermark"
+				icon={faPhone}
+				style={{
+					top: '26%',
+					left: '15%',
+					color: '#ff7979',
+				}}
+			/>
+			<FontAwesomeIcon
+				className="watermark"
+				icon={faPaperPlane}
+				style={{
+					bottom: '25%',
+					right: '15%',
+					color: '#ff834d',
+				}}
+			/>
 		</section>
 	);
 }

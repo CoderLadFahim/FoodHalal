@@ -1,6 +1,10 @@
 @import '../index.scss';
 
 .menu-page {
+	svg.watermark {
+		display: none;
+	}
+
 	.header-content {
 		display: flex;
 		justify-content: space-between;
@@ -93,6 +97,10 @@
 			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 			grid-gap: 20px;
 			justify-items: center;
+		}
+
+		svg.watermark {
+			display: inline;
 		}
 	}
 }

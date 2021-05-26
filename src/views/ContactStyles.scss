@@ -69,6 +69,10 @@
 		// height: 82vh;
 		margin-bottom: 50px;
 	}
+
+	svg.watermark {
+		display: none;
+	}
 }
 
 @media only screen and (min-width: 414px) {
@@ -155,6 +159,10 @@
 				bottom: -50px;
 				transform: translateX(-50%) translateY(-50px);
 			}
+		}
+
+		svg.watermark {
+			display: inline;
 		}
 	}
 }
