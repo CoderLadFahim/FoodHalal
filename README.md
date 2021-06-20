@@ -8,6 +8,10 @@
   * SASS (.scss syntax)
   * GSAP
 
+### App Features:
+ * Table Booking
+ * Food Ordering (CRUD feature)
+
 The site is completely fictional.
 
 This site consists of client-side CRUD functionality, is responsive and has route and component animations that have been implemented using GSAP.
