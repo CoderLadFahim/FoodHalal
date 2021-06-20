@@ -14,4 +14,4 @@ This site consists of client-side CRUD functionality, is responsive and has rout
 
 The CRUD functionality has been implemented for the ordering of items from the /menu route and can be accessed from the AppCart component.
 
-URL: https://tr19.netlify.app
+URL: https://foodhalal.netlify.app
