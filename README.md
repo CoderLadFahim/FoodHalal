@@ -14,8 +14,8 @@
 
 The site is completely fictional.
 
-This site consists of client-side CRUD functionality, is responsive and has route and component animations that have been implemented using GSAP.
+This site consists of client-side CRUD functionality, is responsive and has responsive route and component animations that have been implemented using GSAP.
 
-The CRUD functionality has been implemented for the ordering of items from the /menu route and can be accessed from the AppCart component.
+The CRUD functionality is implemented for the ordering of items that can accessed from the AppCart component and orders are placed from the '/menu' route.
 
 URL: https://foodhalal.netlify.app
