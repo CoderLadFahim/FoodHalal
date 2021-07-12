@@ -1,32 +1,22 @@
 import './AppFooterStyles.scss';
 import { useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 function AppFooter() {
 	const { pathname: currentRoutePath } = useLocation();
 
 	return (
 		<footer className={currentRoutePath === '/' ? 'homeFooter' : ''}>
-			<h1>This site is completely fictional</h1>
-			<p>
-				Made by{' '}
-				<a
-					className="author-link"
-					href="https://github.com/CoderLadFahim"
-					target="_blank"
-					rel="noreferrer"
-				>
-					CoderLadFahim
-				</a>
-			</p>
-
-			<a
-				className="source-code-link"
-				href="https://github.com/CoderLadFahim/FoodHalal"
-				target="_blank"
-				rel="noreferrer"
-			>
-				Application source code
-			</a>
+			<h3>Application created by</h3>
+			<h1>CoderLadFahim</h1>
+			<div className="links">
+				<FontAwesomeIcon icon={faGithub} />
+				<FontAwesomeIcon icon={faFacebook} />
+				<FontAwesomeIcon icon={faLinkedin} />
+			</div>
 		</footer>
 	);
 }
