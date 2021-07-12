@@ -47,7 +47,7 @@ html {
 	transition: 150ms;
 
 	&:hover {
-		transform: scale(1.05);
+		transform: scale(1.05) !important;
 		cursor: pointer;
 	}
 
