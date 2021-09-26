@@ -20,9 +20,18 @@ function AppFooter() {
 			<h3>Application created by</h3>
 			<h1>CoderLadFahim</h1>
 			<div className="links">
-				<FontAwesomeIcon className="link" icon={faGithub} />
-				<FontAwesomeIcon className="link" icon={faFacebook} />
-				<FontAwesomeIcon className="link" icon={faLinkedin} />
+				<a
+					href="https://www.linkedin.com/in/fahim-al-emroz-52b21720b/"
+					target="_blank"
+				>
+					<FontAwesomeIcon className="link" icon={faLinkedin} />
+				</a>
+				<a href="https://github.com/CoderLadFahim" target="_blank">
+					<FontAwesomeIcon className="link" icon={faGithub} />
+				</a>
+				<a href="https://www.facebook.com/Comet.258456/" target="_blank">
+					<FontAwesomeIcon className="link" icon={faFacebook} />
+				</a>
 			</div>
 		</footer>
 	);
