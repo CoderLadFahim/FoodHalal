@@ -1,5 +1,5 @@
 import './HomeStyles.scss';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import TweenLite from 'gsap';
 import { useEffect } from 'react';
 
@@ -11,9 +11,11 @@ import bottomRight from '../assets/images_global/bottom-right.png';
 import small1 from '../assets/images_global/small1.png';
 
 function Home({ playState, setPlayState }) {
+	const routeLocation = useLocation();
 	useEffect(() => {
 		// checking if anim has alaready been played, returning out
 		if (!playState) return;
+		setPlayState(false);
 
 		const homePageTL = TweenLite.timeline({
 			delay: 8,
@@ -122,7 +124,11 @@ function Home({ playState, setPlayState }) {
 					src={bottomLeft}
 					alt="Tacos on serving platter"
 				/>
-				<img className="fish-grill" src={small1} alt="Fish Grill with Salad" />
+				<img
+					className="fish-grill"
+					src={small1}
+					alt="Fish Grill with Salad"
+				/>
 				<img
 					className="large-meal"
 					src={picMain}
@@ -134,8 +140,12 @@ function Home({ playState, setPlayState }) {
 				<h1 className="app-logo logo-grad">FoodHalal</h1>
 				<p className="app-description">
 					<span className="desc-line line1">Enjoy our top-quality</span>
-					<span className="desc-line line2">professionally cooked meals</span>
-					<span className="desc-line line3">that are 100% Halal certified</span>
+					<span className="desc-line line2">
+						professionally cooked meals
+					</span>
+					<span className="desc-line line3">
+						that are 100% Halal certified
+					</span>
 				</p>
 				<div className="app-btns">
 					<TableBookBtn />

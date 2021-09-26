@@ -23,9 +23,9 @@ function Contact(props) {
 	// this state determines what to show on the contact page
 	const [submissionState, setSubmissionState] = useState(false);
 
-	const handleFormSubmission = e => {
+	const handleFormSubmission = (e) => {
 		e.preventDefault();
-		setSubmissionState(prevState => !prevState);
+		setSubmissionState((prevState) => !prevState);
 	};
 
 	// this function runs on confirmation-msg OK btn click after user submits a form
@@ -35,12 +35,12 @@ function Contact(props) {
 		setSubject('');
 		setUserIssue('');
 
-		setSubmissionState(prevState => !prevState);
+		setSubmissionState((prevState) => !prevState);
 	};
 
 	// disabling the submit-btn (by adding a 'disbled' className) if required information is falsy
 	const requiredFieldsFilled = [name, email, subject, userIssue].every(
-		field => field
+		(field) => field
 	);
 
 	useEffect(() => {
@@ -95,7 +95,9 @@ function Contact(props) {
 							name: 'contact',
 							required: true,
 							// adding color red if entered email is not valid
-							style: { color: `${!emailChecker.test(email) ? 'red' : ''}` },
+							style: {
+								color: `${!emailChecker.test(email) ? 'red' : ''}`,
+							},
 						}}
 						content={email}
 						contentSetter={setEmail}
@@ -113,14 +115,16 @@ function Contact(props) {
 					</AppInput>
 					<textarea
 						value={userIssue}
-						onChange={e => setUserIssue(prevIssue => e.target.value)}
+						onChange={(e) => setUserIssue((prevIssue) => e.target.value)}
 						required
 						placeholder="Tell us your issue"
 					></textarea>
 					<FormButton
 						className="submit-btn"
 						// disabling FormButton if fields aren't filled properly
-						btnDisabler={!requiredFieldsFilled || !emailChecker.test(email)}
+						btnDisabler={
+							!requiredFieldsFilled || !emailChecker.test(email)
+						}
 					>
 						{' '}
 						Submit{' '}
