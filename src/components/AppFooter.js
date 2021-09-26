@@ -10,12 +10,19 @@ function AppFooter() {
 
 	return (
 		<footer className={currentRoutePath === '/' ? 'homeFooter' : ''}>
+			<a
+				href="https://github.com/CoderLadFahim/FoodHalal"
+				target="_blank"
+				className="src-code"
+			>
+				{' </> '}
+			</a>
 			<h3>Application created by</h3>
 			<h1>CoderLadFahim</h1>
 			<div className="links">
-				<FontAwesomeIcon icon={faGithub} />
-				<FontAwesomeIcon icon={faFacebook} />
-				<FontAwesomeIcon icon={faLinkedin} />
+				<FontAwesomeIcon className="link" icon={faGithub} />
+				<FontAwesomeIcon className="link" icon={faFacebook} />
+				<FontAwesomeIcon className="link" icon={faLinkedin} />
 			</div>
 		</footer>
 	);
